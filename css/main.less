@@ -4,11 +4,12 @@ body {
 
 .section() {
     height: 100vh;
-    min-height: 720px;
+    min-height: 768px;
     padding-top: 70px;
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
+    background-color: #000;
 }
 
 header {
@@ -34,11 +35,13 @@ header {
                 text-transform: uppercase;
                 letter-spacing: 0.1em;
                 font-size: 18px;
-                font-weight: 400;
+                font-weight: 300;
                 transition: all 0.1s;
                 &:hover {
                     text-decoration: none;
-                    color: rgb(207, 20, 20);
+                    // color: rgb(207, 20, 20);
+                    color: #fff;
+                    text-shadow: 0px 0px 20px rgb(255, 0, 0);
                 }
             }
         }
@@ -65,7 +68,7 @@ header {
     }
 }
 
-.s1 {
+#s1 {
     background-image: url(../img/dead_space_funny_player_joystick_dark_monster_sofa-1011630.jpg);
     .section;
     h1 {
@@ -83,7 +86,33 @@ header {
     }
 }
 
-.s2 {
+#s2 {
     .section;
-    background-image: url(../img/dead_space_funny_player_joystick_dark_monster_sofa-1011630.jpg);
+    .container {
+        display: flex;
+        height: 100%;
+        align-items: center;
+    }
+    .console {
+        display: flex;
+        justify-content: space-between;
+        align-items: flex-end;
+        width: 100%;
+        img {
+            display: block;
+            height: 450px;
+        }
+    }
+    .console-text {
+        width: 400px;
+        height: 500px;
+        border: 1px solid rgba(139, 14, 14, 1);
+        background: rgba(255, 255, 255, 0.02);
+        box-shadow: 0 0 20px 0px rgba(139, 14, 14, 1);
+        border-radius: 2px;
+    }
+}
+
+#s3 {
+    .section;
 }

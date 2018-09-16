@@ -27,12 +27,13 @@ header nav ul a {
   text-transform: uppercase;
   letter-spacing: 0.1em;
   font-size: 18px;
-  font-weight: 400;
+  font-weight: 300;
   transition: all 0.1s;
 }
 header nav ul a:hover {
   text-decoration: none;
-  color: #cf1414;
+  color: #fff;
+  text-shadow: 0px 0px 20px #ff0000;
 }
 header nav .action {
   display: block;
@@ -54,16 +55,17 @@ header nav .action:hover {
   background: #fff;
   color: #8b0e0e;
 }
-.s1 {
+#s1 {
   background-image: url(../img/dead_space_funny_player_joystick_dark_monster_sofa-1011630.jpg);
   height: 100vh;
-  min-height: 720px;
+  min-height: 768px;
   padding-top: 70px;
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
+  background-color: #000;
 }
-.s1 h1 {
+#s1 h1 {
   font-family: 'Russo One', sans-serif;
   color: #fff;
   font-size: 70px;
@@ -71,17 +73,49 @@ header nav .action:hover {
   letter-spacing: 0.1em;
   font-weight: 700;
 }
-.s1 h2 {
+#s1 h2 {
   color: #fff;
   font-weight: 300;
   letter-spacing: 0.1em;
 }
-.s2 {
+#s2 {
   height: 100vh;
-  min-height: 720px;
+  min-height: 768px;
   padding-top: 70px;
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
-  background-image: url(../img/dead_space_funny_player_joystick_dark_monster_sofa-1011630.jpg);
+  background-color: #000;
+}
+#s2 .container {
+  display: flex;
+  height: 100%;
+  align-items: center;
+}
+#s2 .console {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  width: 100%;
+}
+#s2 .console img {
+  display: block;
+  height: 450px;
+}
+#s2 .console-text {
+  width: 400px;
+  height: 500px;
+  border: 1px solid #8b0e0e;
+  background: rgba(255, 255, 255, 0.02);
+  box-shadow: 0 0 20px 0px #8b0e0e;
+  border-radius: 2px;
+}
+#s3 {
+  height: 100vh;
+  min-height: 768px;
+  padding-top: 70px;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  background-color: #000;
 }
