@@ -7,6 +7,7 @@ header {
   position: fixed;
   z-index: 1;
   background: rgba(139, 14, 14, 0.4);
+  background: linear-gradient(to right, #a02323, #760000);
 }
 header nav {
   display: flex;
@@ -33,7 +34,7 @@ header nav ul a {
 header nav ul a:hover {
   text-decoration: none;
   color: #fff;
-  text-shadow: 0px 0px 20px #ff0000;
+  text-shadow: 0px 0px 10px #ffffff;
 }
 header nav .action {
   display: block;
@@ -42,7 +43,7 @@ header nav .action {
   line-height: 32px;
   border-radius: 2px;
   border: 1px solid;
-  background: #8b0e0e;
+  background: #ad3030;
   color: #fff;
   text-align: center;
   font-weight: 300;
@@ -102,13 +103,40 @@ header nav .action:hover {
   display: block;
   height: 450px;
 }
-#s2 .console-text {
+#s2 .console-body {
   width: 400px;
   height: 500px;
   border: 1px solid #8b0e0e;
-  background: rgba(255, 255, 255, 0.02);
-  box-shadow: 0 0 20px 0px #8b0e0e;
+  background: linear-gradient(to right, #151515, #000000);
+  box-shadow: 0 0 8px 0px #8b0e0e;
   border-radius: 2px;
+  color: #fff;
+}
+#s2 .console-body .console-title {
+  min-height: 70px;
+  width: 100%;
+  background: linear-gradient(to right, #a02323, #760000);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 20px;
+  letter-spacing: 0.05em;
+  padding: 15px;
+  text-align: center;
+}
+#s2 .console-body .console-text {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  padding: 20px;
+  font-size: 18px;
+  font-weight: 300;
+  letter-spacing: 0.03em;
+}
+#s2 .console-body .console-text b {
+  font-size: 24px;
+  font-weight: 700;
 }
 #s3 {
   height: 100vh;
