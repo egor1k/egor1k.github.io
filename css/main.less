@@ -22,6 +22,17 @@ html {
     background-color: #000;
 }
 
+#s1, #s2, #s3, #s4, #s5 {
+    .section;
+}
+
+.section-title {
+    text-align: center;
+    font-size: 50px;
+    margin-top: 40px;
+    margin-bottom: 80px;
+}
+
 header.active,
 header.active nav ul {
     height: 55px;
@@ -54,6 +65,7 @@ header {
                 font-size: 18px;
                 font-weight: 300;
                 transition: all 0.1s;
+                padding: 0 5px;
                 &:hover {
                     text-decoration: none;
                     color: #fff;
@@ -86,7 +98,6 @@ header {
 
 #s1 {
     background-image: url(../img/dead_space_funny_player_joystick_dark_monster_sofa-1011630.jpg);
-    .section;
     h1 {
         font-family: 'Russo One', sans-serif;
         color: #fff;
@@ -103,12 +114,6 @@ header {
 }
 
 #s2 {
-    .section;
-    .container {
-        display: flex;
-        height: 100%;
-        align-items: center;
-    }
     .console {
         display: flex;
         justify-content: space-between;
@@ -124,7 +129,7 @@ header {
         height: 500px;
         border: 1px solid @main-color;
         background: linear-gradient(to right, rgba(0, 0, 0, 1) + #151515, rgba(0, 0, 0, 1) - #151515);
-        box-shadow: 0 0 8px 0px @main-color;
+        // box-shadow: 0 0 8px 0px @main-color;
         border-radius: 2px;
         color: #fff;
         .console-title {
@@ -154,8 +159,4 @@ header {
             }
         }
     }
-}
-
-#s3 {
-    .section;
 }
