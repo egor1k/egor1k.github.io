@@ -5,7 +5,7 @@ $(window).on('load', function() {
     $('#s1 h1').addClass('animated fadeInLeft delay-1s');
     $('#s1 h2').addClass('animated fadeIn delay-2s');
 
-    $('.section-title').addClass('wow fadeInUp slow').attr('data-wow-offset', '150');
+    $('.section-title').addClass('wow zoomIn').attr('data-wow-offset', '150');
     $('#s2 .console img').addClass('wow fadeInLeft').attr('data-wow-offset', '250');
     $('#s2 .console-body').addClass('wow fadeInRight').attr('data-wow-offset', '250');
     new WOW().init();
@@ -18,5 +18,11 @@ $(document).ready(function () {
         } else {
             $('header').removeClass('active');
         }
+    });
+    $('.games').slick({
+        infinite: true,
+        slidesToShow: 3,
+        slidesToScroll: 3,
+        draggable: false
     });
 });

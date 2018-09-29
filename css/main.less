@@ -1,7 +1,7 @@
 @main-color: rgba(139, 14, 14, 1);
 
 body {
-    font-family: 'Oswald', sans-serif;
+    // font-family: 'Oswald', sans-serif;
     background: #000;
     color: #fff;
 }
@@ -31,6 +31,7 @@ html {
     font-size: 50px;
     margin-top: 40px;
     margin-bottom: 80px;
+    text-transform: uppercase;
 }
 
 header.active,
@@ -61,7 +62,7 @@ header {
                 margin-right: 35px;
                 color: #fff;
                 text-transform: uppercase;
-                letter-spacing: 0.1em;
+                letter-spacing: 0.05em;
                 font-size: 18px;
                 font-weight: 300;
                 transition: all 0.1s;
@@ -83,8 +84,7 @@ header {
             background: @main-color + #222222;
             color: #fff;
             text-align: center;
-            font-weight: 300;
-            letter-spacing: 0.05em;
+            font-weight: 400;
             white-space: nowrap;
             transition: all 0.2s;
             &:hover {
@@ -109,7 +109,7 @@ header {
     h2 {
         color: #fff;
         font-weight: 300;
-        letter-spacing: 0.1em;
+        letter-spacing: 0.0em;
     }
 }
 
@@ -125,11 +125,10 @@ header {
         }
     }
     .console-body {
-        width: 400px;
+        width: 420px;
         height: 500px;
         border: 1px solid @main-color;
         background: linear-gradient(to right, rgba(0, 0, 0, 1) + #151515, rgba(0, 0, 0, 1) - #151515);
-        // box-shadow: 0 0 8px 0px @main-color;
         border-radius: 2px;
         color: #fff;
         .console-title {
@@ -137,12 +136,20 @@ header {
             width: 100%;
             background: linear-gradient(to right, @main-color + #151515, @main-color - #151515);
             display: flex;
+            flex-direction: column;
             align-items: center;
             justify-content: center;
-            font-size: 20px;
-            letter-spacing: 0.05em;
+            font-size: 18px;
             padding: 15px;
             text-align: center;
+            font-style: italic;
+            p {
+                font-style: normal;
+                margin-bottom: 0;
+                font-size: 22px;
+                font-weight: 600;
+                white-space: nowrap;
+            }
         }
         .console-text {
             width: 100%;
@@ -152,11 +159,50 @@ header {
             padding: 20px;
             font-size: 18px;
             font-weight: 300;
-            letter-spacing: 0.03em;
             b {
                 font-size: 24px;
                 font-weight: 700;
             }
         }
     }
+}
+
+.games {
+    margin: 150px 30px 20px 30px;
+    &:focus {
+        outline: none;
+    }
+}
+
+.game img {
+    margin: 0 auto;
+}
+
+.slick-arrow {
+    background-repeat: no-repeat;
+    background-position: center;
+    background-color: transparent;
+    width: 30px;
+    height: 70px;
+    border: 0;
+    color: transparent;
+    display: block;
+    position: absolute;
+    cursor: pointer;
+    &:focus {
+        outline: none;
+    }
+    transform: translateY(-50%);
+}
+
+.slick-prev {
+    background-image: url(../img/chevron-left-solid.svg);
+    left: -35px;
+    top: 50%;
+}
+
+.slick-next {
+    background-image: url(../img/chevron-right-solid.svg);
+    right: -35px;
+    top: 50%;
 }
