@@ -150,9 +150,20 @@ header nav .action:hover {
   font-size: 18px;
   font-weight: 300;
 }
+#s2 .console-body .console-text .rates {
+  font-weight: 600;
+}
+#s2 .console-body .console-text .rates .day {
+  display: inline-block;
+  min-width: 70px;
+}
 #s2 .console-body .console-text b {
-  font-size: 24px;
-  font-weight: 700;
+  font-size: 22px;
+  padding-left: 18px;
+}
+#s2 .console-body .console-text i {
+  min-width: 60px;
+  display: inline-block;
 }
 .games {
   margin: 150px 30px 20px 30px;
@@ -160,7 +171,7 @@ header nav .action:hover {
 .games:focus {
   outline: none;
 }
-.game img {
+.games .game img {
   margin: 0 auto;
 }
 .slick-arrow {
@@ -188,4 +199,12 @@ header nav .action:hover {
   background-image: url(../img/chevron-right-solid.svg);
   right: -35px;
   top: 50%;
+}
+.callme {
+  font-size: 22px;
+}
+.phone {
+  font-family: 'Russo One', sans-serif;
+  font-size: 40px;
+  letter-spacing: 0.1em;
 }

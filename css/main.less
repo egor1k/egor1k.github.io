@@ -159,9 +159,20 @@ header {
             padding: 20px;
             font-size: 18px;
             font-weight: 300;
+            .rates {
+                font-weight: 600;
+                .day {
+                    display: inline-block;
+                    min-width: 70px;
+                }
+            }
             b {
-                font-size: 24px;
-                font-weight: 700;
+                font-size: 22px;
+                padding-left: 18px;
+            }
+            i {
+                min-width: 60px;
+                display: inline-block;
             }
         }
     }
@@ -172,10 +183,9 @@ header {
     &:focus {
         outline: none;
     }
-}
-
-.game img {
-    margin: 0 auto;
+    .game img {
+        margin: 0 auto;
+    }
 }
 
 .slick-arrow {
@@ -205,4 +215,14 @@ header {
     background-image: url(../img/chevron-right-solid.svg);
     right: -35px;
     top: 50%;
+}
+
+
+.callme {
+    font-size: 22px;
+}
+.phone {
+    font-family: 'Russo One', sans-serif;
+    font-size: 40px;
+    letter-spacing: 0.1em;
 }
