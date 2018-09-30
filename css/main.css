@@ -94,7 +94,6 @@ header nav .action:hover {
   font-family: 'Russo One', sans-serif;
   color: #fff;
   font-size: 70px;
-  margin-top: 200px;
   letter-spacing: 0.1em;
   font-weight: 700;
 }
@@ -102,6 +101,11 @@ header nav .action:hover {
   color: #fff;
   font-weight: 300;
   letter-spacing: 0.0em;
+}
+#s1 .logo {
+  margin-bottom: 60px;
+  margin-top: 100px;
+  margin-left: -27px;
 }
 #s2 .console {
   display: flex;
