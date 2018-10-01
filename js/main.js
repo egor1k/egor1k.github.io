@@ -1,5 +1,5 @@
 $(window).on('load', function() {
-    $("#preloader").delay(800).fadeOut('slow');
+    // $("#preloader").delay(800).fadeOut('slow');
     $('#s1').addClass('animated fadeIn delay-1s slow');
     $('header').addClass('animated fadeInDown delay-1s');
     $('#s1 h1').addClass('animated fadeInLeft delay-1s');
