@@ -1,0 +1,196 @@
+@media (max-width: 1410px) {
+    #info .visitors .tabs a {
+        border: 1px solid #4F4F4F;
+        border-radius: 0 !important;
+        margin-left: -1px;
+    }
+    #info .members .members-body .members-lastyear {
+        display: none;
+    }
+    #info .members .members-body .members-tabs {
+        padding-left: 0;
+    }
+    
+}
+
+@media (max-width:1365px) {
+    header {
+        margin-bottom: 40px;
+    }
+    footer .logo-footer-text {
+        display: none;
+    }
+}
+
+@media (max-width: 1199px) {
+    header {
+        flex-wrap: wrap;
+        justify-content: center;
+        // margin-bottom: 0;
+    }
+    header .partners {
+        order: 2;
+        padding-left: 0;
+    }
+    header .partners .partner .partner-title {
+        text-align: center;
+    }
+    header nav {
+        margin-bottom: 40px;
+    }
+    main .main-title {
+        margin-bottom: 20px;
+    }
+    main .main-title h1 {
+        font-size: 44px;
+    }
+    footer {
+        height: auto;
+    }
+    footer .footer-info-row {;
+    }
+    footer .footer-info-row .footer-info {
+        width: 33%;
+    }
+    footer .footer-btns {
+        padding-right: 0;
+    }
+    footer .footer-info-row .footer-info {
+        margin: 20px;
+    }
+    footer .logo-footer-bottom {
+        align-self: center;
+    }
+    footer .underground {
+        right: 15px;
+    }
+    #sponsor .double-row {
+        flex-wrap: wrap;
+    }
+    #sponsor .double-row .double-row-column {
+        width: 100%;
+    }
+}
+
+@media (max-width: 1023px) {
+    .tabs a {
+        min-width: auto;
+    }
+    #info .members .members-body .tab-content a {
+        width: 100%;
+        text-align: center;
+    }
+    #info .members .members-body .tab-content a:nth-child(3n) {
+        padding-left: 0;
+    }
+    #info .visitors .tab-content .lists {
+        flex-wrap: wrap;
+        ul {
+            margin-bottom: 30px;
+        }
+    }
+    #info .visitors .tab-content ul,
+    #sponsor .double-row .double-row-column {
+        width: 100%;
+    }
+    #program .tab-pane-body,
+    #reviews .reviews,
+    footer .footer-info-row,
+    #sponsor .double-row,
+    footer .logo-footer-row,
+    header nav ul,
+    #program .program-row .tabs,
+    main .main-btns {
+        flex-wrap: wrap;
+    }
+    header nav ul li {
+        margin: 0 10px;
+    }
+    #program .tab-pane-body .column,
+    #reviews .reviews .column {
+        width: 100%;
+    }
+    #info .about p br {
+        display: none;
+    }
+    footer .logo-footer {
+        margin-bottom: 30px;
+    }
+    footer .footer-btns {
+        margin: 10px;
+    }
+    .getlist form button {
+        font-size: 20px;
+    }
+    #program .program-row .tabs a {
+        border-radius: 4px;
+        border: 1px solid #4F4F4F;
+        width: 100%;
+        margin-bottom: 10px;
+    }
+    #conference {
+        padding-top: 40px;
+    }
+    main .main-title h2 {
+        font-size: 26px;
+        line-height: normal;
+    }
+    main .main-title h1 {
+        font-size: 33px;
+        line-height: normal;
+        br {
+            display: none;
+        }
+    }
+    main .main-title h3 {
+        font-size: 18px;
+        line-height: normal;
+    }
+    main .main-btns a {
+        margin: 0 0 15px 0;
+    }
+    #conference p {
+        font-size: 24px;
+    }
+    #window .checkbox label {
+        width: 100%;
+        border-radius: 4px;
+        width: 100%;
+        max-width: 350px;
+    }
+    #window .checkbox-group {
+        flex-direction: column;
+    }
+    #window .checkbox {
+        margin-bottom: 20px;
+    }
+    #window .fields .field {
+        padding-bottom: 20px;
+    }
+    #window .privacy {
+        margin-top: 15px;
+        margin-bottom: 30px;
+    }
+    #window .submit {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+    #window .submit .submit-text {
+        padding-left: 0;
+    }
+    #window .submit button {
+        margin-bottom: 15px;
+    }
+    #window .privacy label {
+        font-size: 18px;
+    }
+    header .partners .partner {
+        margin-right: 6px;
+        &:last-child {
+            margin-right: 0;
+        }
+    }
+    header nav ul {
+        justify-content: center;
+    }
+}
