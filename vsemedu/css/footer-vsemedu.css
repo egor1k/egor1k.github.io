@@ -85,8 +85,8 @@
   background-image: url(../img/vsemedu-logo.svg);
   background-repeat: no-repeat;
   background-position: center;
-  -webkit-animation: vsemedu 7s infinite linear;
-          animation: vsemedu 7s infinite linear;
+  -webkit-animation: vsemedu 7s infinite linear 3.5s;
+          animation: vsemedu 7s infinite linear 3.5s;
   -webkit-animation-play-state: paused;
           animation-play-state: paused;
   cursor: pointer;
