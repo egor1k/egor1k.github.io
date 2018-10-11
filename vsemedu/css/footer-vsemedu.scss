@@ -70,7 +70,7 @@
     background-image: url(../img/vsemedu-logo.svg);
     background-repeat: no-repeat;
     background-position: center;
-    animation: vsemedu 7s infinite linear 3.5s;
+    animation: vsemedu 7s infinite linear;
     animation-play-state: paused;
     &.active {
         animation-play-state: running;
