@@ -1,372 +1,183 @@
 $main-color: #110DB2;
 
+// Google Fonts
+@import url('https://fonts.googleapis.com/css?family=Exo+2:100,100i,200,200i,300,300i,400,400i,500,500i,600,600i,700,700i,800,800i,900,900i&subset=cyrillic');
+
+@import '_preloader';
+@import '_jarallax';
+
 body {
-    // font-family: 'Montserrat Alternates', sans-serif;
-    font-family: 'Alegreya Sans', sans-serif;
-    background: #000;
+    font-family: 'Exo 2', sans-serif;
+    font-size: 16px;
+    line-height: 1.3;
     color: #fff;
+    font-weight: 400;
+    background-color: #000;
+    overflow: hidden;
 }
 
 header {
-    font-family: 'Montserrat Alternates', sans-serif;
-    position: fixed;
     z-index: 1;
+    position: fixed;
+    display: flex;
+    align-items: center;
     width: 100%;
-    background-color: transparentize($main-color, .75);
-    .header-body {
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-        min-height: 90px;
-    }
+    min-height: 70px;
+    background-color: transparentize($main-color, 0.75);
 }
 
-main {
-    height: 100vh;
-    min-height: 320px;
-    background-image: url(../img/main.jpg);
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-position: center;
-    padding-top: 90px;
-    display: flex;
-    align-items: center;
-}
-
-.logo {
-    margin-left: -20px;
-    display: flex;
-    align-items: center;
-    color: #fff;
-    &:hover {
-        color: #fff;
-        text-decoration: none;
-    }
-    img {
-        width: 200px;
-        height: auto;
-    }
-    .separator {
-        margin-left: 10px;
-        margin-right: 30px;
-        width: 1px;
-        height: 30px;
-        background: $main-color;
-    }
-    .logo-text {
-        font-size: 12px;
-        max-width: 140px;
-        line-height: 1.1;
-        font-weight: 300;
-    }
-}
-
-nav {
-    display: flex;
-    align-items: center;
-    .info {
-        display: flex;
-        flex-direction: column;
-        align-items: flex-end;
-        .phone {
-            font-size: 18px;
-            font-weight: 700;
-            letter-spacing: 0.05em;
-            white-space: nowrap;
-        }
-        .city {
-            font-size: 12px;
-            font-weight: 300;
-        }
-    }
-    .hamburger {
-        height: 44px;
-        width: 44px;
-        border: 1px solid $main-color;
-        margin-left: 30px;
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        justify-content: center;
-        cursor: pointer;
-        transition: 0.2s;
-        &:hover {
-            background-color: $main-color;
-            box-shadow: 0 0 6px $main-color;
-        }
-        span {
-            display: block;
-            width: 17px;
-            height: 1px;
-            background-color: #fff;
-            margin: 2px 0;
-        }
-    }
-}
-
-.main-text {
-    margin-bottom: 100px;
-    h2 {
-        font-size: 54px;
-        font-weight: 500;
-        letter-spacing: 1px;
-        color: $main-color;
-    }
-    h1 {
-        font-size: 74px;
-        font-weight: 700;
-        letter-spacing: 1px;
-        text-shadow: 0 0 50px $main-color;
-    }
+.header-logo {
     a {
-        margin: 30px 0;
-        color: #fff;
-        display: inline-block;
-        border: 1px solid $main-color;
-        height: 40px;
-        line-height: 40px;
-        padding: 0 20px;
+        display: flex;
+        align-items: center;
+        height: 100%;
         font-size: 14px;
-        font-weight: 300;
-        // letter-spacing: 0.05em;
-        background: $main-color;
-        box-shadow: 0 0 10px $main-color;
-        white-space: nowrap;
-        letter-spacing: 1px;
+        font-weight: 200;
+        color: #fff;
+
         &:hover {
             text-decoration: none;
         }
     }
-}
 
-.panel {
-    position: fixed;
-    z-index: 1;
-    top: 0;
-    right: 0;
-    background: #fff;
-    width: 0;
-    height: 100vh;
-    min-height: 320px;
-    color: #000;
-    overflow: hidden;
-    transition: width 0.3s;
-    &.active {
-        width: 480px;
+    .site-logo img {
+        width: 200px;
+        margin-left: -20px;
     }
-    .panel-body {
-        padding: 30px 30px;
-    }
-    .panel-close {
-        display: inline-block;
-        margin-left: auto;
-        cursor: pointer;
+
+    .v-line {
+        width: 1px;
+        height: 30px;
+        margin-right: 32px;
+        margin-left: 10px;
+        background-color: $main-color;
     }
 }
 
-#offer, #games, #food, #call {
-    // min-height: 100vh;
-    padding-top: 150px;
-    padding-bottom: 60px;
-    h2 {
-        font-size: 44px;
-        font-weight: 400;
-        text-shadow: 0 0 20px $main-color;
-        margin-bottom: 20px;
+.header-info {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    height: 100%;
+    text-align: right;
+
+    .phone {
+        font-size: 20px;
+        font-weight: 800;
+        letter-spacing: 0.05em;
     }
-    p {
-        font-size: 24px;
-        line-height: 1.2;
+
+    .city {
+        font-size: 14px;
+        font-weight: 200;
     }
 }
 
-#offer {
-    .offer-text {
+.header-btn {
+    display: flex;
+    align-items: center;
+    height: 100%;
+
+    .header-icon {
         display: flex;
         justify-content: center;
-        flex-direction: column;
-        text-align: center;
-    }
-    p {
-        font-weight: 400;
-        font-size: 28px;
-    }
-    ul {
-        list-style: none;
-        font-size: 34px;
-        font-weight: 700;
-        line-height: 1.3;
-        letter-spacing: 0.03em;
-    }
-    i {
-        font-size: 16px;
-        font-weight: 200;
-        font-family: 'Montserrat Alternates', sans-serif;
-    }
-}
+        align-items: center;
+        width: 40px;
+        height: 40px;
+        border: 1px solid $main-color;
+        cursor: pointer;
 
-#games {
-    .slider {
-        padding: 0 50px;
-        .slick-slide {
-            display: flex;
-            justify-content: center;
-            outline: none;
+        &:hover {
+            background-color: transparentize($main-color, 0.25);
         }
-        .slick-arrow {
-            position: absolute;
-            top: 50%;
-            transform: translateY(-50%);
-            background-repeat: no-repeat;
-            background-position: center;
-            background-size: cover;
-            background-color: #000;
+
+        span,
+        span::before,
+        span::after {
             display: block;
-            width: 40px;
-            height: 40px;
-            border: none;
-            outline: none;
-            color: transparent;
-            cursor: pointer;
-        }
-        .slick-prev {
-            left: 0;
-            background-image: url(../img/prev.svg);
-        }
-        .slick-next {
-            right: 0;
-            background-image: url(../img/next.svg);
-        }
-        img {
-            padding: .25rem;
+            width: 17px;
+            height: 1px;
             background-color: #fff;
-            border: 1px solid #dee2e6;
-            border-radius: .25rem;
-            max-width: 100%;
-            height: auto;
+        }
+
+        span::before {
+            content: "";
+            transform: translateY(-5px);
+        }
+
+        span::after {
+            content: "";
+            transform: translateY(4px);
         }
     }
+}
+
+section.home {
+    display: flex;
+    align-items: center;
+    padding: 100px 0;
+    background-image: url(../img/dead_space_funny_player_joystick_dark_monster_sofa-1011630.jpg);
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: cover;
+}
+
+.home-title {
+    max-width: 75%;
+
+    @media (max-width: 575px) {
+        max-width: 100%;
+    }
+
     h2 {
-        text-align: center;
-    }
-}
+        font-size: 50px;
+        text-transform: uppercase;
+        color: $main-color;
+        font-weight: 400;
 
-#call {
-    .phone {
-        font-family: 'Montserrat Alternates', sans-serif;
-        font-size: 40px;
-        font-weight: 700;
-        letter-spacing: 0.05em;
-        white-space: nowrap;
-        text-shadow: 0 0 20px $main-color;
-        margin-bottom: 30px;
-    }
-    p {
-        font-weight: 200;
-    }
-}
-
-@media (min-width: 1200px) {
-    #offer {
-        .offer-text {
-            padding-left: 80px;
-        }
-    }
-}
-@media (max-width: 991px) {
-    #offer, #games, #food, #call {
-        text-align: center;
-    }
-    .main-text {
-        margin-bottom: 0;
-    }
-    #offer {
-        padding-top: 130px;
-        img {
-            max-width: 400px;
-        }
-    }
-}
-@media (max-width: 767px) {
-    main {
-        background: #000;
-        text-align: center;
-    }
-    .separator,
-    .logo-text {
-        display: none;
-    }
-    .main-text {
-        h2 {
+        @media (max-width: 991px) {
             font-size: 30px;
         }
-        h1 {
-            font-size: 44px;
-        }
-    }
-    #offer, #games, #food, #call {
-        h2 {
+
+        @media (max-width:575px) {
             font-size: 28px;
         }
-        p {
-            font-size: 20px;
+    }
+
+    h1 {
+        font-size: 80px;
+        text-transform: uppercase;
+        font-weight: 600;
+
+        @media (max-width: 991px) {
+            font-size: 50px;
+        }
+
+        @media (max-width:575px) {
+            font-size: 39px;
         }
     }
-    #call .phone {
-        font-size: 28px;
+
+    html.cl-preload & {
+        opacity: 0;
     }
-    #offer {
-        .offer-text {
-            ul {
-                font-size: 24px;
-                padding: 0;
-            }
-        }
-        img {
-            max-width: 280px;
-        }
-        i {
-            font-size: 12px;
-        }
+
+    html.cl-loaded & {
+        animation-duration: 2s;
+        animation-name: fadeup;
     }
 }
-@media (max-width: 575px) {
-    header .header-body {
-        max-height: 65px;
-        min-height: 0;
-    }
-    nav .info {
-        display: none;
-    }
-    .logo {
-        order: 2;
-    }
-    nav {
-        order: 1;
-    }
-    #offer {
-        padding-top: 80px;
-    }
+
+section.home,
+section.look,
+section.games,
+section.food {
+    min-height: 100vh;
 }
-@media (max-width: 480px) {
-    .panel.active {
-        width: 100vw;
-    }
-    #games {
-        .slider {
-            padding: 0 0px;
-            .slick-arrow {
-                top: calc(100% + 10px);
-                transform: none;
-            }
-            .slick-prev {
-                left: calc(50% - 5px);
-                transform: translateX(-100%);
-            }
-            .slick-next {
-                right: calc(50% - 5px);
-                transform: translateX(100%);
-            }
-        }
+
+.h-jarralax {
+    height: 600px;
+    @media (max-width: 575px) {
+        height: 250px;
     }
 }

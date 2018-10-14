@@ -1,29 +1,33 @@
-$(document).ready(function () {
-    $('.hamburger, .panel-close').click(function (e) { 
-        e.preventDefault();
-        $('.panel').toggleClass('active');
+// https://github.com/inuyaksa/jquery.nicescroll
+var clniceScroll = function () {
+    $(document).ready(function () {
+        $('body').niceScroll({
+            cursorborder: "1px solid #000"
+        });
     });
-    $('.slider').slick({
-        dots: false,
-        infinite: true,
-        speed: 300,
-        slidesToShow: 3,
-        slidesToScroll: 3,
-        responsive: [
-          {
-            breakpoint: 1199,
-            settings: {
-              slidesToShow: 2,
-              slidesToScroll: 2
-            }
-          },
-          {
-            breakpoint: 767,
-            settings: {
-              slidesToShow: 1,
-              slidesToScroll: 1
-            }
-          }
-        ]
-      });
-});
+}
+
+var clPreloader = function () {
+
+    $("html").addClass('cl-preload');
+
+    $(window).on('load', function () {
+
+        //force page scroll position to top at page refresh
+        // $('html, body').animate({ scrollTop: 0 }, 'normal');
+
+        // will first fade out the loading animation 
+        $("#loader").fadeOut("slow", function () {
+            // will fade out the whole DIV that covers the website.
+            $("#preloader").delay(300).fadeOut("slow");
+        });
+
+        // for hero content animations 
+        $("html").removeClass('cl-preload');
+        $("html").addClass('cl-loaded');
+
+    });
+}
+
+clPreloader();
+clniceScroll();
