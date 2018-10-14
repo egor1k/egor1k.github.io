@@ -1,11 +1,11 @@
 // https://github.com/inuyaksa/jquery.nicescroll
-var clniceScroll = function () {
-    $(document).ready(function () {
-        $('body').niceScroll({
-            cursorborder: "1px solid #000"
-        });
-    });
-}
+// var clniceScroll = function () {
+//     $(document).ready(function () {
+//         $('body').niceScroll({
+//             cursorborder: "1px solid #000"
+//         });
+//     });
+// }
 
 var clPreloader = function () {
 
@@ -29,5 +29,10 @@ var clPreloader = function () {
     });
 }
 
+jarallax(document.querySelectorAll('.jarallax'), {
+    disableParallax: /iPad|iPhone|iPod|Android/,
+    disableVideo: /iPad|iPhone|iPod|Android/
+});
+
 clPreloader();
-clniceScroll();
+// clniceScroll();
