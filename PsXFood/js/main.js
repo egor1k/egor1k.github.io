@@ -1,4 +1,4 @@
-// https://github.com/inuyaksa/jquery.nicescroll
+// https: //github.com/inuyaksa/jquery.nicescroll
 // var clniceScroll = function () {
 //     $(document).ready(function () {
 //         $('body').niceScroll({
@@ -29,10 +29,20 @@ var clPreloader = function () {
     });
 }
 
-jarallax(document.querySelectorAll('.jarallax'), {
-    disableParallax: /iPad|iPhone|iPod|Android/,
-    disableVideo: /iPad|iPhone|iPod|Android/
-});
+// jarallax(document.querySelectorAll('.jarallax'), {
+//     disableParallax: /iPad|iPhone|iPod|Android/,
+//     disableVideo: /iPad|iPhone|iPod|Android/
+// });
 
 clPreloader();
 // clniceScroll();
+
+//  https://kingsora.github.io/OverlayScrollbars/#!overview
+$("body").overlayScrollbars({
+    className: 'os-theme-light',
+    scrollbars : {
+		visibility       : "auto",
+		autoHide         : "scroll",
+		autoHideDelay    : 400,
+	},
+ });
