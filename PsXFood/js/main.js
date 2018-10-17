@@ -1,41 +1,61 @@
-var clPreloader = function () {
+(function ($) {
+    "use strict";
 
-    $("html").addClass('cl-preload');
+    var clPreloader = function () {
 
-    $(window).on('load', function () {
+        $("html").addClass('cl-preload');
 
-        //force page scroll position to top at page refresh
-        // $('html, body').animate({ scrollTop: 0 }, 'normal');
+        $(window).on('load', function () {
 
-        // will first fade out the loading animation 
-        $("#loader").fadeOut("slow", function () {
-            // will fade out the whole DIV that covers the website.
-            $("#preloader").delay(300).fadeOut("slow");
+            //принудительное перемещение страницы верх при ее обновлении
+            // $('html, body').animate({
+            //     scrollTop: 0
+            // }, 'normal');
+
+            // will first fade out the loading animation 
+            $("#loader").fadeOut("slow", function () {
+                // will fade out the whole DIV that covers the website.
+                $("#preloader").delay(300).fadeOut("slow");
+            });
+
+            // для анимации h1
+            $("html").removeClass('cl-preload');
+            $("html").addClass('cl-loaded');
+
+        });
+    }
+
+    var clAOS = function () {
+
+        AOS.init({
+            offset: 200,
+            duration: 600,
+            easing: 'ease-in-sine',
+            delay: 200,
+            once: false,
+            disable: 'mobile'
         });
 
-        // for hero content animations 
-        $("html").removeClass('cl-preload');
-        $("html").addClass('cl-loaded');
+    };
 
-    });
-}
+    var navOpen = function () {
 
-//  https://kingsora.github.io/OverlayScrollbars/#!overview
-var clOverlayScrollbars = function () {
-    $("body").overlayScrollbars({
-        className: 'os-theme-light',
-        scrollbars: {
-            visibility: "auto",
-            autoHide: "scroll",
-            autoHideDelay: 400,
-        },
-    });
-}
+        var siteBody = $('body');
 
-clPreloader();
-// clOverlayScrollbars();
+        $('.header-icon').click(function (e) {
+            e.preventDefault();
+            siteBody.addClass('header-nav-open');
+        });
+        
+    };
 
-// jarallax(document.querySelectorAll('.jarallax'), {
-//     disableParallax: /iPad|iPhone|iPod|Android/,
-//     disableVideo: /iPad|iPhone|iPod|Android/
-// });
+    (function ssInit() {
+
+        clPreloader();
+        clAOS();
+        navOpen();
+
+    })();
+
+
+})(jQuery);
