@@ -25,10 +25,10 @@ body {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
-  width: 100%;
-  height: 100vh;
   max-width: 648px;
   max-height: 904px;
+  width: 100%;
+  height: 100vh;
   border-top-left-radius: 24px;
   border-top-right-radius: 24px;
   border-bottom-right-radius: 8px;
@@ -37,24 +37,14 @@ body {
   color: #ffffff;
 }
 
-@media (max-width: 648px) {
-  .bs-content {
-    border-radius: 0;
-  }
-}
-
 /* ------------------------------------------------------------------- 
  * # Header
  * ------------------------------------------------------------------- */
 .bs-header {
-  padding: 24px;
   overflow: hidden;
-}
-
-@media (max-width: 568px) {
-  .bs-header {
-    padding: 20px;
-  }
+  padding: 24px;
+  -ms-flex-negative: 0;
+      flex-shrink: 0;
 }
 
 .bs-header__info {
@@ -83,12 +73,6 @@ body {
   letter-spacing: 0.05em;
   font-weight: 500;
   font-size: 20px;
-}
-
-@media (max-width: 568px) {
-  .bs-header__info .bs-phone {
-    font-size: 14px;
-  }
 }
 
 .bs-header__info .bs-phone span {
@@ -125,14 +109,6 @@ body {
   cursor: pointer;
 }
 
-@media (max-width: 568px) {
-  .bs-header__info .bs-help::before {
-    width: 20px;
-    height: 20px;
-    margin-left: auto;
-  }
-}
-
 .bs-header__info .bs-close::before {
   display: block;
   margin-left: auto;
@@ -144,13 +120,6 @@ body {
   background-repeat: no-repeat;
   content: "";
   cursor: pointer;
-}
-
-@media (max-width: 568px) {
-  .bs-header__info .bs-close::before {
-    width: 18px;
-    height: 18px;
-  }
 }
 
 .bs-header__title {
@@ -166,21 +135,9 @@ body {
   font-size: 24px;
 }
 
-@media (max-width: 568px) {
-  .bs-header__title .bs-h2 {
-    font-size: 16px;
-  }
-}
-
 .bs-header__title .bs-h1 {
   font-weight: 600;
   font-size: 40px;
-}
-
-@media (max-width: 568px) {
-  .bs-header__title .bs-h1 {
-    font-size: 20px;
-  }
 }
 
 /* ------------------------------------------------------------------- 
@@ -191,17 +148,11 @@ body {
   display: -ms-flexbox;
   display: flex;
   overflow: hidden;
+  -ms-flex-negative: 0;
+      flex-shrink: 0;
   -ms-flex-wrap: nowrap;
       flex-wrap: nowrap;
   height: 100px;
-  -ms-flex-negative: 0;
-      flex-shrink: 0;
-}
-
-@media (max-width: 568px) {
-  .bs-footer {
-    height: 49px;
-  }
 }
 
 .bs-footer a {
@@ -230,12 +181,6 @@ body {
           user-select: none;
 }
 
-@media (max-width: 568px) {
-  .bs-footer a {
-    font-size: 16px;
-  }
-}
-
 .bs-footer a.bs-next {
   background: -webkit-gradient(linear, left top, left bottom, from(#6fcf97), to(#27ae60));
   background: linear-gradient(to bottom, #6fcf97, #27ae60);
@@ -260,10 +205,10 @@ body {
  * # Main
  * ------------------------------------------------------------------- */
 .bs-main {
-  overflow: hidden;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  overflow: hidden;
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
@@ -274,25 +219,13 @@ body {
   padding: 24px;
 }
 
-@media (max-width: 568px) {
-  .bs-main {
-    padding: 5px 20px;
-  }
-}
-
 .bs-main .bs-main__title {
+  margin-bottom: 15px;
   text-align: center;
   text-transform: uppercase;
   letter-spacing: 0.05em;
   font-weight: 600;
   font-size: 40px;
-  margin-bottom: 15px;
-}
-
-@media (max-width: 568px) {
-  .bs-main .bs-main__title {
-    font-size: 20px;
-  }
 }
 
 /* ------------------------------------------------------------------- 
@@ -319,25 +252,12 @@ body {
 
 #Datepickk .d-calendar,
 #Datepickk .d-header {
+  margin-bottom: 15px;
   background-color: transparent;
   text-transform: uppercase;
   letter-spacing: 0.05em;
   font-weight: 500;
   font-size: 32px;
-  margin-bottom: 15px;
-}
-
-@media (max-width: 568px) {
-  #Datepickk .d-calendar,
-  #Datepickk .d-header {
-    font-size: 20px;
-  }
-}
-
-@media (max-width: 568px) {
-  #Datepickk .d-tables {
-    font-size: 16px;
-  }
 }
 
 #Datepickk .d-table input + label {
@@ -359,13 +279,6 @@ body {
           transform: translate(-50%, -50%);
   -webkit-transform-origin: center;
           transform-origin: center;
-}
-
-@media (max-width: 568px) {
-  #Datepickk .d-table input + label:before {
-    width: 32px;
-    height: 32px;
-  }
 }
 
 #Datepickk .d-table input + label.next, #Datepickk .d-table input + label.prev {
@@ -395,22 +308,16 @@ body {
   background-repeat: no-repeat;
 }
 
-@media (max-width: 568px) {
-  #Datepickk .d-header i {
-    width: 25px;
-  }
-}
-
 #Datepickk .d-header i#d-previous {
+  left: 0;
   background-image: url(../img/calendar-arrow-prev.svg);
   background-position: center left;
-  left: 0;
 }
 
 #Datepickk .d-header i#d-next {
+  right: 0;
   background-image: url(../img/calendar-arrow-next.svg);
   background-position: center right;
-  right: 0;
 }
 
 #Datepickk .d-header i::before, #Datepickk .d-header i::after {
@@ -421,16 +328,56 @@ body {
   background-color: transparent;
 }
 
-@media (max-height: 568px) {
+/* ------------------------------------------------------------------- 
+ * # Media
+ * ------------------------------------------------------------------- */
+@media (max-width: 568px) {
   .bs-content {
-    max-width: none;
     border-radius: 0;
   }
+  .bs-header {
+    padding: 10px 20px;
+  }
+  .bs-header__info {
+    margin-bottom: 10px;
+  }
+  .bs-header__info .bs-phone {
+    font-size: 14px;
+  }
+  .bs-header__info .bs-help::before {
+    margin-left: auto;
+    width: 20px;
+    height: 20px;
+  }
+  .bs-header__info .bs-close::before {
+    width: 18px;
+    height: 18px;
+  }
+  .bs-header__title {
+    padding: 15px 0;
+  }
+  .bs-header__title .bs-h1 {
+    font-size: 20px;
+  }
+  .bs-header__title .bs-h2 {
+    font-size: 16px;
+  }
   .bs-footer {
-    height: 32px;
+    height: 49px;
   }
   .bs-footer a {
-    font-size: 18px;
+    font-size: 16px;
+  }
+  .bs-main {
+    padding: 5px 20px;
+  }
+  .bs-main .bs-main__title {
+    font-size: 20px;
+    margin-bottom: 10px;
+  }
+  #Datepickk .d-header {
+    margin-bottom: 5px;
+    font-size: 20px;
   }
   #Datepickk .d-tables {
     font-size: 16px;
@@ -439,39 +386,98 @@ body {
     width: 32px;
     height: 32px;
   }
-  #Datepickk .d-month-picker.d-show,
-  #Datepickk .d-year-picker.d-show {
+  #Datepickk .d-header i {
+    width: 25px;
+  }
+}
+
+@media (max-height: 567px) {
+  .bs-content {
+    max-width: none;
+    border-radius: 0;
+  }
+  .bs-header {
+    padding-top: 5px;
+    padding-bottom: 0;
+  }
+  .bs-header__info {
+    margin-bottom: 10px;
+  }
+  .bs-header__info .bs-phone {
+    font-size: 14px;
+  }
+  .bs-header__info .bs-help::before {
+    margin-left: auto;
+    width: 20px;
+    height: 20px;
+  }
+  .bs-header__info .bs-close::before {
+    width: 18px;
+    height: 18px;
+  }
+  .bs-header__title {
+    padding: 0;
+  }
+  .bs-header__title .bs-h1 {
+    font-size: 20px;
+  }
+  .bs-header__title .bs-h2 {
+    font-size: 16px;
+    margin-bottom: 5px;
+  }
+  .bs-footer {
+    height: 35px;
+  }
+  #Datepickk .d-calendar {
+    margin-bottom: 5px;
+  }
+  .bs-footer a {
+    font-size: 16px;
+  }
+  .bs-main {
+    padding: 5px 20px;
+    padding-top: 0;
+  }
+  .bs-main .bs-main__title {
     display: none;
-  }
-  #Datepickk .d-header p {
-    margin: 2px 0;
-  }
-  #Datepickk.inline.d-show .d-calendar {
-    margin-bottom: 0;
   }
   #Datepickk .d-header {
     margin-bottom: 5px;
     font-size: 20px;
   }
-  .bs-header {
-    padding-top: 10px;
-    padding-bottom: 10px;
-  }
-  .bs-main {
-    padding-top: 0;
-  }
-  .bs-header__title .bs-h1 {
-    font-size: 20px;
-    margin-bottom: 0;
-  }
-  .bs-main .bs-main__title {
-    display: none;
-  }
-  .bs-header__title .bs-h2 {
+  #Datepickk .d-tables {
     font-size: 16px;
   }
-  .bs-header__info {
-    margin-bottom: 10px;
+  #Datepickk .d-table input + label:before {
+    width: 30px;
+    height: 30px;
+  }
+  #Datepickk .d-header i {
+    width: 25px;
+  }
+  #Datepickk .d-month-picker,
+  #Datepickk .d-year-picker {
+    display: none;
+  }
+}
+
+@media (max-height: 320px) {
+  .bs-footer {
+    height: 25px;
+  }
+  #Datepickk .d-header {
+    margin-bottom: 5px;
+    font-size: 16px;
+  }
+  .bs-header__title .bs-h1 {
+    font-size: 16px;
+  }
+  #Datepickk .d-table input + label:before {
+    width: 70%;
+    height: 100%;
+  }
+  #Datepickk .d-table input + label.today text:before {
+    display: none;
   }
 }
 /*# sourceMappingURL=main.css.map */
