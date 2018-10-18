@@ -19,7 +19,7 @@ body {
     border-top-right-radius: 24px;
     border-bottom-right-radius: 8px;
     border-bottom-left-radius: 8px;
-    background: linear-gradient(to right, #18a7d4, #6916a9);
+    background: linear-gradient(137.39deg, #18a7d4, #6916a9);
     color: #fff;
 }
 
@@ -34,7 +34,7 @@ body {
     margin-bottom: 40px;
     color: #fff;
 
-    & > div {
+    &>div {
         flex-grow: 1;
     }
 
@@ -127,15 +127,96 @@ body {
         text-transform: uppercase;
         letter-spacing: 0.15em;
         font-size: 24px;
-
         user-select: none;
 
         &.bs-next {
             background: linear-gradient(to bottom, #6fcf97, #27ae60);
+            &:hover {
+                background: linear-gradient(to top, #6fcf97, #27ae60);
+            }
         }
 
         &.bs-back {
             background: linear-gradient(to bottom, #80c9e5, #18a7d4);
+            &:hover {
+                background: linear-gradient(to top, #80c9e5, #18a7d4);
+            }
+        }
+    }
+}
+
+.bs-main {
+    flex-grow: 1;
+    padding: 20px;
+}
+
+#Datepickk {
+
+    .d-calendar,
+    .d-header {
+        background-color: transparent;
+        text-transform: uppercase;
+        letter-spacing: 0.05em;
+        font-weight: 500;
+        font-size: 32px;
+    }
+
+    .d-table input+label {
+        padding: 18px 12px;
+        color: #fff;
+
+        &:before {
+            top: 0;
+            left: 50%;
+            width: 70px;
+            height: 70px;
+            border-radius: 35px;
+            background: linear-gradient(to top, #27ae60, #6fcf97);
+            transform-origin: center;
+            transform: translate(-50%);
+            opacity: 0;
+            transition: opacity 0.2s;
+        }
+
+        &.next,
+        &.prev {
+            color: rgba(255, 255, 255, 0.5);
+        }
+    }
+
+    .d-table input:checked+label:before {
+        opacity: 1;
+        transform: translate(-50%);
+    }
+
+    .d-weekdays {
+        display: none;
+    }
+
+    .d-tables:not(.locked) input:not(:checked)+label:not(.hidden):hover {
+        background-color: transparent;
+        color: #fff;
+    }
+
+    .d-header i {
+        width: 35px;
+        height: 22px;
+        border-radius: 0;
+        background-repeat: no-repeat;
+        background-position: center center;
+        background-size: cover;
+
+        &#d-previous {
+            background-image: url(../img/calendar-arrow-prev.svg);
+        }
+
+        &#d-next {
+            background-image: url(../img/calendar-arrow-next.svg);
+        }
+
+        &::before,
+        &::after {
+            display: none;
         }
     }
 }

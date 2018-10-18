@@ -31,8 +31,7 @@ body {
   border-top-right-radius: 24px;
   border-bottom-right-radius: 8px;
   border-bottom-left-radius: 8px;
-  background: -webkit-gradient(linear, left top, right top, from(#18a7d4), to(#6916a9));
-  background: linear-gradient(to right, #18a7d4, #6916a9);
+  background: linear-gradient(137.39deg, #18a7d4, #6916a9);
   color: #fff;
 }
 
@@ -171,8 +170,96 @@ body {
   background: linear-gradient(to bottom, #6fcf97, #27ae60);
 }
 
+.bs-footer a.bs-next:hover {
+  background: -webkit-gradient(linear, left bottom, left top, from(#6fcf97), to(#27ae60));
+  background: linear-gradient(to top, #6fcf97, #27ae60);
+}
+
 .bs-footer a.bs-back {
   background: -webkit-gradient(linear, left top, left bottom, from(#80c9e5), to(#18a7d4));
   background: linear-gradient(to bottom, #80c9e5, #18a7d4);
+}
+
+.bs-footer a.bs-back:hover {
+  background: -webkit-gradient(linear, left bottom, left top, from(#80c9e5), to(#18a7d4));
+  background: linear-gradient(to top, #80c9e5, #18a7d4);
+}
+
+.bs-main {
+  -webkit-box-flex: 1;
+      -ms-flex-positive: 1;
+          flex-grow: 1;
+  padding: 20px;
+}
+
+#Datepickk .d-calendar,
+#Datepickk .d-header {
+  background-color: transparent;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  font-weight: 500;
+  font-size: 32px;
+}
+
+#Datepickk .d-table input + label {
+  padding: 18px 12px;
+  color: #fff;
+}
+
+#Datepickk .d-table input + label:before {
+  top: 0;
+  left: 50%;
+  width: 70px;
+  height: 70px;
+  border-radius: 35px;
+  background: -webkit-gradient(linear, left bottom, left top, from(#27ae60), to(#6fcf97));
+  background: linear-gradient(to top, #27ae60, #6fcf97);
+  -webkit-transform-origin: center;
+          transform-origin: center;
+  -webkit-transform: translate(-50%);
+          transform: translate(-50%);
+  opacity: 0;
+  -webkit-transition: opacity 0.2s;
+  transition: opacity 0.2s;
+}
+
+#Datepickk .d-table input + label.next, #Datepickk .d-table input + label.prev {
+  color: rgba(255, 255, 255, 0.5);
+}
+
+#Datepickk .d-table input:checked + label:before {
+  opacity: 1;
+  -webkit-transform: translate(-50%);
+          transform: translate(-50%);
+}
+
+#Datepickk .d-weekdays {
+  display: none;
+}
+
+#Datepickk .d-tables:not(.locked) input:not(:checked) + label:not(.hidden):hover {
+  background-color: transparent;
+  color: #fff;
+}
+
+#Datepickk .d-header i {
+  width: 35px;
+  height: 22px;
+  border-radius: 0;
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: cover;
+}
+
+#Datepickk .d-header i#d-previous {
+  background-image: url(../img/calendar-arrow-prev.svg);
+}
+
+#Datepickk .d-header i#d-next {
+  background-image: url(../img/calendar-arrow-next.svg);
+}
+
+#Datepickk .d-header i::before, #Datepickk .d-header i::after {
+  display: none;
 }
 /*# sourceMappingURL=main.css.map */
