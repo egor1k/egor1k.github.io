@@ -1,0 +1,178 @@
+@import url("https://fonts.googleapis.com/css?family=Ubuntu:300,300i,400,400i,500,500i,700,700i&subset=cyrillic");
+body {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  min-height: 100vh;
+}
+
+.bs-content {
+  font-family: "Ubuntu", sans-serif;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  overflow: hidden;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  width: 648px;
+  height: 904px;
+  border-top-left-radius: 24px;
+  border-top-right-radius: 24px;
+  border-bottom-right-radius: 8px;
+  border-bottom-left-radius: 8px;
+  background: -webkit-gradient(linear, left top, right top, from(#18a7d4), to(#6916a9));
+  background: linear-gradient(to right, #18a7d4, #6916a9);
+  color: #fff;
+}
+
+.bs-header {
+  padding: 24px;
+}
+
+.bs-header__info {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  margin-bottom: 40px;
+  color: #fff;
+}
+
+.bs-header__info > div {
+  -webkit-box-flex: 1;
+      -ms-flex-positive: 1;
+          flex-grow: 1;
+}
+
+.bs-header__info .bs-phone {
+  position: relative;
+  padding-left: 30px;
+  letter-spacing: 0.05em;
+  font-weight: 500;
+  font-size: 20px;
+}
+
+.bs-header__info .bs-phone span {
+  display: inline-block;
+  border-bottom: 1px solid #fff;
+}
+
+.bs-header__info .bs-phone::before {
+  position: absolute;
+  top: 2px;
+  left: 0;
+  display: block;
+  width: 18px;
+  height: 18px;
+  background-image: url(../img/bs-phone.svg);
+  background-position: center center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  content: "";
+}
+
+.bs-header__info .bs-help::before {
+  display: block;
+  width: 26px;
+  height: 26px;
+  background-image: url(../img/bs-help.svg);
+  background-position: center center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  content: "";
+  cursor: pointer;
+}
+
+.bs-header__info .bs-close::before {
+  display: block;
+  margin-left: auto;
+  width: 24px;
+  height: 24px;
+  background-image: url(../img/bs-close.svg);
+  background-position: center center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  content: "";
+  cursor: pointer;
+}
+
+.bs-header__title {
+  color: #6fcf97;
+  text-align: center;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+.bs-header__title .bs-h2 {
+  margin-bottom: 10px;
+  font-weight: 400;
+  font-size: 24px;
+}
+
+.bs-header__title .bs-h1 {
+  font-weight: 600;
+  font-size: 40px;
+}
+
+.bs-footer {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  overflow: hidden;
+  -ms-flex-wrap: nowrap;
+      flex-wrap: nowrap;
+  height: 100px;
+}
+
+.bs-footer a {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-flex: 1;
+      -ms-flex-positive: 1;
+          flex-grow: 1;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  height: 100%;
+  color: #fff;
+  text-align: center;
+  text-decoration: none;
+  text-transform: uppercase;
+  letter-spacing: 0.15em;
+  font-size: 24px;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+}
+
+.bs-footer a.bs-next {
+  background: -webkit-gradient(linear, left top, left bottom, from(#6fcf97), to(#27ae60));
+  background: linear-gradient(to bottom, #6fcf97, #27ae60);
+}
+
+.bs-footer a.bs-back {
+  background: -webkit-gradient(linear, left top, left bottom, from(#80c9e5), to(#18a7d4));
+  background: linear-gradient(to bottom, #80c9e5, #18a7d4);
+}
+/*# sourceMappingURL=main.css.map */

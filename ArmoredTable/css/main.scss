@@ -1,0 +1,141 @@
+@import url("https://fonts.googleapis.com/css?family=Ubuntu:300,300i,400,400i,500,500i,700,700i&subset=cyrillic");
+
+body {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+}
+
+.bs-content {
+    font-family: "Ubuntu", sans-serif;
+    display: flex;
+    overflow: hidden;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 648px;
+    height: 904px;
+    border-top-left-radius: 24px;
+    border-top-right-radius: 24px;
+    border-bottom-right-radius: 8px;
+    border-bottom-left-radius: 8px;
+    background: linear-gradient(to right, #18a7d4, #6916a9);
+    color: #fff;
+}
+
+.bs-header {
+    padding: 24px;
+}
+
+.bs-header__info {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 40px;
+    color: #fff;
+
+    & > div {
+        flex-grow: 1;
+    }
+
+    .bs-phone {
+        position: relative;
+        padding-left: 30px;
+        letter-spacing: 0.05em;
+        font-weight: 500;
+        font-size: 20px;
+
+        span {
+            display: inline-block;
+            border-bottom: 1px solid #fff;
+        }
+
+        &::before {
+            position: absolute;
+            top: 2px;
+            left: 0;
+            display: block;
+            width: 18px;
+            height: 18px;
+            background-image: url(../img/bs-phone.svg);
+            background-position: center center;
+            background-size: cover;
+            background-repeat: no-repeat;
+            content: "";
+        }
+    }
+
+    .bs-help::before {
+        display: block;
+        width: 26px;
+        height: 26px;
+        background-image: url(../img/bs-help.svg);
+        background-position: center center;
+        background-size: cover;
+        background-repeat: no-repeat;
+        content: "";
+        cursor: pointer;
+    }
+
+    .bs-close::before {
+        display: block;
+        margin-left: auto;
+        width: 24px;
+        height: 24px;
+        background-image: url(../img/bs-close.svg);
+        background-position: center center;
+        background-size: cover;
+        background-repeat: no-repeat;
+        content: "";
+        cursor: pointer;
+    }
+}
+
+.bs-header__title {
+    color: #6fcf97;
+    text-align: center;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+
+    .bs-h2 {
+        margin-bottom: 10px;
+        font-weight: 400;
+        font-size: 24px;
+    }
+
+    .bs-h1 {
+        font-weight: 600;
+        font-size: 40px;
+    }
+}
+
+.bs-footer {
+    display: flex;
+    overflow: hidden;
+    flex-wrap: nowrap;
+    height: 100px;
+
+    a {
+        display: flex;
+        align-items: center;
+        flex-grow: 1;
+        justify-content: center;
+        height: 100%;
+        color: #fff;
+        text-align: center;
+        text-decoration: none;
+        text-transform: uppercase;
+        letter-spacing: 0.15em;
+        font-size: 24px;
+
+        user-select: none;
+
+        &.bs-next {
+            background: linear-gradient(to bottom, #6fcf97, #27ae60);
+        }
+
+        &.bs-back {
+            background: linear-gradient(to bottom, #80c9e5, #18a7d4);
+        }
+    }
+}
