@@ -437,5 +437,26 @@ body {
   #Datepickk .d-tables {
     font-size: 16px;
   }
+  #Datepickk .d-table input + label:before {
+    width: 32px;
+    height: 32px;
+  }
+  .bs-header {
+    padding-bottom: 15px;
+  }
+  .bs-main {
+    padding-top: 0;
+  }
+  .bs-header__title .bs-h1,
+  .bs-main .bs-main__title {
+    font-size: 30px;
+    margin-bottom: 0;
+  }
+  .bs-header__title .bs-h2 {
+    font-size: 20px;
+  }
+  .bs-header__info {
+    margin-bottom: 20px;
+  }
 }
 /*# sourceMappingURL=main.css.map */
