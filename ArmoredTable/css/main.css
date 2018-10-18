@@ -9,7 +9,7 @@ body {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  min-height: 100vh;
+  height: 100vh;
 }
 
 .bs-content {
@@ -25,18 +25,36 @@ body {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
-  width: 648px;
-  height: 904px;
+  width: 100%;
+  height: 100vh;
+  max-width: 648px;
+  max-height: 904px;
   border-top-left-radius: 24px;
   border-top-right-radius: 24px;
   border-bottom-right-radius: 8px;
   border-bottom-left-radius: 8px;
   background: linear-gradient(137.39deg, #18a7d4, #6916a9);
-  color: #fff;
+  color: #ffffff;
 }
 
+@media (max-width: 648px) {
+  .bs-content {
+    border-radius: 0;
+  }
+}
+
+/* ------------------------------------------------------------------- 
+ * # Header
+ * ------------------------------------------------------------------- */
 .bs-header {
   padding: 24px;
+  overflow: hidden;
+}
+
+@media (max-width: 568px) {
+  .bs-header {
+    padding: 20px;
+  }
 }
 
 .bs-header__info {
@@ -50,7 +68,7 @@ body {
       -ms-flex-pack: justify;
           justify-content: space-between;
   margin-bottom: 40px;
-  color: #fff;
+  color: #ffffff;
 }
 
 .bs-header__info > div {
@@ -67,14 +85,21 @@ body {
   font-size: 20px;
 }
 
+@media (max-width: 568px) {
+  .bs-header__info .bs-phone {
+    font-size: 14px;
+  }
+}
+
 .bs-header__info .bs-phone span {
   display: inline-block;
-  border-bottom: 1px solid #fff;
+  border-bottom: 1px solid #ffffff;
+  cursor: pointer;
 }
 
 .bs-header__info .bs-phone::before {
   position: absolute;
-  top: 2px;
+  top: 50%;
   left: 0;
   display: block;
   width: 18px;
@@ -84,6 +109,8 @@ body {
   background-size: cover;
   background-repeat: no-repeat;
   content: "";
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
 }
 
 .bs-header__info .bs-help::before {
@@ -96,6 +123,14 @@ body {
   background-repeat: no-repeat;
   content: "";
   cursor: pointer;
+}
+
+@media (max-width: 568px) {
+  .bs-header__info .bs-help::before {
+    width: 20px;
+    height: 20px;
+    margin-left: auto;
+  }
 }
 
 .bs-header__info .bs-close::before {
@@ -111,6 +146,13 @@ body {
   cursor: pointer;
 }
 
+@media (max-width: 568px) {
+  .bs-header__info .bs-close::before {
+    width: 18px;
+    height: 18px;
+  }
+}
+
 .bs-header__title {
   color: #6fcf97;
   text-align: center;
@@ -124,11 +166,26 @@ body {
   font-size: 24px;
 }
 
+@media (max-width: 568px) {
+  .bs-header__title .bs-h2 {
+    font-size: 16px;
+  }
+}
+
 .bs-header__title .bs-h1 {
   font-weight: 600;
   font-size: 40px;
 }
 
+@media (max-width: 568px) {
+  .bs-header__title .bs-h1 {
+    font-size: 20px;
+  }
+}
+
+/* ------------------------------------------------------------------- 
+ * # Footer
+ * ------------------------------------------------------------------- */
 .bs-footer {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -137,6 +194,14 @@ body {
   -ms-flex-wrap: nowrap;
       flex-wrap: nowrap;
   height: 100px;
+  -ms-flex-negative: 0;
+      flex-shrink: 0;
+}
+
+@media (max-width: 568px) {
+  .bs-footer {
+    height: 49px;
+  }
 }
 
 .bs-footer a {
@@ -153,7 +218,7 @@ body {
       -ms-flex-pack: center;
           justify-content: center;
   height: 100%;
-  color: #fff;
+  color: #ffffff;
   text-align: center;
   text-decoration: none;
   text-transform: uppercase;
@@ -163,6 +228,12 @@ body {
      -moz-user-select: none;
       -ms-user-select: none;
           user-select: none;
+}
+
+@media (max-width: 568px) {
+  .bs-footer a {
+    font-size: 16px;
+  }
 }
 
 .bs-footer a.bs-next {
@@ -185,11 +256,59 @@ body {
   background: linear-gradient(to top, #80c9e5, #18a7d4);
 }
 
+/* ------------------------------------------------------------------- 
+ * # Main
+ * ------------------------------------------------------------------- */
 .bs-main {
+  overflow: hidden;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
   -webkit-box-flex: 1;
       -ms-flex-positive: 1;
           flex-grow: 1;
-  padding: 20px;
+  padding: 24px;
+}
+
+.bs-main .bs-main__title {
+  text-align: center;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  font-weight: 600;
+  font-size: 40px;
+  margin-bottom: 15px;
+}
+
+@media (max-width: 568px) {
+  .bs-main .bs-main__title {
+    font-size: 20px;
+  }
+}
+
+/* ------------------------------------------------------------------- 
+ * # Calendar
+ * ------------------------------------------------------------------- */
+.bs-calendar {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-flex: 1;
+      -ms-flex-positive: 1;
+          flex-grow: 1;
+}
+
+#Datepickk {
+  -webkit-box-flex: 1;
+      -ms-flex-positive: 1;
+          flex-grow: 1;
 }
 
 #Datepickk .d-calendar,
@@ -199,28 +318,48 @@ body {
   letter-spacing: 0.05em;
   font-weight: 500;
   font-size: 32px;
+  margin-bottom: 15px;
+}
+
+@media (max-width: 568px) {
+  #Datepickk .d-calendar,
+  #Datepickk .d-header {
+    font-size: 20px;
+  }
+}
+
+@media (max-width: 568px) {
+  #Datepickk .d-tables {
+    font-size: 16px;
+  }
 }
 
 #Datepickk .d-table input + label {
-  padding: 18px 12px;
-  color: #fff;
+  color: #ffffff;
 }
 
 #Datepickk .d-table input + label:before {
-  top: 0;
+  top: 50%;
   left: 50%;
   width: 70px;
   height: 70px;
   border-radius: 35px;
   background: -webkit-gradient(linear, left bottom, left top, from(#27ae60), to(#6fcf97));
   background: linear-gradient(to top, #27ae60, #6fcf97);
+  opacity: 0;
+  -webkit-transition: opacity 0.1s linear;
+  transition: opacity 0.1s linear;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
   -webkit-transform-origin: center;
           transform-origin: center;
-  -webkit-transform: translate(-50%);
-          transform: translate(-50%);
-  opacity: 0;
-  -webkit-transition: opacity 0.2s;
-  transition: opacity 0.2s;
+}
+
+@media (max-width: 568px) {
+  #Datepickk .d-table input + label:before {
+    width: 37px;
+    height: 37px;
+  }
 }
 
 #Datepickk .d-table input + label.next, #Datepickk .d-table input + label.prev {
@@ -229,8 +368,8 @@ body {
 
 #Datepickk .d-table input:checked + label:before {
   opacity: 1;
-  -webkit-transform: translate(-50%);
-          transform: translate(-50%);
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
 }
 
 #Datepickk .d-weekdays {
@@ -239,27 +378,40 @@ body {
 
 #Datepickk .d-tables:not(.locked) input:not(:checked) + label:not(.hidden):hover {
   background-color: transparent;
-  color: #fff;
+  color: #ffffff;
 }
 
 #Datepickk .d-header i {
   width: 35px;
   height: 22px;
   border-radius: 0;
-  background-repeat: no-repeat;
-  background-position: center center;
   background-size: cover;
+  background-repeat: no-repeat;
+}
+
+@media (max-width: 568px) {
+  #Datepickk .d-header i {
+    width: 25px;
+  }
 }
 
 #Datepickk .d-header i#d-previous {
   background-image: url(../img/calendar-arrow-prev.svg);
+  background-position: center left;
+  left: 0;
 }
 
 #Datepickk .d-header i#d-next {
   background-image: url(../img/calendar-arrow-next.svg);
+  background-position: center right;
+  right: 0;
 }
 
 #Datepickk .d-header i::before, #Datepickk .d-header i::after {
   display: none;
+}
+
+#Datepickk .d-header i:hover {
+  background-color: transparent;
 }
 /*# sourceMappingURL=main.css.map */
