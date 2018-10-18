@@ -461,7 +461,7 @@ body {
   }
 }
 
-@media (max-height: 320px) {
+@media (max-height: 340px) {
   .bs-footer {
     height: 25px;
   }
