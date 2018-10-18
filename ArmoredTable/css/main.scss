@@ -212,6 +212,10 @@ body {
     flex-grow: 1;
     padding: 24px;
 
+    @media(max-width: $media-sm) {
+        padding: 5px 20px;
+    }
+
     .bs-main__title {
         text-align: center;
         text-transform: uppercase;
@@ -276,8 +280,8 @@ body {
             transform-origin: center;
 
             @media(max-width: $media-sm) {
-                width: 37px;
-                height: 37px;
+                width: 32px;
+                height: 32px;
             }
         }
 
@@ -332,5 +336,18 @@ body {
         &:hover {
             background-color: transparent;
         }
+    }
+}
+
+@media (max-height:568px) {
+    body {
+        height: auto;
+        min-height: 568px;
+    }
+    .bs-content {
+        height: auto;
+    }
+    .bs-main {
+        min-height: 320px;
     }
 }
