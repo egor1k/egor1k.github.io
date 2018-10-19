@@ -1,7 +1,7 @@
 @import url("https://fonts.googleapis.com/css?family=Ubuntu:300,300i,400,400i,500,500i,700,700i&subset=cyrillic");
 .bs-content {
-  position: relative;
   font-family: "Ubuntu", sans-serif;
+  position: relative;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -10,9 +10,9 @@
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
   min-height: 100vh;
   max-width: 648px;
   max-height: 904px;
@@ -29,9 +29,9 @@
  * # Header
  * ------------------------------------------------------------------- */
 .bs-header {
-  overflow: hidden;
-  -ms-flex-negative: 0;
-      flex-shrink: 0;
+  -webkit-box-flex: 0;
+      -ms-flex: 0 0;
+          flex: 0 0;
   padding: 24px;
 }
 
@@ -46,13 +46,12 @@
       -ms-flex-pack: justify;
           justify-content: space-between;
   margin-bottom: 40px;
-  color: #fff;
 }
 
 .bs-header__info > div {
   -webkit-box-flex: 1;
-      -ms-flex-positive: 1;
-          flex-grow: 1;
+      -ms-flex: 1 0 auto;
+          flex: 1 0 auto;
 }
 
 .bs-header__info .bs-phone {
@@ -73,7 +72,7 @@
   position: absolute;
   top: 50%;
   left: 0;
-  display: block;
+  display: inline-block;
   width: 18px;
   height: 18px;
   background-image: url(../img/bs-phone.svg);
@@ -118,7 +117,7 @@
 }
 
 .bs-header__title .bs-h2 {
-  margin-bottom: 10px;
+  margin-bottom: 0.4em;
   font-weight: 400;
   font-size: 24px;
 }
@@ -139,8 +138,9 @@
   display: -ms-flexbox;
   display: flex;
   overflow: hidden;
-  -ms-flex-negative: 0;
-      flex-shrink: 0;
+  -webkit-box-flex: 0;
+      -ms-flex: 0 1 auto;
+          flex: 0 1 auto;
   -ms-flex-wrap: nowrap;
       flex-wrap: nowrap;
   max-width: 648px;
@@ -201,19 +201,19 @@
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  overflow: hidden;
+  overflow-x: hidden;
+  -webkit-box-flex: 1;
+      -ms-flex: 1 1 auto;
+          flex: 1 1 auto;
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  -webkit-box-flex: 1;
-      -ms-flex-positive: 1;
-          flex-grow: 1;
   padding: 24px 24px 100px 24px;
 }
 
 .bs-main .bs-main__title {
-  margin-bottom: 15px;
+  margin-bottom: 0.38em;
   text-align: center;
   text-transform: uppercase;
   letter-spacing: 0.05em;
@@ -228,28 +228,23 @@
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -webkit-box-flex: 1;
+      -ms-flex: 1 1 auto;
+          flex: 1 1 auto;
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  -webkit-box-flex: 1;
-      -ms-flex-positive: 1;
-          flex-grow: 1;
 }
 
 #Datepickk {
   -webkit-box-flex: 1;
-      -ms-flex-positive: 1;
-          flex-grow: 1;
-  -webkit-user-select: auto;
-     -moz-user-select: auto;
-      -ms-user-select: auto;
-          user-select: auto;
+      -ms-flex: 1 1 auto;
+          flex: 1 1 auto;
 }
 
 #Datepickk .d-calendar,
 #Datepickk .d-header {
-  margin-bottom: 15px;
   background-color: transparent;
   text-transform: uppercase;
   letter-spacing: 0.05em;
@@ -268,8 +263,8 @@
 #Datepickk .d-table input + label:before {
   top: 50%;
   left: 50%;
-  width: 55px;
-  height: 55px;
+  width: 60px;
+  height: 60px;
   border-radius: 35px;
   background: -webkit-gradient(linear, left bottom, left top, from(#27ae60), to(#6fcf97));
   background: linear-gradient(to top, #27ae60, #6fcf97);
@@ -290,10 +285,6 @@
   opacity: 1;
   -webkit-transform: translate(-50%, -50%);
           transform: translate(-50%, -50%);
-}
-
-#Datepickk .d-weekdays {
-  display: none;
 }
 
 #Datepickk .d-tables:not(.locked) input:not(:checked) + label:not(.hidden):hover {
@@ -330,8 +321,69 @@
 }
 
 #Datepickk .d-month-picker,
-#Datepickk .d-year-picker {
+#Datepickk .d-year-picker,
+#Datepickk .d-weekdays {
   display: none;
+}
+
+/* ------------------------------------------------------------------- 
+ * # Slide
+ * ------------------------------------------------------------------- */
+.bs-main > div {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-flex: 1;
+      -ms-flex-positive: 1;
+          flex-grow: 1;
+}
+
+.bs-1 .bs-back {
+  display: none;
+}
+
+.bs-main .bs-slide1 {
+  display: none;
+}
+
+.bs-1 .bs-main .bs-slide1 {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.bs-main .bs-slide2 {
+  display: none;
+}
+
+.bs-2 .bs-main .bs-slide2 {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.bs-main .bs-slide3 {
+  display: none;
+}
+
+.bs-3 .bs-main .bs-slide3 {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.bs-main .bs-slide4 {
+  display: none;
+}
+
+.bs-4 .bs-main .bs-slide4 {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
 }
 
 /* ------------------------------------------------------------------- 
@@ -345,7 +397,7 @@
     padding: 10px 20px;
   }
   .bs-header__info {
-    margin-bottom: 10px;
+    margin-bottom: 20px;
   }
   .bs-header__info .bs-phone {
     font-size: 14px;
@@ -359,14 +411,11 @@
     width: 18px;
     height: 18px;
   }
-  .bs-header__title {
-    padding: 15px 0;
+  .bs-header__title .bs-h2 {
+    font-size: 16px;
   }
   .bs-header__title .bs-h1 {
     font-size: 20px;
-  }
-  .bs-header__title .bs-h2 {
-    font-size: 16px;
   }
   .bs-footer {
     max-width: none;
@@ -376,17 +425,15 @@
     font-size: 16px;
   }
   .bs-main {
-    padding: 5px 20px 60px 20px;
+    padding: 10px 20px 49px 20px;
   }
   .bs-main .bs-main__title {
-    margin-bottom: 10px;
     font-size: 20px;
   }
   #Datepickk .d-table {
     min-height: 225px;
   }
   #Datepickk .d-header {
-    margin-bottom: 5px;
     font-size: 20px;
   }
   #Datepickk .d-tables {
@@ -407,7 +454,7 @@
     border-radius: 0;
   }
   .bs-header {
-    padding-bottom: 10px;
+    padding: 20px 20px 10px 20px;
   }
   .bs-header__info {
     margin-bottom: 15px;
@@ -424,51 +471,37 @@
     width: 18px;
     height: 18px;
   }
+  .bs-header__title .bs-h2 {
+    font-size: 16px;
+  }
   .bs-header__title .bs-h1 {
     font-size: 20px;
   }
-  .bs-header__title .bs-h2 {
-    margin-bottom: 10px;
-    font-size: 16px;
-  }
   .bs-footer {
     max-width: none;
-    height: 40px;
-  }
-  #Datepickk .d-calendar {
-    margin-bottom: 5px;
+    height: 49px;
   }
   .bs-footer a {
     font-size: 16px;
   }
   .bs-main {
-    padding: 10px 20px 50px 20px;
+    padding: 10px 20px 49px 20px;
   }
   .bs-main .bs-main__title {
     font-size: 20px;
   }
   #Datepickk .d-header {
-    margin-bottom: 5px;
     font-size: 20px;
   }
   #Datepickk .d-tables {
     font-size: 16px;
   }
   #Datepickk .d-table input + label:before {
-    width: 30px;
-    height: 30px;
+    width: 32px;
+    height: 32px;
   }
   #Datepickk .d-header i {
     width: 25px;
-  }
-}
-
-@media only screen {
-  .bs-footer {
-    position: absolute;
-  }
-  .bs-content {
-    min-height: 904px;
   }
 }
 /*# sourceMappingURL=main.css.map */

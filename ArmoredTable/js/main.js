@@ -1,20 +1,44 @@
-var datepicker = new Datepickk();
-datepicker.maxSelections = 1;
-datepicker.container = document.querySelector('#bs-calendar');
-datepicker.inline = true;
-datepicker.lang = 'ru';
-datepicker.show();
+var calendar = function () {
+    var datepicker = new Datepickk();
+    datepicker.maxSelections = 1;
+    datepicker.container = document.querySelector('#bs-calendar');
+    // datepicker.inline = true;
+    datepicker.lang = 'ru';
+    datepicker.show();
+}
 
+var slidePage = function () {
+    $(document).ready(function () {
 
+        var bsbody = $('body'),
+            buttonNext = $('.bs-next'),
+            buttonPrev = $('.bs-back'),
+            bsquantity = 3;
 
-$('.bs-content.bs-1 .bs-next').on('click', function(e) {
-    e.preventDefault();
-    $('.bs-content').removeClass('bs-1');
-    $('.bs-content').addClass('bs-2');
-});
+        buttonNext.on('click', function (e) {
+            e.preventDefault();
+            var slidenumber = bsbody.attr('data-bs');
+            if (slidenumber >= bsquantity) {
+                return;
+            }
+            var oldBsClass = "bs-" + slidenumber++,
+                newBsClass = "bs-" + slidenumber;
+            bsbody.attr('data-bs', slidenumber).removeClass(oldBsClass).addClass(newBsClass);
+        });
 
-$('.bs-content.bs-2 .bs-prev').on('click', function(e) {
-    e.preventDefault();
-    $('.bs-content').removeClass('bs-2');
-    $('.bs-content').addClass('bs-1');
-});
+        buttonPrev.on('click', function (e) {
+            e.preventDefault();
+            var slidenumber = bsbody.attr('data-bs');
+            if (slidenumber <= 1) {
+                return;
+            }
+            var oldBsClass = "bs-" + slidenumber--,
+                newBsClass = "bs-" + slidenumber;
+            bsbody.attr('data-bs', slidenumber).removeClass(oldBsClass).addClass(newBsClass);
+        });
+
+    });
+}
+
+calendar();
+slidePage();

@@ -10,12 +10,12 @@ body {
 }
 
 .bs-content {
-    position: relative;
     font-family: "Ubuntu", sans-serif;
+    position: relative;
     display: flex;
     overflow: hidden;
     flex-direction: column;
-    justify-content: space-between;
+    justify-content: flex-start;
     min-height: 100vh;
     max-width: 648px;
     max-height: 904px;
@@ -32,8 +32,7 @@ body {
  * # Header
  * ------------------------------------------------------------------- */
 .bs-header {
-    overflow: hidden;
-    flex-shrink: 0;
+    flex: 0 0;
     padding: 24px;
 }
 
@@ -42,10 +41,9 @@ body {
     align-items: center;
     justify-content: space-between;
     margin-bottom: 40px;
-    color: #fff;
 
     & > div {
-        flex-grow: 1;
+        flex: 1 0 auto;
     }
 
     .bs-phone {
@@ -65,7 +63,7 @@ body {
             position: absolute;
             top: 50%;
             left: 0;
-            display: block;
+            display: inline-block;
             width: 18px;
             height: 18px;
             background-image: url(../img/bs-phone.svg);
@@ -110,7 +108,7 @@ body {
     letter-spacing: 0.05em;
 
     .bs-h2 {
-        margin-bottom: 10px;
+        margin-bottom: 0.4em;
         font-weight: 400;
         font-size: 24px;
     }
@@ -131,7 +129,7 @@ body {
     z-index: 1;
     display: flex;
     overflow: hidden;
-    flex-shrink: 0;
+    flex: 0 1 auto;
     flex-wrap: nowrap;
     max-width: 648px;
     width: 100%;
@@ -176,13 +174,13 @@ body {
  * ------------------------------------------------------------------- */
 .bs-main {
     display: flex;
-    overflow: hidden;
+    overflow-x: hidden;
+    flex: 1 1 auto;
     flex-direction: column;
-    flex-grow: 1;
     padding: 24px 24px 100px 24px;
 
     .bs-main__title {
-        margin-bottom: 15px;
+        margin-bottom: 0.38em;
         text-align: center;
         text-transform: uppercase;
         letter-spacing: 0.05em;
@@ -197,18 +195,15 @@ body {
  * ------------------------------------------------------------------- */
 .bs-calendar {
     display: flex;
+    flex: 1 1 auto;
     flex-direction: column;
-    flex-grow: 1;
 }
 
 #Datepickk {
-    flex-grow: 1;
-
-    user-select: auto;
+    flex: 1 1 auto;
 
     .d-calendar,
     .d-header {
-        margin-bottom: 15px;
         background-color: transparent;
         text-transform: uppercase;
         letter-spacing: 0.05em;
@@ -226,8 +221,8 @@ body {
         &:before {
             top: 50%;
             left: 50%;
-            width: 55px;
-            height: 55px;
+            width: 60px;
+            height: 60px;
             border-radius: 35px;
             background: linear-gradient(to top, #27ae60, #6fcf97);
             opacity: 0;
@@ -245,10 +240,6 @@ body {
     .d-table input:checked + label:before {
         opacity: 1;
         transform: translate(-50%, -50%);
-    }
-
-    .d-weekdays {
-        display: none;
     }
 
     .d-tables:not(.locked) input:not(:checked) + label:not(.hidden):hover {
@@ -286,11 +277,35 @@ body {
     }
 
     .d-month-picker,
-    .d-year-picker {
+    .d-year-picker,
+    .d-weekdays {
         display: none;
     }
 }
 
+
+/* ------------------------------------------------------------------- 
+ * # Slide
+ * ------------------------------------------------------------------- */
+.bs-main > div {
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+}
+
+.bs-1 .bs-back {
+    display: none;
+}
+
+@for $i from 1 through 4 {
+    .bs-main .bs-slide#{$i} {
+        display: none;
+
+        .bs-#{$i} & {
+            display: flex;
+        }
+    }
+}
 
 /* ------------------------------------------------------------------- 
  * # Media
@@ -305,7 +320,7 @@ body {
     }
 
     .bs-header__info {
-        margin-bottom: 10px;
+        margin-bottom: 20px;
     }
 
     .bs-header__info .bs-phone {
@@ -323,16 +338,12 @@ body {
         height: 18px;
     }
 
-    .bs-header__title {
-        padding: 15px 0;
+    .bs-header__title .bs-h2 {
+        font-size: 16px;
     }
 
     .bs-header__title .bs-h1 {
         font-size: 20px;
-    }
-
-    .bs-header__title .bs-h2 {
-        font-size: 16px;
     }
 
     .bs-footer {
@@ -345,11 +356,10 @@ body {
     }
 
     .bs-main {
-        padding: 5px 20px 60px 20px;
+        padding: 10px 20px 49px 20px;
     }
 
     .bs-main .bs-main__title {
-        margin-bottom: 10px;
         font-size: 20px;
     }
 
@@ -359,7 +369,6 @@ body {
         }
 
         .d-header {
-            margin-bottom: 5px;
             font-size: 20px;
         }
 
@@ -387,7 +396,7 @@ body {
     }
 
     .bs-header {
-        padding-bottom: 10px;
+        padding: 20px 20px 10px 20px;
     }
 
     .bs-header__info {
@@ -409,22 +418,17 @@ body {
         height: 18px;
     }
 
+    .bs-header__title .bs-h2 {
+        font-size: 16px;
+    }
+
     .bs-header__title .bs-h1 {
         font-size: 20px;
     }
 
-    .bs-header__title .bs-h2 {
-        margin-bottom: 10px;
-        font-size: 16px;
-    }
-
     .bs-footer {
         max-width: none;
-        height: 40px;
-    }
-
-    #Datepickk .d-calendar {
-        margin-bottom: 5px;
+        height: 49px;
     }
 
     .bs-footer a {
@@ -432,7 +436,7 @@ body {
     }
 
     .bs-main {
-        padding: 10px 20px 50px 20px;
+        padding: 10px 20px 49px 20px;
     }
 
     .bs-main .bs-main__title {
@@ -441,7 +445,6 @@ body {
 
     #Datepickk {
         .d-header {
-            margin-bottom: 5px;
             font-size: 20px;
         }
 
@@ -451,22 +454,13 @@ body {
 
         .d-table input + label {
             &:before {
-                width: 30px;
-                height: 30px;
+                width: 32px;
+                height: 32px;
             }
         }
 
         .d-header i {
             width: 25px;
         }
-    }
-}
-
-@media only screen {
-    .bs-footer {
-        position: absolute;
-    }
-    .bs-content {
-        min-height: 904px;
     }
 }
