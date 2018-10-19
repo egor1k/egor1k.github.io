@@ -615,5 +615,28 @@
   #Datepickk .d-header i {
     width: 25px;
   }
+  .bs-time .bs-input input {
+    height: 50px;
+    font-size: 60px;
+  }
+  .bs-time-2::before {
+    font-size: 60px;
+    top: 50%;
+  }
+  .bs-time-1 .bs-input .bs-minus {
+    left: calc(50% - 65px);
+  }
+  .bs-time-1 .bs-input .bs-plus {
+    left: calc(50% + 65px);
+  }
+  .bs-time .bs-input .bs-plus, .bs-time .bs-input .bs-minus {
+    width: 60px;
+    height: 32px;
+  }
+  .bs-time-1 .bs-input .bs-minus,
+  .bs-time-1 .bs-input .bs-plus {
+    width: 32px;
+    height: 60px;
+  }
 }
 /*# sourceMappingURL=main.css.map */
