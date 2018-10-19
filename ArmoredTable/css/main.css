@@ -437,8 +437,6 @@
       -ms-flex-positive: 1;
           flex-grow: 1;
   position: relative;
-  -webkit-animation: bs-show 0.4s;
-          animation: bs-show 0.4s;
 }
 
 .bs-1 .bs-back {
