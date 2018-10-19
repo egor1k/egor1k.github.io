@@ -1,4 +1,11 @@
 @import url("https://fonts.googleapis.com/css?family=Ubuntu:300,300i,400,400i,500,500i,700,700i&subset=cyrillic");
+*,
+*::before,
+*::after {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
 .bs-content {
   font-family: "Ubuntu", sans-serif;
   position: relative;
@@ -156,8 +163,8 @@
       -ms-flex-align: center;
           align-items: center;
   -webkit-box-flex: 1;
-      -ms-flex-positive: 1;
-          flex-grow: 1;
+      -ms-flex: 1 0;
+          flex: 1 0;
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
@@ -174,12 +181,12 @@
           user-select: none;
 }
 
-.bs-footer a.bs-next {
+.bs-footer a.bs-next, .bs-footer a.bs-success {
   background: -webkit-gradient(linear, left top, left bottom, from(#6fcf97), to(#27ae60));
   background: linear-gradient(to bottom, #6fcf97, #27ae60);
 }
 
-.bs-footer a.bs-next:hover {
+.bs-footer a.bs-next:hover, .bs-footer a.bs-success:hover {
   background: -webkit-gradient(linear, left bottom, left top, from(#6fcf97), to(#27ae60));
   background: linear-gradient(to top, #6fcf97, #27ae60);
 }
@@ -429,6 +436,9 @@
   -webkit-box-flex: 1;
       -ms-flex-positive: 1;
           flex-grow: 1;
+  position: relative;
+  -webkit-animation: bs-show 0.4s;
+          animation: bs-show 0.4s;
 }
 
 .bs-1 .bs-back {
@@ -473,6 +483,59 @@
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+}
+
+.bs-footer .bs-submit,
+.bs-footer .bs-success {
+  display: none;
+}
+
+.bs-4 .bs-footer .bs-next {
+  display: none;
+}
+
+.bs-4 .bs-footer .bs-next.bs-submit {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.bs-5 .bs-footer a {
+  display: none;
+}
+
+.bs-5 .bs-footer a.bs-success {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+/* ------------------------------------------------------------------- 
+ * # Form
+ * ------------------------------------------------------------------- */
+.bs-form p {
+  text-transform: uppercase;
+  font-size: 17px;
+  font-weight: 500;
+  letter-spacing: 0.05em;
+  padding-left: 30px;
+  margin-bottom: 20px;
+}
+
+.bs-form input {
+  padding: 0 30px;
+  width: 100%;
+  height: 85px;
+  outline: none;
+  border: none;
+  border-radius: 8px;
+  background-color: #fff;
+  color: #828282;
+  letter-spacing: 0.05em;
+  font-weight: 500;
+  font-size: 32px;
+  line-height: 32px;
+  margin-bottom: 60px;
 }
 
 /* ------------------------------------------------------------------- 
@@ -540,8 +603,8 @@
     font-size: 60px;
   }
   .bs-time-2::before {
-    font-size: 60px;
     top: 50%;
+    font-size: 60px;
   }
   .bs-time-1 .bs-input .bs-minus {
     left: calc(50% - 65px);
@@ -549,7 +612,8 @@
   .bs-time-1 .bs-input .bs-plus {
     left: calc(50% + 65px);
   }
-  .bs-time .bs-input .bs-plus, .bs-time .bs-input .bs-minus {
+  .bs-time .bs-input .bs-plus,
+  .bs-time .bs-input .bs-minus {
     width: 60px;
     height: 32px;
   }
@@ -620,8 +684,8 @@
     font-size: 60px;
   }
   .bs-time-2::before {
-    font-size: 60px;
     top: 50%;
+    font-size: 60px;
   }
   .bs-time-1 .bs-input .bs-minus {
     left: calc(50% - 65px);
@@ -629,7 +693,8 @@
   .bs-time-1 .bs-input .bs-plus {
     left: calc(50% + 65px);
   }
-  .bs-time .bs-input .bs-plus, .bs-time .bs-input .bs-minus {
+  .bs-time .bs-input .bs-plus,
+  .bs-time .bs-input .bs-minus {
     width: 60px;
     height: 32px;
   }
@@ -637,6 +702,28 @@
   .bs-time-1 .bs-input .bs-plus {
     width: 32px;
     height: 60px;
+  }
+}
+
+@-webkit-keyframes bs-show {
+  0% {
+    opacity: 0;
+    bottom: -100px;
+  }
+  100% {
+    opacity: 1;
+    bottom: 0;
+  }
+}
+
+@keyframes bs-show {
+  0% {
+    opacity: 0;
+    bottom: -100px;
+  }
+  100% {
+    opacity: 1;
+    bottom: 0;
   }
 }
 /*# sourceMappingURL=main.css.map */

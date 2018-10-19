@@ -12,9 +12,9 @@ var slidePage = function () {
     var bsbody = $('.bs-content'), // отслеживаемый контейнер
         buttonNext = $('.bs-next'), // кнопка вперед
         buttonPrev = $('.bs-back'), // кнопка назад
-        bsquantity = 3; // всего слайдов
+        bsquantity = 5; // всего слайдов
 
-    bsbody.addClass('bs-2').attr('data-bs', '2');
+    bsbody.addClass('bs-1').attr('data-bs', '1');
 
     buttonNext.on('click', function (e) {
         e.preventDefault();
