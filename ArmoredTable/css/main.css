@@ -9,8 +9,6 @@ body {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  height: 100vh;
-  overflow: hidden;
 }
 
 .bs-content {
@@ -26,16 +24,16 @@ body {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
+  min-height: 100vh;
   max-width: 648px;
   max-height: 904px;
   width: 100%;
-  height: 100vh;
   border-top-left-radius: 24px;
   border-top-right-radius: 24px;
   border-bottom-right-radius: 8px;
   border-bottom-left-radius: 8px;
   background: linear-gradient(137.39deg, #18a7d4, #6916a9);
-  color: #ffffff;
+  color: #fff;
 }
 
 /* ------------------------------------------------------------------- 
@@ -43,9 +41,9 @@ body {
  * ------------------------------------------------------------------- */
 .bs-header {
   overflow: hidden;
-  padding: 24px;
   -ms-flex-negative: 0;
       flex-shrink: 0;
+  padding: 24px;
 }
 
 .bs-header__info {
@@ -59,7 +57,7 @@ body {
       -ms-flex-pack: justify;
           justify-content: space-between;
   margin-bottom: 40px;
-  color: #ffffff;
+  color: #fff;
 }
 
 .bs-header__info > div {
@@ -78,7 +76,7 @@ body {
 
 .bs-header__info .bs-phone span {
   display: inline-block;
-  border-bottom: 1px solid #ffffff;
+  border-bottom: 1px solid #fff;
   cursor: pointer;
 }
 
@@ -145,6 +143,9 @@ body {
  * # Footer
  * ------------------------------------------------------------------- */
 .bs-footer {
+  position: fixed;
+  bottom: 0;
+  z-index: 1;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -153,6 +154,8 @@ body {
       flex-shrink: 0;
   -ms-flex-wrap: nowrap;
       flex-wrap: nowrap;
+  width: 100%;
+  max-width: 648px;
   height: 100px;
 }
 
@@ -170,7 +173,7 @@ body {
       -ms-flex-pack: center;
           justify-content: center;
   height: 100%;
-  color: #ffffff;
+  color: #fff;
   text-align: center;
   text-decoration: none;
   text-transform: uppercase;
@@ -217,7 +220,7 @@ body {
   -webkit-box-flex: 1;
       -ms-flex-positive: 1;
           flex-grow: 1;
-  padding: 24px;
+  padding: 24px 24px 100px 24px;
 }
 
 .bs-main .bs-main__title {
@@ -246,6 +249,10 @@ body {
 }
 
 #Datepickk {
+  -webkit-user-select: auto;
+     -moz-user-select: auto;
+      -ms-user-select: auto;
+          user-select: auto;
   -webkit-box-flex: 1;
       -ms-flex-positive: 1;
           flex-grow: 1;
@@ -261,8 +268,12 @@ body {
   font-size: 32px;
 }
 
+#Datepickk .d-table {
+  min-height: 320px;
+}
+
 #Datepickk .d-table input + label {
-  color: #ffffff;
+  color: #fff;
 }
 
 #Datepickk .d-table input + label:before {
@@ -298,7 +309,7 @@ body {
 
 #Datepickk .d-tables:not(.locked) input:not(:checked) + label:not(.hidden):hover {
   background-color: transparent;
-  color: #ffffff;
+  color: #fff;
 }
 
 #Datepickk .d-header i {
@@ -365,16 +376,20 @@ body {
   }
   .bs-footer {
     height: 49px;
+    max-width: none;
   }
   .bs-footer a {
     font-size: 16px;
   }
   .bs-main {
-    padding: 5px 20px;
+    padding: 5px 20px 60px 20px;
   }
   .bs-main .bs-main__title {
-    font-size: 20px;
     margin-bottom: 10px;
+    font-size: 20px;
+  }
+  #Datepickk .d-table {
+    min-height: 225px;
   }
   #Datepickk .d-header {
     margin-bottom: 5px;
@@ -398,11 +413,10 @@ body {
     border-radius: 0;
   }
   .bs-header {
-    padding-top: 5px;
-    padding-bottom: 0;
+    padding-bottom: 10px;
   }
   .bs-header__info {
-    margin-bottom: 10px;
+    margin-bottom: 15px;
   }
   .bs-header__info .bs-phone {
     font-size: 14px;
@@ -416,18 +430,16 @@ body {
     width: 18px;
     height: 18px;
   }
-  .bs-header__title {
-    padding: 0;
-  }
   .bs-header__title .bs-h1 {
     font-size: 20px;
   }
   .bs-header__title .bs-h2 {
     font-size: 16px;
-    margin-bottom: 5px;
+    margin-bottom: 10px;
   }
   .bs-footer {
-    height: 35px;
+    height: 40px;
+    max-width: none;
   }
   #Datepickk .d-calendar {
     margin-bottom: 5px;
@@ -436,11 +448,10 @@ body {
     font-size: 16px;
   }
   .bs-main {
-    padding: 5px 20px;
-    padding-top: 0;
+    padding: 10px 20px 50px 20px;
   }
   .bs-main .bs-main__title {
-    display: none;
+    font-size: 20px;
   }
   #Datepickk .d-header {
     margin-bottom: 5px;
@@ -462,23 +473,23 @@ body {
   }
 }
 
-@media (max-height: 340px) {
-  .bs-footer {
-    height: 25px;
-  }
-  #Datepickk .d-header {
-    margin-bottom: 5px;
-    font-size: 16px;
-  }
-  .bs-header__title .bs-h1 {
-    font-size: 16px;
-  }
-  #Datepickk .d-table input + label:before {
-    width: 70%;
-    height: 100%;
-  }
-  #Datepickk .d-table input + label.today text:before {
-    display: none;
-  }
-}
+/* @media (max-height: 340px) {
+    .bs-footer {
+        height: 25px;
+    }
+    #Datepickk .d-header {
+        margin-bottom: 5px;
+        font-size: 16px;
+    }
+    .bs-header__title .bs-h1 {
+        font-size: 16px;
+    }
+    #Datepickk .d-table input + label:before {
+        width: 70%;
+        height: 100%;
+    }
+    #Datepickk .d-table input+label.today text:before {
+        display: none;
+    }
+} */
 /*# sourceMappingURL=main.css.map */
