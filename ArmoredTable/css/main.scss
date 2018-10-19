@@ -389,7 +389,7 @@ body {
     display: none;
 }
 
-@for $i from 1 through 4 {
+@for $i from 1 through 6 {
     .bs-main .bs-slide#{$i} {
         display: none;
 

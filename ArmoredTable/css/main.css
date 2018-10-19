@@ -485,6 +485,26 @@
   display: flex;
 }
 
+.bs-main .bs-slide5 {
+  display: none;
+}
+
+.bs-5 .bs-main .bs-slide5 {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.bs-main .bs-slide6 {
+  display: none;
+}
+
+.bs-6 .bs-main .bs-slide6 {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
 .bs-footer .bs-submit,
 .bs-footer .bs-success {
   display: none;
