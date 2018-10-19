@@ -2,14 +2,15 @@
 
 
 body {
-    display: flex;
-    align-items: center;
-    justify-content: center;
+    // display: flex;
+    // align-items: center;
+    // justify-content: center;
     // height: 100vh;
     // overflow: hidden;
 }
 
 .bs-content {
+    position: relative;
     font-family: "Ubuntu", sans-serif;
     display: flex;
     overflow: hidden;
@@ -43,7 +44,7 @@ body {
     margin-bottom: 40px;
     color: #fff;
 
-    &>div {
+    & > div {
         flex-grow: 1;
     }
 
@@ -132,8 +133,8 @@ body {
     overflow: hidden;
     flex-shrink: 0;
     flex-wrap: nowrap;
-    width: 100%;
     max-width: 648px;
+    width: 100%;
     height: 100px;
 
     a {
@@ -201,8 +202,9 @@ body {
 }
 
 #Datepickk {
-    user-select: auto;
     flex-grow: 1;
+
+    user-select: auto;
 
     .d-calendar,
     .d-header {
@@ -218,7 +220,7 @@ body {
         min-height: 320px;
     }
 
-    .d-table input+label {
+    .d-table input + label {
         color: #fff;
 
         &:before {
@@ -240,7 +242,7 @@ body {
         }
     }
 
-    .d-table input:checked+label:before {
+    .d-table input:checked + label:before {
         opacity: 1;
         transform: translate(-50%, -50%);
     }
@@ -249,7 +251,7 @@ body {
         display: none;
     }
 
-    .d-tables:not(.locked) input:not(:checked)+label:not(.hidden):hover {
+    .d-tables:not(.locked) input:not(:checked) + label:not(.hidden):hover {
         background-color: transparent;
         color: #fff;
     }
@@ -281,6 +283,11 @@ body {
         &:hover {
             background-color: transparent;
         }
+    }
+
+    .d-month-picker,
+    .d-year-picker {
+        display: none;
     }
 }
 
@@ -329,8 +336,8 @@ body {
     }
 
     .bs-footer {
-        height: 49px;
         max-width: none;
+        height: 49px;
     }
 
     .bs-footer a {
@@ -360,7 +367,7 @@ body {
             font-size: 16px;
         }
 
-        .d-table input+label {
+        .d-table input + label {
             &:before {
                 width: 32px;
                 height: 32px;
@@ -407,13 +414,13 @@ body {
     }
 
     .bs-header__title .bs-h2 {
-        font-size: 16px;
         margin-bottom: 10px;
+        font-size: 16px;
     }
 
     .bs-footer {
-        height: 40px;
         max-width: none;
+        height: 40px;
     }
 
     #Datepickk .d-calendar {
@@ -433,7 +440,6 @@ body {
     }
 
     #Datepickk {
-
         .d-header {
             margin-bottom: 5px;
             font-size: 20px;
@@ -443,7 +449,7 @@ body {
             font-size: 16px;
         }
 
-        .d-table input+label {
+        .d-table input + label {
             &:before {
                 width: 30px;
                 height: 30px;
@@ -454,29 +460,13 @@ body {
             width: 25px;
         }
     }
-
-    #Datepickk .d-month-picker,
-    #Datepickk .d-year-picker {
-        display: none;
-    }
 }
 
-/* @media (max-height: 340px) {
+@media only screen {
     .bs-footer {
-        height: 25px;
+        position: absolute;
     }
-    #Datepickk .d-header {
-        margin-bottom: 5px;
-        font-size: 16px;
+    .bs-content {
+        min-height: 904px;
     }
-    .bs-header__title .bs-h1 {
-        font-size: 16px;
-    }
-    #Datepickk .d-table input + label:before {
-        width: 70%;
-        height: 100%;
-    }
-    #Datepickk .d-table input+label.today text:before {
-        display: none;
-    }
-} */
+}
