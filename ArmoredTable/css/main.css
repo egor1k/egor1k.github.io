@@ -209,7 +209,7 @@
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  padding: 24px 24px 100px 24px;
+  padding: 24px 24px 140px 24px;
 }
 
 .bs-main .bs-main__title {
@@ -219,6 +219,95 @@
   letter-spacing: 0.05em;
   font-weight: 600;
   font-size: 40px;
+}
+
+.bs-time {
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  padding: 60px 0;
+}
+
+.bs-time .bs-input {
+  position: relative;
+}
+
+.bs-time .bs-input input {
+  font-family: "Ubuntu", sans-serif;
+  width: 100%;
+  height: 95px;
+  border: none;
+  background-color: transparent;
+  color: #fff;
+  text-align: center;
+  letter-spacing: 0.05em;
+  font-weight: 500;
+  font-size: 120px;
+}
+
+.bs-time .bs-input .bs-plus,
+.bs-time .bs-input .bs-minus {
+  position: absolute;
+  left: 50%;
+  display: block;
+  width: 77px;
+  height: 40px;
+  background-position: center center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  content: "";
+  cursor: pointer;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
+}
+
+.bs-time .bs-input .bs-plus {
+  top: -50px;
+  background-image: url(../img/trigonUp.svg);
+}
+
+.bs-time .bs-input .bs-minus {
+  bottom: -50px;
+  background-image: url(../img/trigonDown.svg);
+}
+
+.bs-time-2::before {
+  position: absolute;
+  top: -8px;
+  top: calc(50% - 10px);
+  left: 50%;
+  display: block;
+  content: ":";
+  font-size: 100px;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+}
+
+.bs-time-1 {
+  padding: 20px 0;
+}
+
+.bs-time-1 .bs-input .bs-plus,
+.bs-time-1 .bs-input .bs-minus {
+  top: 50%;
+  width: 40px;
+  height: 77px;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+}
+
+.bs-time-1 .bs-input .bs-plus {
+  left: calc(50% + 100px);
+  background-image: url(../img/trigonRight.svg);
+}
+
+.bs-time-1 .bs-input .bs-minus {
+  left: calc(50% - 100px);
+  background-image: url(../img/trigonLeft.svg);
 }
 
 /* ------------------------------------------------------------------- 
@@ -425,7 +514,7 @@
     font-size: 16px;
   }
   .bs-main {
-    padding: 10px 20px 49px 20px;
+    padding: 10px 20px 89px 20px;
   }
   .bs-main .bs-main__title {
     font-size: 20px;
@@ -445,6 +534,29 @@
   }
   #Datepickk .d-header i {
     width: 25px;
+  }
+  .bs-time .bs-input input {
+    height: 50px;
+    font-size: 60px;
+  }
+  .bs-time-2::before {
+    font-size: 60px;
+    top: 50%;
+  }
+  .bs-time-1 .bs-input .bs-minus {
+    left: calc(50% - 65px);
+  }
+  .bs-time-1 .bs-input .bs-plus {
+    left: calc(50% + 65px);
+  }
+  .bs-time .bs-input .bs-plus, .bs-time .bs-input .bs-minus {
+    width: 60px;
+    height: 32px;
+  }
+  .bs-time-1 .bs-input .bs-minus,
+  .bs-time-1 .bs-input .bs-plus {
+    width: 32px;
+    height: 60px;
   }
 }
 
@@ -485,7 +597,7 @@
     font-size: 16px;
   }
   .bs-main {
-    padding: 10px 20px 49px 20px;
+    padding: 10px 20px 89px 20px;
   }
   .bs-main .bs-main__title {
     font-size: 20px;
