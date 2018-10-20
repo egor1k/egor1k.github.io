@@ -1,15 +1,11 @@
+// https://kingsora.github.io/OverlayScrollbars/#!documentation/options
 var trScrollContent = function () {
-    // $(function () {
-    $(".tablereservation").niceScroll(".tr-scrollcontent", {
-        cursorcolor: "transparent",
-        horizrailenabled: false,
-        cursorwidth: "0",
-        cursorborder: "none",
-        cursoropacitymax: 0,
-        autohidemode: "hidden"
+    $(".tr-scrollcontent").overlayScrollbars({
+        scrollbars: {
+            visibility: "hidden"
+        },
     });
-    // });
-}
+};
 
 var trSteps = function () {
     var maincontainer = $('.tablereservation'),
@@ -49,7 +45,9 @@ var trSteps = function () {
         }
     });
 
-}
+};
 
-trScrollContent();
-trSteps();
+$(function () {
+    trScrollContent();
+    trSteps();
+});

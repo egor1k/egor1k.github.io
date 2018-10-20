@@ -1,24 +1,35 @@
 @import url("https://fonts.googleapis.com/css?family=Ubuntu:300,400,500,700&subset=cyrillic");
+$height: 568px;
+
+*,
+::before,
+::after {
+    box-sizing: border-box;
+}
+
+body {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+}
 
 .tablereservation {
     font-family: "Ubuntu", sans-serif;
     position: relative;
     overflow: hidden;
     box-sizing: border-box;
+    min-height: $height;
     max-width: 320px;
-    // min-height: 568px;
-    max-height: 568px;
-    // width: 100%;
-    // height: 100%;
+    max-height: $height;
     width: 100%;
-    height: 99vh;
     background: linear-gradient(137.39deg, #18a7d4 0%, #6916a9 100%);
     color: #ffffff;
 }
 
 .tr-scrollcontent {
-    padding: 20px;
-    // min-height: 1000px;
+    padding: 20px 20px 70px 20px;
+    max-height: $height;
 }
 
 .tr-header__topbar {
@@ -69,36 +80,37 @@
 }
 
 .tr-header__title {
-    color: #6FCF97;
+    margin-bottom: 35px;
+    color: #6fcf97;
     text-align: center;
     text-transform: uppercase;
     letter-spacing: 0.05em;
-    margin-bottom: 35px;
 }
 
 .tr-header__h2 {
-    font-size: 16px;
-    font-weight: 500;
     margin-bottom: 8px;
+    font-weight: 500;
+    font-size: 16px;
 }
 
 .tr-header__h1 {
-    font-size: 20px;
     font-weight: 700;
+    font-size: 20px;
 }
 
 .tr-step__title {
-    font-size: 20px;
+    margin-bottom: 10px;
     text-align: center;
     text-transform: uppercase;
     letter-spacing: 0.05em;
     font-weight: 700;
-    margin-bottom: 10px;
+    font-size: 20px;
 }
 
 .tr-footer {
     position: absolute;
     bottom: 0;
+    z-index: 100;
     display: flex;
     align-items: stretch;
     width: 100%;
@@ -119,14 +131,16 @@
 
 .tr-footer__btn_next {
     background: linear-gradient(180deg, #6fcf97 0%, #27ae60 100%);
+
     &:hover {
         background: linear-gradient(0deg, #6fcf97 0%, #27ae60 100%);
     }
 }
 
 .tr-footer__btn_prev {
-    background: linear-gradient(180deg, #80C9E5 0%, #18A7D4 100%);
+    background: linear-gradient(180deg, #80c9e5 0%, #18a7d4 100%);
+
     &:hover {
-        background: linear-gradient(0deg, #80C9E5 0%, #18A7D4 100%);
+        background: linear-gradient(0deg, #80c9e5 0%, #18a7d4 100%);
     }
 }
