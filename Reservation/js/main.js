@@ -50,4 +50,32 @@ var trSteps = function () {
 $(function () {
     trScrollContent();
     trSteps();
+
+
+    var tr = $('.tablereservation');
+    var trs = $('.tr-scrollcontent');
+
+    var hh = window.innerHeight;
+
+    var sethh = function () {
+        hh = window.innerHeight;
+        if (hh <= 568) {
+            tr.height(hh);
+            trs.css('max-height', hh);
+        } else {
+            tr.height(568);
+            trs.css('max-height', 568);
+        }
+    }
+
+    sethh();
+
+    window.onscroll = function () {
+        sethh();
+    };
+
+    $(window).resize(function () {
+        sethh();
+    });
+
 });
