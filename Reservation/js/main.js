@@ -6,6 +6,7 @@ var trScrollContent = function () {
         cursorwidth: "0",
         cursorborder: "none",
         cursoropacitymax: 0,
+        autohidemode: "hidden"
     });
     // });
 }

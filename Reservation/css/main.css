@@ -5,8 +5,9 @@
   overflow: hidden;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
+  max-height: 568px;
   width: 100vw;
-  height: 100vh;
+  height: 80vh;
   background: linear-gradient(137.39deg, #18a7d4 0%, #6916a9 100%);
   color: #ffffff;
 }
