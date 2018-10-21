@@ -14,6 +14,10 @@
     width: 100%;
     background: linear-gradient(137.39deg, #18a7d4 0%, #6916a9 100%);
     color: #ffffff;
+
+    input {
+        font-family: "Ubuntu", sans-serif;
+    }
 }
 
 .tr-scrollcontent {
@@ -54,7 +58,7 @@
     background-position: center;
     background-size: cover;
     background-repeat: no-repeat;
-    cursor: pointer;
+    cursor: help;
 }
 
 .tr-header__closebtn {
@@ -96,17 +100,17 @@
 }
 
 .tr-doubleinput {
-    display: flex;
     position: relative;
+    display: flex;
 
     &::before {
-        content: ":";
         position: absolute;
         top: 50%;
         left: 50%;
-        transform: translate(-50%, -55%);
-        font-size: 60px;
+        content: ":";
         font-weight: 500;
+        font-size: 60px;
+        transform: translate(-50%, -55%);
     }
 }
 
@@ -116,11 +120,11 @@
 }
 
 .tr-input-toggle_reverse {
+    margin: 20px auto;
     max-width: 71px;
     transform: rotate(90deg);
-    margin: 20px auto;
 
-    & input {
+    input {
         transform: rotate(-90deg);
     }
 
@@ -134,31 +138,31 @@
 }
 
 .tr-input-toggle input {
+    display: block;
     width: 100%;
+    outline: none;
     border: none;
     background-color: transparent;
-    color: #fff;
-    font-size: 60px;
-    font-weight: 500;
-    letter-spacing: 0.05em;
+    color: #ffffff;
     text-align: center;
-    font-family: "Ubuntu", sans-serif;
-    outline: none;
+    letter-spacing: 0.05em;
+    font-weight: 500;
+    font-size: 60px;
 }
 
 .tr-plus,
 .tr-minus {
     position: absolute;
+    // cursor: pointer;
+    left: 50%;
     z-index: 1;
     display: block;
     width: 51px;
     height: 30px;
     background-image: url(../img/inputtoggle.svg);
-    background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
-    cursor: pointer;
-    left: 50%;
+    background-repeat: no-repeat;
 }
 
 .tr-plus {
@@ -169,6 +173,35 @@
 .tr-minus {
     bottom: 0;
     transform: rotate(180deg) translate(50%, -100%);
+}
+
+.tr-mainform label {
+    display: block;
+    margin-bottom: 30px;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    font-weight: 500;
+    font-size: 14px;
+}
+
+.tr-mainform label span {
+    display: inline-block;
+    margin-bottom: 10px;
+    padding-left: 20px;
+}
+
+.tr-mainform label input {
+    display: block;
+    padding: 0 20px;
+    width: 100%;
+    height: 60px;
+    outline: none;
+    border: none;
+    border-radius: 8px;
+    font-size: 22px;
+    font-weight: 500;
+    letter-spacing: 0.05em;
+    color: #828282;
 }
 
 .tr-footer {
@@ -186,12 +219,12 @@
     align-items: center;
     flex: 1 1 auto;
     justify-content: center;
+    width: 100%;
     color: #ffffff;
     text-decoration: none;
     text-transform: uppercase;
     letter-spacing: 0.15em;
     font-size: 16px;
-    width: 100%;
 }
 
 .tr-footer__btn_next {
@@ -212,8 +245,8 @@
 
 #Datepickk {
     text-transform: uppercase;
-    font-weight: 500;
     letter-spacing: 0.05em;
+    font-weight: 500;
 }
 
 #Datepickk .d-month-picker,
@@ -233,9 +266,9 @@
 #Datepickk .d-tables {
     margin-right: -10px;
     margin-left: -10px;
+    min-height: 240px;
     color: #ffffff;
     font-size: 16px;
-    min-height: 240px;
 }
 
 #Datepickk .d-table input+label.next,
@@ -257,21 +290,21 @@
 }
 
 #Datepickk .d-table input+label:before {
+    top: auto;
+    left: auto;
     max-width: 30px;
     max-height: 30px;
     border-radius: 100%;
-    top: auto;
-    left: auto;
 }
 
 #Datepickk .d-header i#d-previous,
 #Datepickk .d-header i#d-next {
     width: 24px;
     height: 22px;
+    border-radius: 0;
     background-color: transparent;
     background-size: cover;
     background-repeat: no-repeat;
-    border-radius: 0;
 
     &::before,
     &::after {

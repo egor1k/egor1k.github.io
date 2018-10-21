@@ -16,7 +16,7 @@ var trSteps = function () {
         prevbtn = $('.tr-footer__btn_prev'), // кнопка назад
         stepmax = stepsBody.children().length;
 
-    maincontainer.attr('data-step', '2');
+    maincontainer.attr('data-step', '4');
     var stepNumber = maincontainer.attr('data-step');
 
     var switchStep = function () {
