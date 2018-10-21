@@ -14,7 +14,6 @@
   width: 100%;
   background: linear-gradient(137.39deg, #18a7d4 0%, #6916a9 100%);
   color: #ffffff;
-  margin: 0 auto;
 }
 
 .tr-scrollcontent {
@@ -31,7 +30,7 @@
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
-  margin-bottom: 35px;
+  margin-bottom: 25px;
 }
 
 .tr-header__phone {
@@ -79,7 +78,7 @@
 }
 
 .tr-header__title {
-  margin-bottom: 35px;
+  margin-bottom: 25px;
   color: #6fcf97;
   text-align: center;
   text-transform: uppercase;
@@ -106,10 +105,6 @@
   font-size: 20px;
 }
 
-#tr-timeform {
-  text-align: center;
-}
-
 .tr-doubleinput {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -134,11 +129,10 @@
 }
 
 .tr-input-toggle_reverse {
-  display: inline-block;
-  width: 75%;
+  max-width: 71px;
   -webkit-transform: rotate(90deg);
           transform: rotate(90deg);
-  margin: 20px 0;
+  margin: 20px auto;
 }
 
 .tr-input-toggle_reverse input {
