@@ -1,3 +1,5 @@
+"use strict";
+
 // https://kingsora.github.io/OverlayScrollbars/#!documentation/options
 var trScrollContent = function () {
     $(".tr-scrollcontent").overlayScrollbars({
@@ -68,7 +70,7 @@ var trFixHeight = function (maxheight) {
     $(window).resize(function () {
         setHeight(maxheight);
     });
-}
+};
 
 // http://crsten.github.io/datepickk/
 var trCalendar = function () {
@@ -79,11 +81,65 @@ var trCalendar = function () {
     datepicker.show();
     datepicker.daynames = false;
     datepicker.today = true;
-}
+};
+
+var trInputToggle = function () {
+    var inputToggle = $('.tr-input-toggle'),
+        plus = inputToggle.find('.tr-plus'),
+        minus = inputToggle.find('.tr-minus');
+
+    plus.on('click', function (e) {
+        e.preventDefault();
+        var input = $(this).next('input');
+        var inputValue = input.val();
+
+        if (input.attr('name') == 'minutes') {
+            if (inputValue == "00") {
+                input.val('30');
+            } else {
+                input.val('00');
+            }
+        } else if (input.attr('name') == 'hours') {
+            if (inputValue < 24) {
+                input.val(++inputValue);
+            } else {
+                input.val(1);
+            }
+        } else {
+            input.val(++inputValue);
+        }
+
+    });
+
+    minus.on('click', function (e) {
+        e.preventDefault();
+        var input = $(this).prev('input');
+        var inputValue = input.val();
+
+        if (input.attr('name') == 'minutes') {
+            if (inputValue == "00") {
+                input.val('30');
+            } else {
+                input.val('00');
+            }
+        } else if (input.attr('name') == 'hours') {
+            if (inputValue == 1) {
+                input.val(24);
+            } else {
+                input.val(--inputValue);
+            }
+        } else {
+            if (inputValue > 1) {
+                input.val(--inputValue);
+            }
+        }
+    });
+};
 
 $(function () {
     trCalendar();
     trSteps();
     trFixHeight(568);
     trScrollContent();
+    trInputToggle();
 });

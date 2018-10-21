@@ -720,7 +720,7 @@ function Datepickk(args) {
 			});
 		});
 
-		var startX = 0;
+		/* var startX = 0;
 		var distance = 0;
 		that.el.calendar.addEventListener('touchstart', function (e) {
 			startX = e.changedTouches[0].clientX || e.originalEvent.changedTouches[0].clientX;
@@ -739,7 +739,7 @@ function Datepickk(args) {
 				nextMonth();
 			}
 			distance = 0;
-		});
+		}); */
 	};
 
 	function setArgs(x) {
