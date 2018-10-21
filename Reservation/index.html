@@ -8,6 +8,7 @@
     <title>Document</title>
     <link rel="stylesheet" href="css/reset.css">
     <link rel="stylesheet" href="css/OverlayScrollbars.min.css">
+    <link rel="stylesheet" href="css/datepickk.min.css">
     <link rel="stylesheet" href="css/main.css">
 </head>
 
@@ -33,12 +34,38 @@
                 <div class="tr-step">
                     <div class="tr-step__title">Дата</div>
                     <div class="tr-step__content">
-                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Soluta inventore, nemo excepturi labore natus voluptas necessitatibus dicta asperiores sint odio quibusdam provident sed quisquam sit ad eum laborum est ut odit doloremque illo. Nesciunt reprehenderit ea assumenda enim ut! Vero est nisi vitae voluptatibus delectus perferendis excepturi assumenda dolorem aspernatur, ex sequi ipsam nemo cumque veritatis itaque dolorum alias velit eaque, odio laboriosam similique consequatur tempore facilis hic. Voluptatibus id assumenda consequuntur esse sit consequatur hic molestias optio aperiam a similique incidunt qui quae distinctio accusamus, unde temporibus, itaque illo illum aspernatur, quidem dolorum vitae. Doloremque odit animi saepe deleniti, nemo quis sequi dolores beatae quo possimus nam, nesciunt ducimus cupiditate consequatur? Unde, cum fuga neque quo atque facilis, quibusdam consequuntur nostrum laborum ut earum id sequi commodi, dolores modi? Explicabo corrupti labore cum cumque quae omnis laborum tenetur soluta temporibus nam accusamus aliquam quas vel sed tempora culpa sequi nihil, ut consequuntur! Eveniet, commodi harum! Tempora minima sit provident qui vero, sequi est hic culpa cum inventore aperiam a quae illo impedit, alias eaque doloremque nam fugiat ipsa saepe. Ab nesciunt reprehenderit error aliquam, fugit consectetur deleniti cupiditate. Doloremque animi voluptatum provident cumque quasi. Voluptas, quam! Alias accusantium quia molestias dolores reiciendis doloremque pariatur impedit beatae in quae distinctio, nulla, provident nam placeat harum, corrupti mollitia quibusdam nisi? Suscipit dolores perspiciatis labore sint repellendus eaque sit dolor, nam adipisci explicabo autem minus ipsam voluptatum velit, illum veniam qui libero reiciendis molestias itaque. Maxime repellendus minima quia voluptates animi alias unde, sapiente impedit nisi deleniti vero consectetur harum sequi delectus, deserunt quo? Debitis dignissimos similique aperiam amet quisquam dolorem laboriosam rem in repellat, deserunt, natus molestiae aspernatur atque ab sint eius quasi, excepturi quidem minus sunt delectus quia recusandae? Minima dolorem magnam in, omnis earum tempora quisquam rem ratione. Odit enim magni nemo alias molestias! Sed ipsa cumque assumenda laborum nostrum, illo beatae ducimus sapiente ipsam veniam veritatis praesentium quidem animi hic? Dignissimos doloremque dolores adipisci obcaecati iste aspernatur, laborum inventore deleniti maxime dolor? Cum, recusandae exercitationem. Laborum, voluptates. Voluptates aperiam velit dolorem animi molestias corrupti hic, tempora quis, voluptate ullam delectus harum cupiditate consequatur rerum sit ea explicabo non rem obcaecati, quia a et asperiores. Blanditiis, dolor nisi nulla quisquam obcaecati in molestiae enim aliquid iste nostrum voluptatem. Nisi porro mollitia nesciunt aliquam. Corrupti tenetur enim iste! Dolores adipisci expedita facilis beatae hic odio fugiat asperiores quibusdam doloribus, distinctio iste a ratione, mollitia nobis alias incidunt quidem ducimus odit atque perferendis? Aperiam est nisi sit quos quasi incidunt sint tempora dolore facilis hic aspernatur officia quia, ipsam facere aut voluptas placeat. Autem dignissimos unde necessitatibus doloremque nostrum cum illo! Illo voluptatum molestias culpa tempora, numquam obcaecati nihil impedit soluta non pariatur nostrum, nulla, quis aliquam saepe. Enim quisquam numquam architecto suscipit alias deserunt nobis quibusdam vitae delectus, fuga, incidunt molestiae, quae earum? Error, fuga quaerat excepturi fugit esse tempora voluptatum atque ad earum. Ducimus quod rerum sunt culpa. Quo ullam veniam voluptatum. Ut deserunt quo illum sit sed quibusdam!
+                        <div class="tr-calendar"></div>
                     </div>
                 </div>
                 <div class="tr-step">
-                    <div class="tr-step__title">Время</div>
-                    <div class="tr-step__content"></div>
+                    <div class="tr-step__content">
+                        <form id="tr-timeform" action="" >
+
+                            <div class="tr-step__title">Время</div>
+
+                            <div class="tr-doubleinput">
+                                <div class="tr-input-toggle">
+                                    <span class="tr-plus"></span>
+                                    <input type="text" value="12" readonly>
+                                    <span class="tr-minus"></span>
+                                </div>
+                                <div class="tr-input-toggle">
+                                    <span class="tr-plus"></span>
+                                    <input type="text" value="00" readonly>
+                                    <span class="tr-minus"></span>
+                                </div>
+                            </div>
+
+                            <div class="tr-step__title">Персон</div>
+
+                            <div class="tr-input-toggle tr-input-toggle_reverse">
+                                <span class="tr-plus"></span>
+                                <input type="text" value="10" readonly>
+                                <span class="tr-minus"></span>
+                            </div>
+
+                        </form>
+                    </div>
                 </div>
                 <div class="tr-step">
                     <div class="tr-step__title">Столы</div>
@@ -56,6 +83,7 @@
 
     <script src="js/jquery-3.3.1.min.js"></script>
     <script src="js/jquery.overlayScrollbars.min.js"></script>
+    <script src="js/datepickk.js"></script>
     <script src="js/main.js"></script>
 
 </body>

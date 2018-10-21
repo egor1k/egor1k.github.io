@@ -10,18 +10,15 @@
   font-family: "Ubuntu", sans-serif;
   position: relative;
   overflow: hidden;
-  -webkit-box-sizing: border-box;
-          box-sizing: border-box;
   max-width: 320px;
-  max-height: 568px;
   width: 100%;
   background: linear-gradient(137.39deg, #18a7d4 0%, #6916a9 100%);
   color: #ffffff;
+  margin: 0 auto;
 }
 
 .tr-scrollcontent {
   padding: 20px 20px 70px 20px;
-  max-height: 568px;
 }
 
 .tr-header__topbar {
@@ -109,6 +106,94 @@
   font-size: 20px;
 }
 
+#tr-timeform {
+  text-align: center;
+}
+
+.tr-doubleinput {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  position: relative;
+}
+
+.tr-doubleinput::before {
+  content: ":";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -55%);
+          transform: translate(-50%, -55%);
+  font-size: 60px;
+  font-weight: 500;
+}
+
+.tr-input-toggle {
+  position: relative;
+  margin: 40px 0;
+}
+
+.tr-input-toggle_reverse {
+  display: inline-block;
+  width: 75%;
+  -webkit-transform: rotate(90deg);
+          transform: rotate(90deg);
+  margin: 20px 0;
+}
+
+.tr-input-toggle_reverse input {
+  -webkit-transform: rotate(-90deg);
+          transform: rotate(-90deg);
+}
+
+.tr-input-toggle_reverse .tr-plus {
+  top: -15px;
+}
+
+.tr-input-toggle_reverse .tr-minus {
+  bottom: -15px;
+}
+
+.tr-input-toggle input {
+  width: 100%;
+  border: none;
+  background-color: transparent;
+  color: #fff;
+  font-size: 60px;
+  font-weight: 500;
+  letter-spacing: 0.05em;
+  text-align: center;
+  font-family: "Ubuntu", sans-serif;
+  outline: none;
+}
+
+.tr-plus,
+.tr-minus {
+  position: absolute;
+  z-index: 1;
+  display: block;
+  width: 51px;
+  height: 30px;
+  background-image: url(../img/inputtoggle.svg);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  cursor: pointer;
+  left: 50%;
+}
+
+.tr-plus {
+  top: 0;
+  -webkit-transform: translate(-50%, -100%);
+          transform: translate(-50%, -100%);
+}
+
+.tr-minus {
+  bottom: 0;
+  -webkit-transform: rotate(180deg) translate(50%, -100%);
+          transform: rotate(180deg) translate(50%, -100%);
+}
+
 .tr-footer {
   position: absolute;
   bottom: 0;
@@ -141,6 +226,7 @@
   text-transform: uppercase;
   letter-spacing: 0.15em;
   font-size: 16px;
+  width: 100%;
 }
 
 .tr-footer__btn_next {
@@ -161,5 +247,88 @@
 .tr-footer__btn_prev:hover {
   background: -webkit-gradient(linear, left bottom, left top, from(#80c9e5), to(#18a7d4));
   background: linear-gradient(0deg, #80c9e5 0%, #18a7d4 100%);
+}
+
+#Datepickk {
+  text-transform: uppercase;
+  font-weight: 500;
+  letter-spacing: 0.05em;
+}
+
+#Datepickk .d-month-picker,
+#Datepickk .d-year-picker {
+  display: none;
+}
+
+#Datepickk .d-header {
+  font-size: 20px;
+}
+
+#Datepickk .d-calendar,
+#Datepickk .d-header {
+  background-color: transparent;
+}
+
+#Datepickk .d-tables {
+  margin-right: -10px;
+  margin-left: -10px;
+  color: #ffffff;
+  font-size: 16px;
+  min-height: 240px;
+}
+
+#Datepickk .d-table input + label.next,
+#Datepickk .d-table input + label.prev {
+  color: rgba(255, 255, 255, 0.5);
+}
+
+#Datepickk .d-table input + label::before {
+  -webkit-transform-origin: center;
+          transform-origin: center;
+}
+
+#Datepickk .d-tables:not(.locked) input:not(:checked) + label:not(.hidden):hover {
+  background-color: transparent;
+  color: #ffffff;
+}
+
+#Datepickk .d-table input + label:before {
+  max-width: 30px;
+  max-height: 30px;
+  border-radius: 100%;
+  top: auto;
+  left: auto;
+}
+
+#Datepickk .d-header i#d-previous,
+#Datepickk .d-header i#d-next {
+  width: 24px;
+  height: 22px;
+  background-color: transparent;
+  background-size: cover;
+  background-repeat: no-repeat;
+  border-radius: 0;
+}
+
+#Datepickk .d-header i#d-previous::before, #Datepickk .d-header i#d-previous::after,
+#Datepickk .d-header i#d-next::before,
+#Datepickk .d-header i#d-next::after {
+  display: none;
+}
+
+#Datepickk .d-header i#d-previous {
+  left: 0;
+  background-image: url(../img/calendarPrev.svg);
+  background-position: center left;
+}
+
+#Datepickk .d-header i#d-next {
+  right: 0;
+  background-image: url(../img/calendarNext.svg);
+  background-position: center right;
+}
+
+#Datepickk .d-year:before {
+  content: "20";
 }
 /*# sourceMappingURL=main.css.map */

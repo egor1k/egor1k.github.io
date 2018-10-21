@@ -8,13 +8,13 @@ var trScrollContent = function () {
 };
 
 var trSteps = function () {
-    var maincontainer = $('.tablereservation'),
-        nextbtn = $('.tr-footer__btn_next'),
-        prevbtn = $('.tr-footer__btn_prev'),
-        stepsBody = maincontainer.find('.tr-main'),
+    var maincontainer = $('body'),
+        stepsBody = maincontainer.find('.tr-main'), // указать контейнер в котором находятся слайды
+        nextbtn = $('.tr-footer__btn_next'), // кнопка вперед
+        prevbtn = $('.tr-footer__btn_prev'), // кнопка назад
         stepmax = stepsBody.children().length;
 
-    maincontainer.attr('data-step', '1');
+    maincontainer.attr('data-step', '2');
     var stepNumber = maincontainer.attr('data-step');
 
     var switchStep = function () {
@@ -47,35 +47,43 @@ var trSteps = function () {
 
 };
 
-$(function () {
-    trScrollContent();
-    trSteps();
-
-
-    var tr = $('.tablereservation');
-    var trs = $('.tr-scrollcontent');
-
-    var hh = window.innerHeight;
-
-    var sethh = function () {
-        hh = window.innerHeight;
-        if (hh <= 568) {
-            tr.height(hh);
-            trs.css('max-height', hh);
+var trFixHeight = function (maxheight) {
+    var maincontainer = $('.tablereservation'),
+        scrollcontent = maincontainer.find('.tr-scrollcontent'),
+        currentHeight = window.innerHeight;
+    var setHeight = function (maxheight) {
+        currentHeight = window.innerHeight;
+        if (currentHeight <= maxheight) {
+            maincontainer.height(currentHeight);
+            scrollcontent.css('max-height', currentHeight);
         } else {
-            tr.height(568);
-            trs.css('max-height', 568);
+            maincontainer.height(maxheight);
+            scrollcontent.css('max-height', maxheight);
         }
-    }
-
-    sethh();
-
-    window.onscroll = function () {
-        sethh();
     };
-
+    setHeight(maxheight);
+    window.onscroll = function () {
+        setHeight(maxheight);
+    };
     $(window).resize(function () {
-        sethh();
+        setHeight(maxheight);
     });
+}
 
+// http://crsten.github.io/datepickk/
+var trCalendar = function () {
+    var datepicker = new Datepickk();
+    datepicker.maxSelections = 1;
+    datepicker.lang = 'ru';
+    datepicker.container = document.querySelector('.tr-calendar');
+    datepicker.show();
+    datepicker.daynames = false;
+    datepicker.today = true;
+}
+
+$(function () {
+    trCalendar();
+    trSteps();
+    trFixHeight(568);
+    trScrollContent();
 });
