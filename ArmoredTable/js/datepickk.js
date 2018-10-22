@@ -720,26 +720,26 @@ function Datepickk(args) {
 			});
 		});
 
-		var startX = 0;
+		/* var startX = 0;
 		var distance = 0;
-		// that.el.calendar.addEventListener('touchstart', function (e) {
-		// 	startX = e.changedTouches[0].clientX || e.originalEvent.changedTouches[0].clientX;
-		// 	//e.preventDefault();
-		// });
+		that.el.calendar.addEventListener('touchstart', function (e) {
+			startX = e.changedTouches[0].clientX || e.originalEvent.changedTouches[0].clientX;
+			//e.preventDefault();
+		});
 
-		// that.el.calendar.addEventListener('touchmove', function (e) {
-		// 	distance = e.changedTouches[0].clientX - startX || e.originalEvent.changedTouches[0].clientX - startX;
-		// 	e.preventDefault();
-		// });
+		that.el.calendar.addEventListener('touchmove', function (e) {
+			distance = e.changedTouches[0].clientX - startX || e.originalEvent.changedTouches[0].clientX - startX;
+			e.preventDefault();
+		});
 
-		// that.el.calendar.addEventListener('touchend', function (e) {
-		// 	if (distance > 50) {
-		// 		prevMonth();
-		// 	} else if (distance < -50) {
-		// 		nextMonth();
-		// 	}
-		// 	distance = 0;
-		// });
+		that.el.calendar.addEventListener('touchend', function (e) {
+			if (distance > 50) {
+				prevMonth();
+			} else if (distance < -50) {
+				nextMonth();
+			}
+			distance = 0;
+		}); */
 	};
 
 	function setArgs(x) {

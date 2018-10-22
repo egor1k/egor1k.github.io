@@ -6,111 +6,101 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Document</title>
-
-    <!-- Styles -->
     <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="css/OverlayScrollbars.min.css">
     <link rel="stylesheet" href="css/datepickk.min.css">
-    <link rel="stylesheet" href="css/main.css?ver=6">
-
+    <link rel="stylesheet" href="css/main.css">
 </head>
 
-<body >
+<body>
 
-    <div class="bs-content">
+    <div class="tablereservation">
 
-        <div class="bs-header">
-            <div class="bs-header__info">
-                <div class="bs-phone"><span>8-800-200-00-00</span></div>
-                <div class="bs-help"></div>
-                <div class="bs-close"></div>
-            </div>
-            <div class="bs-header__title">
-                <div class="bs-h2">Ресторан «МАКСИМ»</div>
-                <div class="bs-h1">Бронирование столов</div>
-            </div>
-        </div>
+        <div class="tr-scrollcontent">
 
-        <div class="bs-main">
-
-            <!-- SLIDE1 -->
-            <div class="bs-slide1">
-                <div class="bs-main__title">Дата</div>
-                <div id="bs-calendar" class="bs-calendar"></div>
-            </div>
-            <!-- slide1 -->
-            
-            <!-- SLIDE2 -->
-            <div class="bs-slide2">
-                <div class="bs-main__title">Время</div>
-                <div class="bs-time bs-time-2">
-                    <div class="bs-input">
-                        <div class="bs-plus"></div>
-                        <input class="bsHour" type="text" name="bsHour" id="" value="12" readonly>
-                        <div class="bs-minus"></div>
-                    </div>
-                    <div class="bs-input">
-                        <div class="bs-plus"></div>
-                        <input class="bsMinute" type="text" name="bsMinute" id="" value="00" readonly>
-                        <div class="bs-minus"></div>
-                    </div>
+            <div class="tr-header">
+                <div class="tr-header__topbar">
+                    <div class="tr-header__phone">8 800-200-00-00</div>
+                    <div class="tr-header__infobtn"></div>
+                    <div class="tr-header__closebtn"></div>
                 </div>
-                <div class="bs-main__title">Персон</div>
-                <div class="bs-time bs-time-1">
-                    <div class="bs-input">
-                        <div class="bs-plus"></div>
-                        <input type="text" name="bsPerson" id="" value="4" readonly>
-                        <div class="bs-minus"></div>
-                    </div>
+                <div class="tr-header__title">
+                    <div class="tr-header__h2">Ресторан «МАКСИМ»</div>
+                    <div class="tr-header__h1">Бронирование столов</div>
                 </div>
             </div>
-            <!-- slide2 -->
 
-            <!-- SLIDE3 -->
-            <div class="bs-slide3">
-                <div class="bs-main__title">Тут будут столы</div>
-                
-            </div>
-            <!-- slide3 -->
+            <div class="tr-main">
+                <div class="tr-step">
+                    <div class="tr-step__title">Дата</div>
+                    <div class="tr-step__content">
+                        <div class="tr-calendar"></div>
+                    </div>
+                </div>
+                <div class="tr-step">
+                    <div class="tr-step__content">
+                        <form id="tr-timeform" action="">
 
-            <!-- SLIDE4 -->
-            <div class="bs-slide4">
-                <form action="" class="bs-form">
-                    <p>Укажите свое имя*</p>
-                    <input type="text">
-                    <p>Укажите телефон*</p>
-                    <input type="text">
-                    <p>Ваш e-mail*</p>
-                    <input type="text">
-                </form>
-            </div>
-            <!-- slide4 -->
+                            <div class="tr-step__title">Время</div>
 
-            <!-- SLIDE5 -->
-            <div class="bs-slide5">
-                <p>Забронировано</p>
+                            <div class="tr-doubleinput">
+                                <div class="tr-input-toggle">
+                                    <span class="tr-plus"></span>
+                                    <input name="hours" type="text" value="12" readonly>
+                                    <span class="tr-minus"></span>
+                                </div>
+                                <div class="tr-input-toggle">
+                                    <span class="tr-plus"></span>
+                                    <input name="minutes" type="text" value="00" readonly>
+                                    <span class="tr-minus"></span>
+                                </div>
+                            </div>
+
+                            <div class="tr-step__title">Персон</div>
+
+                            <div class="tr-input-toggle tr-input-toggle_reverse">
+                                <span class="tr-plus"></span>
+                                <input name="persons" type="text" value="10" readonly>
+                                <span class="tr-minus"></span>
+                            </div>
+
+                        </form>
+                    </div>
+                </div>
+                <div class="tr-step">
+                    <div class="tr-step__title">Столы</div>
+                </div>
+                <div class="tr-step">
+                    <form class="tr-mainform" action="">
+                        <label>
+                            <span>Укажите свое имя*</span>
+                            <input type="text" placeholder="Василий">
+                        </label>
+                        <label>
+                            <span>Укажите телефон*</span>
+                            <input type="tel" placeholder="8 800 950 22 22">
+                        </label>
+                        <label>
+                            <span>ваш e-mail*</span>
+                            <input type="email" placeholder="mail@mail.ru">
+                        </label>
+                    </form>
+                </div>
             </div>
-            <!-- slide5 -->
 
         </div>
 
-        <div class="bs-footer">
-            <a class="bs-back" href="">Назад</a>
-            <a class="bs-next" href="">Далее</a>
-            <a class="bs-next bs-submit" href="">Готово</a>
-            <a class="bs-success" href="#">Вернуться на сайт</a>
+        <div class="tr-footer">
+            <a href="#" class="tr-footer__btn tr-footer__btn_prev">Назад</a>
+            <a href="#" class="tr-footer__btn tr-footer__btn_next">Далее</a>
         </div>
 
     </div>
 
-
-
-
-
-    <!-- Scripts -->
-    <!-- <script src="js/datepickk.min.js"></script> -->
-    <script src="js/datepickk.js"></script>
     <script src="js/jquery-3.3.1.min.js"></script>
-    <script src="js/main.js?ver=6"></script>
+    <script src="js/jquery.overlayScrollbars.min.js"></script>
+    <script src="js/datepickk.js"></script>
+    <script src="js/main.js"></script>
 
 </body>
 
