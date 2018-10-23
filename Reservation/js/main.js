@@ -184,4 +184,7 @@ $(function () {
     trFixHeight(568);
     trScrollContent();
     trInputToggle();
+
+    $('#tr-mainform input[type=tel]').inputmask("+7 999 999 99 99");
+
 });
