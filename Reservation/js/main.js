@@ -16,7 +16,7 @@ var trSteps = function () {
         prevbtn = $('.tr-footer__btn_prev'), // кнопка назад
         stepmax = stepsBody.children().length; // сколько всего шагов
 
-    maincontainer.attr('data-step', '3');
+    maincontainer.attr('data-step', '1');
     var stepNumber = maincontainer.attr('data-step');
 
     var showHide = function () { // скрыть все шаги, кроме активного
