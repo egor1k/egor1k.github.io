@@ -10,7 +10,7 @@
     font-family: "Ubuntu", sans-serif;
     position: relative;
     overflow: hidden;
-    max-width: 420px;
+    max-width: 320px;
     width: 100%;
     height: 0;
     background: linear-gradient(137.39deg, #18a7d4 0%, #6916a9 100%);
@@ -154,8 +154,6 @@
 .tr-plus,
 .tr-minus {
     position: absolute;
-    cursor: pointer;
-    -webkit-tap-highlight-color: rgba(0,0,0,0);
     left: 50%;
     z-index: 1;
     display: block;
@@ -165,6 +163,9 @@
     background-position: center;
     background-size: cover;
     background-repeat: no-repeat;
+    cursor: pointer;
+
+    -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
 }
 
 .tr-plus {
@@ -187,11 +188,11 @@
     right: 0;
     left: 0;
     z-index: 999;
-    width: 100%;
     min-height: 100%;
+    width: 100%;
+    background-color: #fff;
     color: #bdbdbd;
     font-weight: 300;
-    background-color: #fff;
 }
 
 .tr-tables__topbar {
@@ -356,12 +357,12 @@
     font-size: 16px;
 }
 
-#Datepickk .d-table input+label.next,
-#Datepickk .d-table input+label.prev {
+#Datepickk .d-table input + label.next,
+#Datepickk .d-table input + label.prev {
     color: rgba(255, 255, 255, 0.5);
 }
 
-#Datepickk .d-table input+label {
+#Datepickk .d-table input + label {
     // padding: 12px 10px;
 
     &::before {
@@ -369,12 +370,12 @@
     }
 }
 
-#Datepickk .d-tables:not(.locked) input:not(:checked)+label:not(.hidden):hover {
+#Datepickk .d-tables:not(.locked) input:not(:checked) + label:not(.hidden):hover {
     background-color: transparent;
     color: #fff;
 }
 
-#Datepickk .d-table input+label:before {
+#Datepickk .d-table input + label:before {
     top: auto;
     left: auto;
     max-width: 30px;
@@ -413,6 +414,6 @@
     content: "20";
 }
 
-#Datepickk .d-table input:checked+label {
+#Datepickk .d-table input:checked + label {
     pointer-events: none;
 }

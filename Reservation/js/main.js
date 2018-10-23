@@ -9,6 +9,26 @@ var trScrollContent = function () {
     });
 };
 
+// http://crsten.github.io/datepickk/
+var trCalendar = function () {
+    var datepicker = new Datepickk();
+    datepicker.maxSelections = 1;
+    datepicker.lang = 'ru';
+    datepicker.container = document.querySelector('.tr-calendar');
+    datepicker.today = false;
+    datepicker.daynames = false;
+    datepicker.show();
+    datepicker.selectDate(new Date());
+    datepicker.onSelect = function () {
+        $('input[name=date]').val(this.toLocaleDateString());
+    };
+};
+
+// https://github.com/RobinHerbots/Inputmask
+var trInputMask = function () {
+    $('#tr-mainform input[type=tel]').inputmask("+7 999 999 99 99");
+};
+
 var trSteps = function () {
     var maincontainer = $('body'),
         stepsBody = maincontainer.find('.tr-main'), // указать контейнер в котором находятся слайды
@@ -121,18 +141,6 @@ var trFixHeight = function (maxheight) {
     });
 };
 
-// http://crsten.github.io/datepickk/
-var trCalendar = function () {
-    var datepicker = new Datepickk();
-    datepicker.maxSelections = 1;
-    datepicker.lang = 'ru';
-    datepicker.container = document.querySelector('.tr-calendar');
-    datepicker.today = false;
-    datepicker.daynames = false;
-    datepicker.show();
-    datepicker.selectDate(new Date());
-};
-
 var trInputToggle = function () {
     var inputToggle = $('.tr-input-toggle'),
         plus = inputToggle.find('.tr-plus'),
@@ -184,11 +192,6 @@ var trInputToggle = function () {
             }
         }
     });
-};
-
-// https://github.com/RobinHerbots/Inputmask
-var trInputMask = function () {
-    $('#tr-mainform input[type=tel]').inputmask("+7 999 999 99 99");
 };
 
 $(function () {
