@@ -16,7 +16,7 @@ var trSteps = function () {
         prevbtn = $('.tr-footer__btn_prev'), // кнопка назад
         stepmax = stepsBody.children().length; // сколько всего шагов
 
-    maincontainer.attr('data-step', '1');
+    maincontainer.attr('data-step', '3');
     var stepNumber = maincontainer.attr('data-step');
 
     var showHide = function () { // скрыть все шаги, кроме активного
@@ -98,10 +98,18 @@ var trFixHeight = function (maxheight) {
         currentHeight = window.innerHeight;
         if (currentHeight <= maxheight) {
             maincontainer.height(currentHeight);
-            scrollcontent.css('max-height', currentHeight);
+            // scrollcontent.css('max-height', currentHeight);
+            scrollcontent.css({
+                'max-height': currentHeight,
+                'min-height': currentHeight
+            });
         } else {
             maincontainer.height(maxheight);
-            scrollcontent.css('max-height', maxheight);
+            // scrollcontent.css('max-height', maxheight);
+            scrollcontent.css({
+                'max-height': maxheight,
+                'min-height': maxheight
+            });
         }
     };
     setHeight(maxheight);
@@ -178,13 +186,16 @@ var trInputToggle = function () {
     });
 };
 
+// https://github.com/RobinHerbots/Inputmask
+var trInputMask = function () {
+    $('#tr-mainform input[type=tel]').inputmask("+7 999 999 99 99");
+};
+
 $(function () {
-    trCalendar();
-    trSteps();
     trFixHeight(568);
     trScrollContent();
+    trCalendar();
+    trSteps();
     trInputToggle();
-
-    $('#tr-mainform input[type=tel]').inputmask("+7 999 999 99 99");
-
+    trInputMask();
 });
