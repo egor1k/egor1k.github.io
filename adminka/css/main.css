@@ -1,0 +1,297 @@
+@import url("https://fonts.googleapis.com/css?family=Ubuntu:300,400,500,700&subset=cyrillic");
+*,
+*::before,
+*::after {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+body {
+  background-color: #e5e5e5;
+}
+
+.tr-admin {
+  font-family: "Ubuntu", sans-serif;
+  max-width: 420px;
+  height: 568px;
+  overflow: hidden;
+}
+
+.tr-admin input,
+.tr-admin button {
+  font-family: "Ubuntu", sans-serif;
+}
+
+.tr-startscreen {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  min-height: 100%;
+  background: linear-gradient(130.46deg, #18a7d4 0%, #6916a9 100%);
+  color: #fff;
+  text-align: center;
+}
+
+.tr-logo {
+  margin-bottom: 40px;
+}
+
+.tr-logo img {
+  position: relative;
+  left: 8px;
+}
+
+.tr-login__title {
+  margin-bottom: 30px;
+  letter-spacing: 0.05em;
+  font-size: 14px;
+}
+
+.tr-login__input {
+  position: relative;
+  margin: 0 auto 20px auto;
+  max-width: 260px;
+}
+
+.tr-login__input::before {
+  position: absolute;
+  top: 50%;
+  left: 15px;
+  width: 15px;
+  height: 20px;
+  background-position: center;
+  background-size: contain;
+  background-repeat: no-repeat;
+  content: "";
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
+}
+
+.tr-login__input_login::before {
+  background-image: url(../img/loginInputIcon.svg);
+}
+
+.tr-login__input_password::before {
+  background-image: url(../img/passwordInputIcon.svg);
+}
+
+.tr-login__input input {
+  display: block;
+  padding: 0 40px;
+  width: 100%;
+  height: 40px;
+  outline: none;
+  border: none;
+  border-radius: 20px;
+  background-color: rgba(255, 255, 255, 0.6);
+  color: #fff;
+  text-align: center;
+  letter-spacing: 0.05em;
+  font-size: 14px;
+  line-height: 40px;
+}
+
+.tr-login__input input::-webkit-input-placeholder {
+  color: #fff;
+}
+
+.tr-login__input input:-ms-input-placeholder {
+  color: #fff;
+}
+
+.tr-login__input input::-ms-input-placeholder {
+  color: #fff;
+}
+
+.tr-login__input input::placeholder {
+  color: #fff;
+}
+
+.tr-login button[type=submit] {
+  display: block;
+  margin: 50px auto 0 auto;
+  max-width: 260px;
+  width: 100%;
+  height: 40px;
+  outline: none;
+  border: none;
+  border-radius: 20px;
+  background: -webkit-gradient(linear, left top, left bottom, from(#6fcf97), to(#27ae60));
+  background: linear-gradient(180deg, #6fcf97 0%, #27ae60 100%);
+  color: #fff;
+  letter-spacing: 0.05em;
+  font-size: 14px;
+  line-height: 40px;
+  cursor: pointer;
+}
+
+.tr-login button[type=submit]:hover {
+  background: -webkit-gradient(linear, left bottom, left top, from(#6fcf97), to(#27ae60));
+  background: linear-gradient(0deg, #6fcf97 0%, #27ae60 100%);
+}
+
+.tr-workplace {
+  padding: 24px 16px;
+  min-height: 100%;
+  background-color: #fff;
+  color: #333;
+  letter-spacing: 0.05em;
+}
+
+.tr-header {
+  border-bottom: 1px solid #e0e0e0;
+}
+
+.tr-header__topbar {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  margin-bottom: 15px;
+}
+
+.tr-header__topbar a {
+  margin-bottom: 5px;
+  border-bottom: 1px solid;
+  color: #828282;
+  text-decoration: none;
+  font-weight: 300;
+  font-size: 16px;
+}
+
+.tr-header__topbar a.important {
+  color: #6916a9;
+}
+
+.tr-header__title {
+  margin-bottom: 20px;
+  text-align: center;
+  text-transform: uppercase;
+  font-weight: 700;
+  font-size: 24px;
+}
+
+.tr-tools {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  padding: 25px 0 35px 0;
+}
+
+.tr-search {
+  margin-right: 45px;
+}
+
+.tr-search input {
+  display: block;
+  padding: 0 25px;
+  width: 100%;
+  height: 40px;
+  outline: none;
+  border: 1px solid #e0e0e0;
+  border-radius: 20px;
+  color: #bdbdbd;
+  font-weight: 300;
+  font-size: 16px;
+  line-height: 40px;
+  letter-spacing: 0.05em;
+}
+
+.tr-search input::-webkit-input-placeholder {
+  color: #bdbdbd;
+}
+
+.tr-search input:-ms-input-placeholder {
+  color: #bdbdbd;
+}
+
+.tr-search input::-ms-input-placeholder {
+  color: #bdbdbd;
+}
+
+.tr-search input::placeholder {
+  color: #bdbdbd;
+}
+
+.tr-add {
+  -webkit-box-flex: 0;
+      -ms-flex: 0 0 auto;
+          flex: 0 0 auto;
+  width: 41px;
+  height: 41px;
+  background-image: url(../img/add.svg);
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  cursor: pointer;
+}
+
+.tr-list thead td {
+  padding-bottom: 20px;
+  color: #bdbdbd;
+  font-weight: 300;
+}
+
+.tr-list thead td.active {
+  color: #6916a9;
+  font-weight: 500;
+}
+
+.tr-list tbody td {
+  padding-bottom: 15px;
+}
+
+.tr-list td:nth-child(2) {
+  width: 100%;
+  word-break: break-all;
+  padding-left: 8px;
+}
+
+.tr-list td:nth-child(3) {
+  text-align: center;
+}
+
+.tr-list td.tr-tdicon {
+  padding-left: 10px;
+}
+
+.tr-list td.tr-tdicon::before {
+  display: block;
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  content: "";
+  cursor: pointer;
+  height: 16px;
+}
+
+.tr-list td.tr-tdicon_edit::before {
+  width: 14px;
+  background-image: url(../img/edit.svg);
+}
+
+.tr-list td.tr-tdicon_delete::before {
+  width: 16px;
+  background-image: url(../img/delete.svg);
+}
+/*# sourceMappingURL=main.css.map */
