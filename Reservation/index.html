@@ -31,18 +31,20 @@
             </div>
 
             <div class="tr-main">
+
+                <!-- ШАГ1 Календарь -->
                 <div class="tr-step">
                     <div class="tr-step__title">Дата</div>
                     <div class="tr-step__content">
                         <div class="tr-calendar"></div>
                     </div>
                 </div>
+
+                <!-- ШАГ2 Время -->
                 <div class="tr-step">
                     <div class="tr-step__content">
-                        <form id="tr-timeform" action="">
-
+                        <form action="">
                             <div class="tr-step__title">Время</div>
-
                             <div class="tr-doubleinput">
                                 <div class="tr-input-toggle">
                                     <span class="tr-plus"></span>
@@ -55,37 +57,71 @@
                                     <span class="tr-minus"></span>
                                 </div>
                             </div>
-
                             <div class="tr-step__title">Персон</div>
-
                             <div class="tr-input-toggle tr-input-toggle_reverse">
                                 <span class="tr-plus"></span>
-                                <input name="persons" type="text" value="10" readonly>
+                                <input name="persons" type="text" value="0" readonly>
                                 <span class="tr-minus"></span>
                             </div>
-
+                            <input type="hidden" name="date" value="">
                         </form>
                     </div>
                 </div>
+
+                <!-- ШАГ3 Столы -->
                 <div class="tr-step">
-                    <div class="tr-step__title">Столы</div>
+                    <div class="tr-tables">
+                        <div class="tr-tables__topbar">
+                            <a href="#">План зала</a>
+                            <a href="#" class="active">Общий зал</a>
+                            <a href="#">Vip-зал</a>
+                        </div>
+                        <div class="tr-tables__level">
+                            <a href="#" class="active">1 этаж</a>
+                            <a href="#">2 этаж</a>
+                        </div>
+
+                    </div>
                 </div>
+
+                <!-- ШАГ4 Форма -->
                 <div class="tr-step">
-                    <form class="tr-mainform" action="">
-                        <label>
+                    <form id="tr-mainform" action="">
+                        <label class="tr-label">
                             <span>Укажите свое имя*</span>
-                            <input type="text" placeholder="Василий">
+                            <input type="text" placeholder="">
                         </label>
-                        <label>
+                        <label class="tr-label">
                             <span>Укажите телефон*</span>
-                            <input type="tel" placeholder="8 800 950 22 22">
+                            <input type="tel" placeholder="">
                         </label>
-                        <label>
+                        <label class="tr-label">
                             <span>ваш e-mail*</span>
-                            <input type="email" placeholder="mail@mail.ru">
+                            <input type="email" placeholder="">
                         </label>
+
+                        <label class="tr-agreement">
+                            <input type="checkbox">
+                            <span>Согласен на обработку личных данных</span>
+                        </label>
+
                     </form>
                 </div>
+
+                <!-- ШАГ5 Конец -->
+                <div class="tr-step">
+                    <div class="tr-formresult">
+                        <img src="img/trsuccess.svg" alt="Успешно">
+                        <ul>
+                            <li>Имя - <span>Василий</span></li>
+                            <li>Дата - <span>31.12.2018</span></li>
+                            <li>Время - <span>23.30</span></li>
+                            <li>Персон - <span>1</span></li>
+                            <li>Стол № <span>13</span></li>
+                        </ul>
+                    </div>
+                </div>
+
             </div>
 
         </div>
@@ -100,6 +136,7 @@
     <script src="js/jquery-3.3.1.min.js"></script>
     <script src="js/jquery.overlayScrollbars.min.js"></script>
     <script src="js/datepickk.js"></script>
+    <script src="js/jquery.inputmask.bundle.min.js"></script>
     <script src="js/main.js"></script>
 
 </body>

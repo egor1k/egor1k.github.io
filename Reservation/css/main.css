@@ -12,8 +12,9 @@
   overflow: hidden;
   max-width: 320px;
   width: 100%;
+  height: 0;
   background: linear-gradient(137.39deg, #18a7d4 0%, #6916a9 100%);
-  color: #ffffff;
+  color: #fff;
 }
 
 .tablereservation input {
@@ -158,7 +159,7 @@
   outline: none;
   border: none;
   background-color: transparent;
-  color: #ffffff;
+  color: #fff;
   text-align: center;
   letter-spacing: 0.05em;
   font-weight: 500;
@@ -177,6 +178,8 @@
   background-position: center;
   background-size: cover;
   background-repeat: no-repeat;
+  cursor: pointer;
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
 }
 
 .tr-plus {
@@ -191,7 +194,67 @@
           transform: rotate(180deg) translate(50%, -100%);
 }
 
-.tr-mainform label {
+.os-content {
+  min-height: 100%;
+}
+
+.tr-tables {
+  position: absolute;
+  top: 0;
+  right: 0;
+  left: 0;
+  z-index: 999;
+  min-height: 100%;
+  width: 100%;
+  background-color: #fff;
+  color: #bdbdbd;
+  font-weight: 300;
+}
+
+.tr-tables__topbar {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  padding: 10px;
+}
+
+.tr-tables__level {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  padding: 0 10px;
+}
+
+.tr-tables__topbar a,
+.tr-tables__level a {
+  margin: 5px 0;
+  padding: 0 10px;
+  color: #bdbdbd;
+}
+
+.tr-tables__topbar a.active,
+.tr-tables__level a.active {
+  color: #6fcf97;
+  font-weight: 400;
+}
+
+.tr-tables__level a {
+  border-left: 1px solid #bdbdbd;
+}
+
+.tr-tables__level a:first-child {
+  border-left: none;
+}
+
+.tr-label {
   display: block;
   margin-bottom: 30px;
   text-transform: uppercase;
@@ -200,13 +263,13 @@
   font-size: 14px;
 }
 
-.tr-mainform label span {
+.tr-label span {
   display: inline-block;
   margin-bottom: 10px;
   padding-left: 20px;
 }
 
-.tr-mainform label input {
+.tr-label input {
   display: block;
   padding: 0 20px;
   width: 100%;
@@ -214,10 +277,54 @@
   outline: none;
   border: none;
   border-radius: 8px;
-  font-size: 22px;
-  font-weight: 500;
-  letter-spacing: 0.05em;
   color: #828282;
+  letter-spacing: 0.05em;
+  font-weight: 500;
+  font-size: 22px;
+}
+
+.tr-agreement {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  letter-spacing: 0.05em;
+  font-size: 12px;
+}
+
+.tr-agreement span {
+  padding-left: 5px;
+}
+
+.tr-formresult {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  font-weight: 500;
+}
+
+.tr-formresult ul {
+  min-width: 180px;
+}
+
+.tr-formresult ul li {
+  margin-bottom: 10px;
+}
+
+.tr-formresult img {
+  margin: 30px 0;
+  width: 120px;
 }
 
 .tr-footer {
@@ -248,7 +355,7 @@
       -ms-flex-pack: center;
           justify-content: center;
   width: 100%;
-  color: #ffffff;
+  color: #fff;
   text-decoration: none;
   text-transform: uppercase;
   letter-spacing: 0.15em;
@@ -299,7 +406,7 @@
   margin-right: -10px;
   margin-left: -10px;
   min-height: 240px;
-  color: #ffffff;
+  color: #fff;
   font-size: 16px;
 }
 
@@ -315,7 +422,7 @@
 
 #Datepickk .d-tables:not(.locked) input:not(:checked) + label:not(.hidden):hover {
   background-color: transparent;
-  color: #ffffff;
+  color: #fff;
 }
 
 #Datepickk .d-table input + label:before {
@@ -356,5 +463,9 @@
 
 #Datepickk .d-year:before {
   content: "20";
+}
+
+#Datepickk .d-table input:checked + label {
+  pointer-events: none;
 }
 /*# sourceMappingURL=main.css.map */
