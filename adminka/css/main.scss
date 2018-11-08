@@ -12,13 +12,16 @@ body {
 
 .tr-admin {
     font-family: "Ubuntu", sans-serif;
-    max-width: 420px;
-    height: 568px;
+    position: relative;
     overflow: hidden;
+    max-width: 320px;
+    height: 568px;
+    letter-spacing: 0.05em;
 
     input,
     button {
         font-family: "Ubuntu", sans-serif;
+        letter-spacing: 0.05em;
     }
 }
 
@@ -43,7 +46,6 @@ body {
 
 .tr-login__title {
     margin-bottom: 30px;
-    letter-spacing: 0.05em;
     font-size: 14px;
 }
 
@@ -84,7 +86,6 @@ body {
         background-color: rgba(255, 255, 255, 0.6);
         color: #fff;
         text-align: center;
-        letter-spacing: 0.05em;
         font-size: 14px;
         line-height: 40px;
 
@@ -94,7 +95,8 @@ body {
     }
 }
 
-.tr-login button[type=submit] {
+.tr-login button[type=submit],
+.tr-datepick button[type=submit] {
     display: block;
     margin: 50px auto 0 auto;
     max-width: 260px;
@@ -105,7 +107,6 @@ body {
     border-radius: 20px;
     background: linear-gradient(180deg, #6fcf97 0%, #27ae60 100%);
     color: #fff;
-    letter-spacing: 0.05em;
     font-size: 14px;
     line-height: 40px;
     cursor: pointer;
@@ -115,21 +116,20 @@ body {
     }
 }
 
-// 
+///////////////////////////////////////////////////////////////////////////////
 
 .tr-workplace {
     padding: 24px 16px;
-    min-height: 100%;
+    height: 100%;
     background-color: #fff;
     color: #333;
-    letter-spacing: 0.05em;
 }
 
 .tr-header {
     border-bottom: 1px solid #e0e0e0;
 }
 
-.tr-header__topbar {
+.tr-topbar {
     display: flex;
     align-items: flex-start;
     flex-wrap: wrap;
@@ -180,7 +180,6 @@ body {
         font-weight: 300;
         font-size: 16px;
         line-height: 40px;
-        letter-spacing: 0.05em;
 
         &::placeholder {
             color: #bdbdbd;
@@ -215,9 +214,9 @@ body {
 }
 
 .tr-list td:nth-child(2) {
-    width: 100%;
-    word-break: break-all; 
     padding-left: 8px;
+    width: 100%;
+    word-break: break-all;
 }
 
 .tr-list td:nth-child(3) {
@@ -229,12 +228,12 @@ body {
 
     &::before {
         display: block;
+        height: 16px;
         background-position: center;
         background-size: cover;
         background-repeat: no-repeat;
         content: "";
         cursor: pointer;
-        height: 16px;
     }
 
     &_edit::before {
@@ -246,4 +245,134 @@ body {
         width: 16px;
         background-image: url(../img/delete.svg);
     }
+}
+
+.tr-preloader {
+    position: absolute;
+    top: 0;
+    right: 0;
+    z-index: 9999;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(130.46deg, #18a7d4, #6916a9);
+    color: #fff;
+    font-size: 14px;
+
+    img {
+        margin-bottom: 40px;
+    }
+}
+
+.tr-datepick {
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 100;
+    display: none;
+    padding: 24px 16px;
+    width: 100%;
+    height: 100%;
+    background-color: #fff;
+}
+
+#Datepickk {
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    font-weight: 500;
+}
+
+#Datepickk .d-month-picker,
+#Datepickk .d-year-picker {
+    display: none;
+}
+
+#Datepickk .d-header {
+    margin-top: -12px;
+    margin-bottom: 8px;
+    color: #333;
+    font-weight: 700;
+    font-size: 24px;
+}
+
+#Datepickk .d-calendar,
+#Datepickk .d-header {
+    background-color: transparent;
+}
+
+#Datepickk .d-tables {
+    border-top: 1px solid #e0e0e0;
+    padding-top: 15px;
+    margin-right: -10px;
+    margin-left: -10px;
+    min-height: 240px;
+    color: #333;
+    font-size: 16px;
+}
+
+#Datepickk .d-year {
+    display: none;
+}
+
+#Datepickk .d-table input+label.next,
+#Datepickk .d-table input+label.prev {
+    color: #e0e0e0;
+}
+
+#Datepickk .d-table input+label {
+    &::before {
+        background-color: #6916a9;
+        transform-origin: center;
+    }
+}
+
+#Datepickk .d-tables:not(.locked) input:not(:checked)+label:not(.hidden):hover {
+    background-color: transparent;
+    color: #333;
+}
+
+#Datepickk .d-table input+label:before {
+    top: auto;
+    left: auto;
+    max-width: 30px;
+    max-height: 30px;
+    border-radius: 100%;
+}
+
+#Datepickk .d-header i#d-previous,
+#Datepickk .d-header i#d-next {
+    width: 30px;
+    height: 20px;
+    border-radius: 0;
+    background-color: transparent;
+    background-size: cover;
+    background-repeat: no-repeat;
+
+    &::before,
+    &::after {
+        display: none;
+    }
+}
+
+#Datepickk .d-header i#d-previous {
+    left: 0;
+    background-image: url(../img/calendarPrev.svg);
+    background-position: center left;
+}
+
+#Datepickk .d-header i#d-next {
+    right: 0;
+    background-image: url(../img/calendarNext.svg);
+    background-position: center right;
+}
+
+#Datepickk .d-year:before {
+    content: "20";
+}
+
+#Datepickk .d-table input:checked+label {
+    pointer-events: none;
 }
