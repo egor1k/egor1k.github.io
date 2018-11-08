@@ -1,0 +1,179 @@
+@import url("https://fonts.googleapis.com/css?family=Roboto:300,400,500&subset=cyrillic");
+body {
+  font-family: "Roboto", sans-serif;
+  padding-top: 50px;
+}
+
+.btn_main {
+  padding: 0 40px;
+  height: 60px;
+  border-radius: 6px;
+  background-color: #ff6b00;
+  color: #ffffff;
+  font-weight: 500;
+  line-height: 60px;
+}
+
+.btn_main:hover {
+  background-color: #ea5600;
+  color: #ffffff;
+}
+
+.btn_main:focus {
+  -webkit-box-shadow: none;
+          box-shadow: none;
+}
+
+.section {
+  text-align: center;
+  padding: 140px 0;
+}
+
+.section_dark {
+  background-color: #f9f9f9;
+}
+
+.section-title {
+  margin: 0 auto 50px;
+  max-width: 1100px;
+  color: #5e6977;
+  text-align: center;
+  letter-spacing: -2px;
+  font-weight: 300;
+  font-size: 52px;
+  line-height: 58px;
+}
+
+.section-subtitle {
+  color: #5e6977;
+  font-weight: 300;
+  font-size: 24px;
+  letter-spacing: -1px;
+  max-width: 500px;
+  margin: 0 auto 50px;
+}
+
+.bright-title {
+  font-size: 18px;
+  color: #ff6b00;
+  font-weight: 500;
+}
+
+header {
+  position: fixed;
+  top: 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: 15px 50px;
+  min-height: 100px;
+  width: 100%;
+  border-bottom: 1px solid #eeeeee;
+  background-color: #ffffff;
+}
+
+footer {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: 15px 0;
+  min-height: 100px;
+  background-color: #86939e;
+  color: rgba(255, 255, 255, 0.7);
+}
+
+footer a {
+  color: inherit;
+}
+
+footer a:hover {
+  color: #ffffff;
+  text-decoration: none;
+}
+
+.menu-hamburger {
+  position: relative;
+  display: block;
+  margin: 0;
+  width: 20px;
+  height: 14px;
+  cursor: pointer;
+}
+
+.menu-hamburger div {
+  position: absolute;
+  width: 100%;
+  height: 2px;
+  background-color: #43484d;
+  -webkit-transition: top 0.15s ease-in-out 0.15s, opacity 0s ease-in-out 0.15s, -webkit-transform 0.15s ease-in-out;
+  transition: top 0.15s ease-in-out 0.15s, opacity 0s ease-in-out 0.15s, -webkit-transform 0.15s ease-in-out;
+  transition: top 0.15s ease-in-out 0.15s, opacity 0s ease-in-out 0.15s, transform 0.15s ease-in-out;
+  transition: top 0.15s ease-in-out 0.15s, opacity 0s ease-in-out 0.15s, transform 0.15s ease-in-out, -webkit-transform 0.15s ease-in-out;
+}
+
+.menu-hamburger input {
+  display: none;
+}
+
+.menu-hamburger input + div {
+  top: 0;
+}
+
+.menu-hamburger input + div + div {
+  top: 6px;
+}
+
+.menu-hamburger input + div + div + div {
+  top: 12px;
+}
+
+.menu-hamburger input:checked + div {
+  top: 6px;
+  -webkit-transition: top 0.15s ease-in-out, opacity 0s ease-in-out 0.15s, -webkit-transform 0.15s ease-in-out 0.15s;
+  transition: top 0.15s ease-in-out, opacity 0s ease-in-out 0.15s, -webkit-transform 0.15s ease-in-out 0.15s;
+  transition: top 0.15s ease-in-out, opacity 0s ease-in-out 0.15s, transform 0.15s ease-in-out 0.15s;
+  transition: top 0.15s ease-in-out, opacity 0s ease-in-out 0.15s, transform 0.15s ease-in-out 0.15s, -webkit-transform 0.15s ease-in-out 0.15s;
+  -webkit-transform: rotate(45deg);
+          transform: rotate(45deg);
+}
+
+.menu-hamburger input:checked + div + div {
+  opacity: 0;
+  -webkit-transition: top 0.15s ease-in-out, opacity 0s ease-in-out 0.15s, -webkit-transform 0.15s ease-in-out 0.15s;
+  transition: top 0.15s ease-in-out, opacity 0s ease-in-out 0.15s, -webkit-transform 0.15s ease-in-out 0.15s;
+  transition: top 0.15s ease-in-out, opacity 0s ease-in-out 0.15s, transform 0.15s ease-in-out 0.15s;
+  transition: top 0.15s ease-in-out, opacity 0s ease-in-out 0.15s, transform 0.15s ease-in-out 0.15s, -webkit-transform 0.15s ease-in-out 0.15s;
+}
+
+.menu-hamburger input:checked + div + div + div {
+  top: 6px;
+  -webkit-transition: top 0.15s ease-in-out, opacity 0s ease-in-out 0.15s, -webkit-transform 0.15s ease-in-out 0.15s;
+  transition: top 0.15s ease-in-out, opacity 0s ease-in-out 0.15s, -webkit-transform 0.15s ease-in-out 0.15s;
+  transition: top 0.15s ease-in-out, opacity 0s ease-in-out 0.15s, transform 0.15s ease-in-out 0.15s;
+  transition: top 0.15s ease-in-out, opacity 0s ease-in-out 0.15s, transform 0.15s ease-in-out 0.15s, -webkit-transform 0.15s ease-in-out 0.15s;
+  -webkit-transform: rotate(-45deg);
+          transform: rotate(-45deg);
+}
+
+@media (max-width: 575px) {
+  .section {
+    padding: 70px 0;
+  }
+  .section-title {
+    letter-spacing: 0;
+    font-size: 26px;
+    line-height: 30px;
+    font-weight: 400;
+  }
+  .section-subtitle {
+    font-size: 18px;
+    letter-spacing: 0;
+  }
+}
+/*# sourceMappingURL=main.css.map */
