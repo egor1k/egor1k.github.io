@@ -1,10 +1,11 @@
 "use strict";
 
 function fileUpload() {
-    $('.file-upload').on('change', function () {
-        var label = $(this),
-            input = label.find('input'),
-            inputVal = input.val();
+    var label = $('.file-upload'),
+        input = label.find('input');
+
+    label.on('change', function () {
+        var inputVal = input.val();
         if (inputVal != "") {
             label.addClass('active');
         } else {
@@ -13,6 +14,59 @@ function fileUpload() {
     });
 }
 
+function animateAnchor() {
+    var header = $('header');
+
+    $('.anchor-animate').on('click', function (e) {
+        e.preventDefault();
+        var headerHeight = header.innerHeight();
+        $('html, body').animate({
+            scrollTop: $(this.hash).offset().top - headerHeight
+        }, 600);
+    });
+}
+
+function dropMenu() {
+    var button = $('.menu-hamburger');
+    var dropMenu = $('.drop-menu');
+    var checkbox = button.find('input[type=checkbox]');
+
+    button.on('click', function () {
+        if (checkbox.prop('checked') == true) {
+            dropMenu.addClass('opened');
+        } else {
+            dropMenu.removeClass('opened');
+        }
+    });
+}
+
+function slider1() {
+    var sliderContainer = $('.slider1'),
+        logosContainer = $('.slider1-logos'),
+        logoClass = ".img",
+        logos = logosContainer.find(logoClass);
+
+    sliderContainer.slick({
+        // options
+    });
+
+    logosContainer.on('click', logoClass, function () {
+        var index = $(this).index();
+        sliderContainer.slick('slickGoTo', index);
+        $('html, body').stop().animate({
+            scrollTop: sliderContainer.offset().top - $(window).height()/2
+        }, 400);
+    });
+
+    sliderContainer.on('beforeChange', function (event, slick, currentSlide, nextSlide) {
+        logos.removeClass('active').eq(nextSlide).addClass('active');
+    })
+}
+
 $(function () {
-    fileUpload(); // если загружены файлы в input -> добавляет класс active для label
+    animateAnchor();
+    fileUpload();
+    dropMenu();
+    slider1();
+
 });
