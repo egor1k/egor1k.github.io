@@ -82,10 +82,30 @@ function slider2() {
 
 }
 
+function sendForm() {
+    $('#main-form').on('submit', (e)=>{
+        e.preventDefault();
+        formData = new FormData($(this).get(0));
+        alert(formData);
+        $.ajax({
+            type: "POST",
+            url: "/ajax/form.php",
+            data: formData,
+            contentType: false,
+            processData: false,
+            // dataType: "dataType",
+            success: function (response) {
+                
+            }
+        });
+    });
+}
+
 $(function () {
     animateAnchor();
     fileUpload();
     dropMenu();
     slider1();
     slider2();
+    sendForm();
 });
