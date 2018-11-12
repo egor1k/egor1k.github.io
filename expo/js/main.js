@@ -17,10 +17,10 @@ function fileUpload() {
 function animateAnchor() {
     var header = $('header');
 
-    $('.anchor-animate').on('click', function (e) {
+    $('.anchor-animate, .drop-menu a').on('click', function (e) {
         e.preventDefault();
         var headerHeight = header.innerHeight();
-        $('html, body').animate({
+        $('html, body').stop().animate({
             scrollTop: $(this.hash).offset().top - headerHeight
         }, 600);
     });
@@ -63,10 +63,29 @@ function slider1() {
     })
 }
 
+function slider2() {
+    var notebook = $('.notes'),
+        sliderContainer = $('.slider2');
+
+    notebook.slick({
+        arrows: false,
+        fade: true,
+        swipe: false,
+        touchMove: false,
+        asNavFor: sliderContainer
+    });
+
+    sliderContainer.slick({
+        dots: true,
+        asNavFor: notebook
+    });
+
+}
+
 $(function () {
     animateAnchor();
     fileUpload();
     dropMenu();
     slider1();
-
+    slider2();
 });

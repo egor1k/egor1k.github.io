@@ -20,8 +20,8 @@ header {
   padding: 15px 50px;
   min-height: 100px;
   width: 100%;
-  border-bottom: 1px solid #eeeeee;
-  background-color: #ffffff;
+  border-bottom: 1px solid #eee;
+  background-color: #fff;
 }
 
 footer {
@@ -44,12 +44,16 @@ footer a {
 }
 
 footer a:hover {
-  color: #ffffff;
+  color: #fff;
   text-decoration: none;
 }
 
 .section {
   padding: 140px 0;
+}
+
+.section#graph {
+  padding: 60px 0 0 0;
 }
 
 .section_dark {
@@ -88,14 +92,14 @@ footer a:hover {
   height: 60px;
   border-radius: 6px;
   background-color: #ff6b00;
-  color: #ffffff;
+  color: #fff;
   font-weight: 500;
   line-height: 60px;
 }
 
 .btn_main:hover {
   background-color: #ea5600;
-  color: #ffffff;
+  color: #fff;
 }
 
 .btn_main:focus {
@@ -170,9 +174,11 @@ footer a:hover {
 .drop-menu {
   position: absolute;
   top: 100%;
-  right: 65px;
+  right: 0;
   margin: 0;
-  padding: 5px 0 0 0;
+  padding: 0;
+  border: 1px solid #eee;
+  background-color: #fff;
   list-style: none;
   -webkit-transition: -webkit-transform 0.2s ease-in-out 0.1s;
   transition: -webkit-transform 0.2s ease-in-out 0.1s;
@@ -186,13 +192,13 @@ footer a:hover {
 
 .drop-menu a {
   display: block;
-  padding: 5px 0;
+  padding: 5px 65px 5px 15px;
   color: #86939e;
   text-decoration: none;
 }
 
 .drop-menu a:hover {
-  color: #5e6977;
+  background-color: #eee;
 }
 
 .drop-menu.opened {
@@ -264,7 +270,7 @@ footer a:hover {
   outline: none;
   border: 2px solid #e1e8ee;
   border-radius: 6px;
-  background-color: #ffffff;
+  background-color: #fff;
   background-image: url(../img/input-icon.svg);
   background-position: 15px center;
   background-repeat: no-repeat;
@@ -375,14 +381,14 @@ footer a:hover {
 
 .slider1 {
   margin: 0 auto;
-  max-width: 1100px;
   padding: 0 18px;
+  max-width: 1100px;
 }
 
 .slider1 .slide {
+  outline: none;
   color: #43484d;
   text-align: center;
-  outline: none;
 }
 
 .slider1 .slick-arrow {
@@ -392,16 +398,22 @@ footer a:hover {
   overflow: hidden;
   width: 16px;
   height: 28px;
+  outline: none;
   border: none;
   background-color: transparent;
   background-image: url(../img/slick-arrow.svg);
   background-position: center;
+  background-size: cover;
   background-repeat: no-repeat;
   color: transparent;
   text-indent: -9999px;
   cursor: pointer;
   -webkit-transform: translateY(-50%);
           transform: translateY(-50%);
+}
+
+.slider1 .slick-arrow:hover {
+  background-image: url(../img/slick-arrow_hover.svg);
 }
 
 .slider1 .slick-prev {
@@ -429,6 +441,128 @@ footer a:hover {
 .slider1 .date {
   color: #86939e;
   font-size: 16px;
+}
+
+.notebook {
+  position: relative;
+}
+
+.notebook .notes {
+  position: absolute;
+  top: 26px;
+  left: 0;
+  overflow: hidden;
+  width: 473px;
+  height: 305px;
+}
+
+.notebook .notes img {
+  width: 100%;
+}
+
+.slider2 .slide {
+  padding-right: 80px;
+  outline: none;
+  opacity: 0;
+  -webkit-transition: opacity 0.3s linear;
+  transition: opacity 0.3s linear;
+}
+
+.slider2 .slide.slick-current {
+  opacity: 1;
+}
+
+.slider2 .slide-title {
+  margin-bottom: 20px;
+  color: #43484d;
+  letter-spacing: -1px;
+  font-weight: 300;
+  font-size: 32px;
+}
+
+.slider2 .slide-text {
+  margin-bottom: 40px;
+  color: #86939e;
+  font-size: 16px;
+  line-height: 25px;
+}
+
+.slider2 .slick-prev {
+  display: none !important;
+}
+
+.slider2 .slick-dots {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.slider2 .slick-dots li {
+  margin-right: 10px;
+  padding: 2px;
+  width: 10px;
+  height: 10px;
+}
+
+.slider2 .slick-dots li.slick-active {
+  padding: 0;
+}
+
+.slider2 .slick-dots li.slick-active button {
+  background-color: #ff6b00;
+}
+
+.slider2 .slick-dots button {
+  display: inline-block;
+  overflow: hidden;
+  padding: 0;
+  width: 100%;
+  height: 100%;
+  outline: none;
+  border: none;
+  border-radius: 50%;
+  background-color: #86939e;
+  color: transparent;
+  text-indent: -9999px;
+  pointer-events: none;
+}
+
+.slider2 .slick-next {
+  position: absolute;
+  top: 50%;
+  right: -16px;
+  z-index: 1001;
+  overflow: hidden;
+  width: 16px;
+  height: 28px;
+  outline: none;
+  border: none;
+  background-color: transparent;
+  background-image: url(../img/slick-arrow2.svg);
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  color: transparent;
+  text-indent: -9999px;
+  cursor: pointer;
+  -webkit-transform: translateY(-50%) rotate(180deg);
+          transform: translateY(-50%) rotate(180deg);
+}
+
+.slider2 .slick-next:hover {
+  background-image: url(../img/slick-arrow_hover.svg);
+}
+
+@media (max-width: 1199px) {
+  .section#graph {
+    padding: 70px 0;
+  }
 }
 
 @media (max-width: 767px) {
@@ -474,6 +608,14 @@ footer a:hover {
   }
   .slider1-logos .img img {
     max-width: 105px;
+  }
+  .slider2 .slide {
+    padding-right: 0;
+  }
+  .slider2 .slide-title {
+    letter-spacing: 0;
+    font-size: 22px;
+    line-height: 26px;
   }
 }
 /*# sourceMappingURL=main.css.map */
