@@ -1,5 +1,6 @@
 @import url("https://fonts.googleapis.com/css?family=Roboto+Slab:300,400,700&subset=cyrillic");
 $color-main: #eb5757;
+// $color-main: #333;
 
 html {
     height: 100%;
@@ -66,12 +67,16 @@ body {
 }
 
 .main-navbar {
+    display: flex;
+    flex-direction: column;
+    min-height: 50px;
     border-radius: 24px;
     background-color: $color-main;
 }
 
 .main-menu {
     display: flex;
+    flex: 1 1 auto;
     flex-wrap: wrap;
     margin: 0;
     padding: 0 10px;
@@ -118,16 +123,17 @@ body {
 .sub-menu {
     position: absolute;
     top: 100%;
-    right: 0;
-    left: 0;
+    left: 50%;
     z-index: 1;
     flex-direction: column;
     margin: 0;
     padding: 15px 0 0;
+    min-width: 140px;
+    width: 100%;
     list-style: none;
     opacity: 0;
     transition: 0.15s ease;
-    transform: scaleY(0);
+    transform: scaleY(0) translateX(-50%);
     transform-origin: top;
 
     a {
@@ -187,28 +193,83 @@ body {
     }
 }
 
-.sub-menu-toggle {
-    position: absolute;
-    top: 25px;
-    right: 0;
-    transform: translateY(-50%) rotate(0);
-    width: 22px;
-    height: 22px;
-    border: none;
-    border-radius: 50%;
-    background-image: url(../img/arrow-menu-toggle.svg);
-    background-repeat: no-repeat;
-    background-position: center;
-    background-color: #fff;
-    transition: 0.4s ease;
+.main-menu-toggle {
+    display: flex;
+    align-items: center;
+    padding: 0 10px;
+    height: 50px;
+    border-bottom: 1px solid transparent;
+    color: #fff;
     cursor: pointer;
+    transition: 0.4s 0.15s;
 
-    &:focus {
-        outline: none;
+    &.main-menu_is-open {
+        border-color: rgba(255, 255, 255, 0.65);
+    }
+}
+
+.hamburger {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 15px;
+    width: 22px;
+    height: 18px;
+
+    span,
+    span::before,
+    span::after {
+        width: 100%;
+        height: 2px;
+        background-color: #fff;
     }
 
-    &.sub-menu_is-open {
-        transform: translateY(-50%) rotate(180deg);
+    span::before,
+    span::after {
+        position: absolute;
+        content: "";
+    }
+
+    span::before {
+        top: 0;
+    }
+
+    span::after {
+        bottom: 0;
+    }
+}
+
+.sub-menu-toggle {
+    position: absolute;
+    top: 0;
+    left: 0;
+    display: flex;
+    align-items: center;
+    padding: 0 21px;
+    height: 50px;
+    cursor: pointer;
+
+    button {
+        width: 32px;
+        height: 32px;
+        border: none;
+        border-radius: 50%;
+        background-color: #fff;
+        background-image: url(../img/arrow-menu-toggle.svg);
+        background-position: center;
+        background-repeat: no-repeat;
+        cursor: pointer;
+        transition: 0.4s ease;
+        transform: rotate(0);
+
+        &:focus {
+            outline: none;
+        }
+    }
+
+    &.sub-menu_is-open button {
+        transform: rotate(-180deg);
     }
 }
 
@@ -467,12 +528,19 @@ body {
 }
 
 @media (min-width: 1024px) {
+    .main-menu {
+        display: flex !important;
+    }
+
+    .main-menu-toggle {
+        display: none;
+    }
 
     .main-menu a:hover+.sub-menu,
     .sub-menu:hover {
         display: flex !important;
         opacity: 1;
-        transform: scaleY(1);
+        transform: scaleY(1) translateX(-50%);
     }
 
     .sub-menu-toggle {
@@ -482,13 +550,42 @@ body {
 
 @media (max-width: 1023px) {
     .main-menu {
+        display: none;
         flex-direction: column;
+        padding: 0;
+    }
+
+    .main-menu a {
+        width: 100%;
+
+        &::before {
+            content: none;
+        }
+
+        &:hover {
+            background-color: lighten($color-main, 5%);
+        }
+    }
+
+    .main-menu li:last-child a {
+        border-bottom-right-radius: 24px;
+        border-bottom-left-radius: 24px;
+    }
+
+    .main-menu>li {
+        border-bottom: 1px dashed rgba(255, 255, 255, 0.25);
+
+        &:last-child {
+            border-bottom: none;
+        }
     }
 
     .sub-menu {
         position: static;
         display: none;
+        margin: 0 auto;
         padding: 0;
+        width: calc(100% - 20px);
         opacity: 1;
         transition: none;
         transform: scale(1);
