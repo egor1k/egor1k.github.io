@@ -1,8 +1,4 @@
-function menu_toggle() {
-
-    $('.sub-menu-toggle').click(function () {
-        $(this).toggleClass('sub-menu_is-open').prev('.sub-menu').slideToggle();
-    });
+function menuToggle() {
 
     var mainMenu = $('.main-menu');
 
@@ -11,8 +7,12 @@ function menu_toggle() {
         mainMenu.slideToggle();
     });
 
+    $('.sub-menu-toggle').click(function () {
+        $(this).toggleClass('sub-menu_is-open').prev('.sub-menu').slideToggle();
+    });
+
 }
 
 $(function () {
-    menu_toggle();
+    menuToggle();
 });

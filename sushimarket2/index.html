@@ -8,10 +8,12 @@
     <title>SUSHI Интернет Магазин</title>
     <!-- Стили -->
     <link rel="stylesheet" href="css/bootstrap.css">
+    <link rel="stylesheet" href="css/slick.css">
     <link rel="stylesheet" href="css/main.css">
 </head>
 
 <body>
+
     <header class="header">
 
         <div class="top-bar">
@@ -65,35 +67,41 @@
 
                 <ul class="main-menu">
                     <li>
-                        <a href="">Сеты</a>
-                        <ul class="sub-menu">
-                            <li><a href="">Горячие роллы</a></li>
-                            <li><a href="">Запеченные роллы</a></li>
-                            <li><a href="">Гунканы</a></li>
-                            <li><a href="">Большие пиццы</a></li>
-                        </ul>
-                        <div class="sub-menu-toggle"><button></button></div>
-                    </li>
-                    <li><a href="">Суши</a></li>
-                    <li>
                         <a href="">Пицца</a>
                         <ul class="sub-menu">
-                            <li><a href="">Паста</a></li>
-                            <li><a href="">Бизнес ланч</a></li>
-                            <li><a href="">Вок</a></li>
-                            <li><a href="">Горячие роллы</a></li>
-                            <li><a href="">Запеченные роллы</a></li>
-                            <li><a href="">Гунканы</a></li>
-                            <li><a href="">Большие пиццы</a></li>
+                            <li><a href="">Тонкое тесто</a></li>
+                            <li><a href="">Двойная начинка</a></li>
+                            <li><a href="">Толстое тесто</a></li>
                         </ul>
                         <div class="sub-menu-toggle"><button></button></div>
                     </li>
-                    <li><a href="">Салаты</a></li>
+                    <li>
+                        <a href="">Роллы</a>
+                        <ul class="sub-menu">
+                            <li><a href="">Классические</a></li>
+                            <li><a href="">Запеченные</a></li>
+                            <li><a href="">Суши</a></li>
+                        </ul>
+                        <div class="sub-menu-toggle"><button></button></div>
+                    </li>
+                    <li><a href="">Сеты</a></li>
+                    <li><a href="">Наборы</a></li>
+                    <li><a href="">Стритфуд</a></li>
+                    <li><a href="">ВОК и пасты</a></li>
+                    <li>
+                        <a href="">Салаты и закуски</a>
+                        <ul class="sub-menu">
+                            <li><a href="">Соусы</a></li>
+                            <li><a href="">Закуски</a></li>
+                            <li><a href="">Салаты</a></li>
+                        </ul>
+                        <div class="sub-menu-toggle"><button></button></div>
+                    </li>
                     <li><a href="">Супы</a></li>
-                    <li><a href="">Десерты</a></li>
-                    <li><a href="">Напитки</a></li>
-                    <li><a href="">Соусы</a></li>
-                    <li><a href="">Бонусы</a></li>
+                    <!-- <li><a href="">Десерты</a></li> -->
+                    <!-- <li><a href="">Завтраки</a></li> -->
+                    <!-- <li><a href="">Напитки</a></li> -->
+                    <!-- <li><a href="">Соусы</a></li> -->
                 </ul>
 
             </nav>
@@ -104,28 +112,52 @@
 
     <div class="content py-2">
         <div class="container">
-            <p>Далеко-далеко за словесными горами в стране гласных и согласных живут рыбные тексты. Вдали от всех живут
-                они в буквенных домах на берегу Семантика большого языкового океана. Маленький ручеек Даль журчит по
-                всей стране и обеспечивает ее всеми необходимыми правилами. Эта парадигматическая страна, в которой
-                жаренные члены предложения залетают прямо в рот. Даже всемогущая пунктуация не имеет власти над рыбными
-                текстами, ведущими безорфографичный образ жизни. Однажды одна маленькая строчка рыбного текста по имени
-                Lorem ipsum решила выйти в большой мир грамматики.</p>
 
-            <p>Великий Оксмокс предупреждал ее о злых запятых, диких знаках вопроса и коварных точках с запятой, но
-                текст не дал сбить себя с толку. Он собрал семь своих заглавных букв, подпоясал инициал за пояс и
-                пустился в дорогу. Взобравшись на первую вершину курсивных гор, бросил он последний взгляд назад, на
-                силуэт своего родного города Буквоград, на заголовок деревни Алфавит и на подзаголовок своего переулка
-                Строчка. Грустный реторический вопрос скатился по его щеке и он продолжил свой путь. По дороге встретил
-                текст рукопись.</p>
+            <div class="row">
+                <div class="col-auto">
+                    <div class="product-card">
+                        <div class="product-card__img" style="background-image: url(img/temp/bonito.jpg)"></div>
+                        <div class="product-card__body">
+                            <div class="product-card__name">Ролл Филадельфия</div>
+                            <div class="product-card__description">Лосось, огурец, авокадо, сыр сливочный, рис, нори</div>
+                            <div class="product-card__prices">
+                                <div class="product-card__price product-card__price_old">106</div>
+                                <div class="product-card__price product-card__price_discount">96</div>
+                                <div class="product-card__weight">130 гр.</div>
+                            </div>
+                            <div class="product-card__buttons">
+                                <button class="product-card__add"></button>
+                                <div class="product-card__quantity"></div>
+                            </div>
 
-            <p>Она предупредила его: «В моей стране все переписывается по несколько раз. Единственное, что от меня
-                осталось, это приставка «и». Возвращайся ты лучше в свою безопасную страну». Не послушавшись рукописи,
-                наш текст продолжил свой путь. Вскоре ему повстречался коварный составитель рекламных текстов,
-                напоивший его языком и речью и заманивший в свое агенство, которое использовало его снова и снова в
-                своих проектах. И если его не переписали, то живет он там до сих пор. Далеко-далеко за словесными
-                горами в стране гласных и согласных живут рыбные тексты.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-auto">
+                    <div class="product-card">
+                        <div class="product-card__img" style="background-image: url(img/temp/roll-czezar.jpg)"></div>
+                        <div class="product-card__body">
+                            <div class="product-card__name">Запеченный Сяке Терияки Маки</div>
+                            <div class="product-card__description">Лосось, замес краба, авокадо, сыр сливочный, унаги
+                                соус, кунжут, икра Масаго рис, нори</div>
+                            <div class="product-card__prices">
+                                <div class="product-card__price">189</div>
+                                <div class="product-card__weight">260 гр.</div>
+                            </div>
+                            <div class="product-card__buttons">
+                                <button class="product-card__add"></button>
+                                <div class="product-card__quantity"></div>
+                            </div>
 
-            
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+
+
+
+
         </div>
     </div><!-- /.content -->
 
@@ -189,6 +221,7 @@
 
     <!-- Скрипты -->
     <script src="js/jquery-3.3.1.min.js"></script>
+    <script src="js/slick.min.js"></script>
     <script src="js/main.js"></script>
 </body>
 
