@@ -1,0 +1,207 @@
+@import url("https://fonts.googleapis.com/css?family=Roboto+Slab:300,400,700&subset=cyrillic");
+$color-primary: #eb5757;
+$color-primary-light: #FFD7D7;
+$color-secondary: #71c45c;
+$color-secondary-light: #BFF2B2;
+
+html {
+    min-width: 1000px;
+    height: 100%;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    min-height: 100%;
+    font-size: 15px;
+}
+
+
+
+.content {
+    flex: 1 1 auto;
+}
+
+
+
+.main-navbar {
+    position: relative;
+    overflow: hidden;
+    padding: 0 20px;
+    height: 50px;
+    border-radius: 24px;
+    background-color: $color-primary;
+
+    &.is-overflow {
+        padding-right: 70px;
+    }
+}
+
+.main-navbar-toggle {
+    position: absolute;
+    right: 20px;
+    bottom: 0;
+    display: none;
+    width: 31px;
+    height: 50px;
+    background: $color-primary url(../img/navbar-toggle-open.svg) no-repeat center;
+    transition: background 0.2s ease;
+
+    .main-navbar.is-open & {
+        background-image: url(../img/navbar-toggle-close.svg);
+    }
+}
+
+.main-menu {
+    display: flex;
+    flex-wrap: wrap;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+
+    a {
+        position: relative;
+        display: inline-block;
+        padding: 0 30px;
+        color: #fff;
+        text-decoration: none;
+        font-size: 16px;
+        line-height: 50px;
+
+        &::before {
+            position: absolute;
+            top: calc(50% - 10px);
+            left: 6px;
+            width: 18px;
+            height: 18px;
+            background: url(../img/primary-menu-element-icon.svg) no-repeat center;
+            content: "";
+            opacity: 0;
+            transition: 0.15s ease-out;
+            transform: translateY(-50%);
+        }
+
+        &:hover::before {
+            top: 50%;
+            opacity: 1;
+        }
+    }
+}
+
+.top-bar {
+    border-bottom: 1px solid #bdbdbd;
+    background-color: #f2f2f2;
+}
+
+.top-bar-menu {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-end;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+
+    a {
+        position: relative;
+        margin-left: 80px;
+        color: #828282;
+        font-weight: 300;
+        font-size: 14px;
+        line-height: 30px;
+
+        &::before {
+            position: absolute;
+            top: 50%;
+            left: -14px;
+            width: 9px;
+            height: 9px;
+            background: url(../img/top-bar-icon.svg) no-repeat center;
+            content: "";
+            transition: 0.15s ease-out;
+            transform: translateY(-50%);
+        }
+
+        &:hover {
+            color: $color-primary;
+
+            &::before {
+                left: -10px;
+            }
+        }
+    }
+}
+
+.city,
+.phone {
+    display: flex;
+    align-items: center;
+    background-position: center;
+    background-repeat: no-repeat;
+
+    &::before {
+        margin-right: 10px;
+        content: "";
+    }
+}
+
+.city {
+    color: #828282;
+    text-decoration: underline;
+    font-weight: 300;
+    font-size: 14px;
+
+    &::before {
+        width: 16px;
+        height: 20px;
+        background-image: url(../img/city-mark.svg);
+    }
+}
+
+.phone {
+    color: #000;
+    letter-spacing: 0.05em;
+    font-size: 18px;
+
+    &::before {
+        width: 18px;
+        height: 18px;
+        background-image: url(../img/phone.svg);
+    }
+}
+
+.cart,
+.cabinet {
+    display: inline-block;
+    width: 44px;
+    height: 44px;
+    border: 1px solid;
+    border-radius: 50%;
+    background-position: center;
+    background-repeat: no-repeat;
+    vertical-align: middle;
+    transition: 0.15s ease-out;
+
+    &:hover {
+        transform: scale(1.03);
+    }
+}
+
+.cart {
+    border-color: $color-primary-light;
+    background-color: $color-primary-light;
+    background-image: url(../img/cart.svg);
+
+    &:hover {
+        border: 1px solid $color-primary;
+    }
+}
+
+.cabinet {
+    border-color: $color-secondary-light;
+    background-color: $color-secondary-light;
+    background-image: url(../img/cabinet.svg);
+
+    &:hover {
+        border: 1px solid $color-secondary;
+    }
+}
