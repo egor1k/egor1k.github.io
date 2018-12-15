@@ -1,19 +1,14 @@
 'use strict';
 
-function slider() {
-    var swiper = new Swiper('.swiper-container', {
-        direction: 'vertical',
-        slidesPerView: 'auto',
-        // slidesPerView: 1,
-        freeMode: true,
-        mousewheel: true,
-        freeModeSticky: true,
-        // scrollbar: {
-        //     el: '.swiper-scrollbar',
-        // },
+function fullPageMenu () {
+    var toggle = $('.js-fullpage-menu-toggle');
+
+    toggle.click(function (e) { 
+        e.preventDefault();
+        $('body').toggleClass('fullpage-menu-is-open');
     });
 }
 
 $(function () {
-    slider();
+    fullPageMenu ();
 });

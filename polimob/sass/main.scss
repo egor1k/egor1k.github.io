@@ -1,0 +1,159 @@
+$color-primary: #0093cb;
+
+html {
+    height: 100%;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    min-height: 100%;
+    font-size: 14px;
+}
+
+.fullpage-menu-is-open {
+    overflow: hidden;
+}
+
+.main {
+    display: flex;
+    flex: 1 1 auto;
+    flex-direction: column;
+}
+
+.header {
+    position: fixed;
+    overflow: hidden;
+    flex: 0 0 auto;
+    height: 74px;
+    background-color: #fff;
+
+    .fullpage-menu & {
+        background-color: #000;
+    }
+}
+
+.content {
+    flex: 1 1 auto;
+    padding-top: 74px;
+}
+
+.footer {
+    flex: 0 0 auto;
+    background-color: #002a39;
+    color: rgba(255, 255, 255, 0.5);
+    text-align: center;
+
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    h6 {
+        color: rgba(255, 255, 255, 0.8);
+    }
+}
+
+.fullpage-menu {
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 1030;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: 100%;
+    background-color: #000;
+    color: #fff;
+    transition: 0.4s ease;
+    transform: translateX(100%);
+
+    .fullpage-menu-is-open & {
+        transform: translateX(0);
+    }
+
+    &__container {
+        display: flex;
+        flex: 1 1 auto;
+        flex-direction: column;
+        justify-content: center;
+        padding: 0 60px;
+    }
+
+    ul {
+        margin: 0 0 40px;
+        padding: 0;
+        list-style: none;
+
+        a {
+            display: block;
+            padding: 15px 0;
+            color: inherit;
+            letter-spacing: 0.1em;
+            font-size: 16px;
+
+            &.active {
+                text-decoration: underline;
+                font-weight: bold;
+            }
+        }
+    }
+}
+
+.i-phone {
+    font-weight: bold;
+
+    i {
+        margin-right: 5px;
+        color: #27ae60;
+    }
+}
+
+.b-get-consult {
+    width: 100%;
+    height: 50px;
+    border: 1px solid transparent;
+    background-color: $color-primary;
+    color: #fff;
+    cursor: pointer;
+
+    user-select: none;
+
+    &:focus {
+        outline: none;
+    }
+}
+
+.site-lang {
+    text-align: center;
+    text-transform: uppercase;
+    font-style: italic;
+
+    span.active {
+        color: $color-primary;
+        text-decoration: underline;
+        font-weight: bold;
+    }
+
+    .fullpage-menu & {
+        color: rgba(255, 255, 255, 0.5);
+
+        span.active {
+            color: #fff;
+        }
+    }
+}
+
+.header-button {
+    border: 1px solid transparent;
+    background-color: transparent;
+    color: inherit;
+    font-size: 19px;
+    cursor: pointer;
+
+    user-select: none;
+
+    &:focus {
+        outline: none;
+    }
+}
