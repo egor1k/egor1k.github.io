@@ -112,7 +112,7 @@ template { display: none; }
 
 [hidden] { display: none !important; }
 
-.container { width: 100%; padding-right: 16px; padding-left: 16px; margin-right: auto; margin-left: auto; max-width: 768px; }
+.container { width: 100%; padding-right: 16px; padding-left: 16px; margin-right: auto; margin-left: auto; }
 
 .container-fluid { width: 100%; padding-right: 16px; padding-left: 16px; margin-right: auto; margin-left: auto; }
 
