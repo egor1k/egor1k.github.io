@@ -74,12 +74,21 @@ textarea {
         font-weight: bold;
         font-size: 70px;
         line-height: 1.2;
+
+        @media (max-width: 767px) {
+            font-size: 34px;
+            letter-spacing: 0.1em;
+        }
     }
 
     p {
         display: inline-block;
         background-color: $color-primary;
         font-size: 22px;
+
+        @media (max-width: 767px) {
+            font-size: 18px;
+        }
     }
 }
 
@@ -132,6 +141,11 @@ textarea {
         // text-transform: none;
         // letter-spacing: 0;
         // font-weight: 300;
+    }
+
+    @media (max-width: 767px) {
+        font-size: 16px;
+        letter-spacing: 0;
     }
 }
 
@@ -216,7 +230,6 @@ textarea {
         display: block;
         padding: 10px 30px;
         color: #000000;
-        font-weight: 300;
         line-height: 1.2;
         transition: 0.1s ease;
 
@@ -272,12 +285,21 @@ textarea {
     &_white {
         color: #ffffff;
     }
+
+    @media (max-width: 767px) {
+        font-size: 30px;
+        letter-spacing: 0.15em;
+    }
 }
 
 .h3 {
     font-weight: bold;
     font-size: 32px;
     line-height: 1.2;
+
+    @media (max-width: 767px) {
+        font-size: 24px;
+    }
 }
 
 .h4 {
@@ -326,6 +348,10 @@ textarea {
         img {
             max-width: 175px;
             width: 100%;
+        }
+
+        @media (max-width: 767px) {
+            display: none;
         }
     }
 
