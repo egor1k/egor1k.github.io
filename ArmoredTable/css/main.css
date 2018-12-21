@@ -1,9 +1,10 @@
 @import url("https://fonts.googleapis.com/css?family=Ubuntu:300,400,500,700&subset=cyrillic");
+
 *,
 ::before,
 ::after {
   -webkit-box-sizing: border-box;
-          box-sizing: border-box;
+  box-sizing: border-box;
 }
 
 .tablereservation {
@@ -29,11 +30,11 @@
   display: -ms-flexbox;
   display: flex;
   -webkit-box-align: start;
-      -ms-flex-align: start;
-          align-items: flex-start;
+  -ms-flex-align: start;
+  align-items: flex-start;
   -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
   margin-bottom: 25px;
 }
 
@@ -42,8 +43,8 @@
   display: -ms-flexbox;
   display: flex;
   -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
   text-decoration: underline;
   letter-spacing: 0.05em;
   font-weight: 500;
@@ -124,7 +125,7 @@
   font-weight: 500;
   font-size: 60px;
   -webkit-transform: translate(-50%, -55%);
-          transform: translate(-50%, -55%);
+  transform: translate(-50%, -55%);
 }
 
 .tr-input-toggle {
@@ -136,12 +137,12 @@
   margin: 20px auto;
   max-width: 71px;
   -webkit-transform: rotate(90deg);
-          transform: rotate(90deg);
+  transform: rotate(90deg);
 }
 
 .tr-input-toggle_reverse input {
   -webkit-transform: rotate(-90deg);
-          transform: rotate(-90deg);
+  transform: rotate(-90deg);
 }
 
 .tr-input-toggle_reverse .tr-plus {
@@ -182,13 +183,13 @@
 .tr-plus {
   top: 0;
   -webkit-transform: translate(-50%, -100%);
-          transform: translate(-50%, -100%);
+  transform: translate(-50%, -100%);
 }
 
 .tr-minus {
   bottom: 0;
   -webkit-transform: rotate(180deg) translate(50%, -100%);
-          transform: rotate(180deg) translate(50%, -100%);
+  transform: rotate(180deg) translate(50%, -100%);
 }
 
 .tr-mainform label {
@@ -228,8 +229,8 @@
   display: -ms-flexbox;
   display: flex;
   -webkit-box-align: stretch;
-      -ms-flex-align: stretch;
-          align-items: stretch;
+  -ms-flex-align: stretch;
+  align-items: stretch;
   width: 100%;
   height: 50px;
 }
@@ -239,14 +240,14 @@
   display: -ms-flexbox;
   display: flex;
   -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
   -webkit-box-flex: 1;
-      -ms-flex: 1 1 auto;
-          flex: 1 1 auto;
+  -ms-flex: 1 1 auto;
+  flex: 1 1 auto;
   -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
   width: 100%;
   color: #ffffff;
   text-decoration: none;
@@ -303,22 +304,22 @@
   font-size: 16px;
 }
 
-#Datepickk .d-table input + label.next,
-#Datepickk .d-table input + label.prev {
+#Datepickk .d-table input+label.next,
+#Datepickk .d-table input+label.prev {
   color: rgba(255, 255, 255, 0.5);
 }
 
-#Datepickk .d-table input + label::before {
+#Datepickk .d-table input+label::before {
   -webkit-transform-origin: center;
-          transform-origin: center;
+  transform-origin: center;
 }
 
-#Datepickk .d-tables:not(.locked) input:not(:checked) + label:not(.hidden):hover {
+#Datepickk .d-tables:not(.locked) input:not(:checked)+label:not(.hidden):hover {
   background-color: transparent;
   color: #ffffff;
 }
 
-#Datepickk .d-table input + label:before {
+#Datepickk .d-table input+label:before {
   top: auto;
   left: auto;
   max-width: 30px;
@@ -336,7 +337,8 @@
   background-repeat: no-repeat;
 }
 
-#Datepickk .d-header i#d-previous::before, #Datepickk .d-header i#d-previous::after,
+#Datepickk .d-header i#d-previous::before,
+#Datepickk .d-header i#d-previous::after,
 #Datepickk .d-header i#d-next::before,
 #Datepickk .d-header i#d-next::after {
   display: none;
@@ -357,4 +359,5 @@
 #Datepickk .d-year:before {
   content: "20";
 }
+
 /*# sourceMappingURL=main.css.map */
