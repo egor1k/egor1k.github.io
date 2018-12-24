@@ -26,7 +26,14 @@ function swipers() {
             1199: {
                 slidesPerView: 2,
             }
-        }
+        },
+        pagination: {
+            el: '.swiper-pagination',
+        },
+        navigation: {
+            nextEl: '.btn-next',
+            prevEl: '.btn-prev',
+        },
     })
 }
 
@@ -35,15 +42,15 @@ function tech() {
     $('.tech').on({
         mouseenter: function () {
             $(this).addClass('is-open').find('.tech-txt').stop().animate({
-                height: $(this).get(0).scrollHeight
-            }, 300, function() {
+                height: $(this).find('.tech-txt').get(0).scrollHeight
+            }, 300, 'linear', function () {
                 $(this).height('auto');
             });
         },
         mouseleave: function () {
             $(this).removeClass('is-open').find('.tech-txt').stop().animate({
                 height: '200'
-            }, 200);
+            }, 300, 'linear');
         }
     }, '.tech-item');
 }
