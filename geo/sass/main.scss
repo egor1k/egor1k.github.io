@@ -1,6 +1,7 @@
 $color-primary: #112ed0;
 $color-secondary: #d52b1e;
 $color-reserve: #6fcf73;
+$color-alt: #149adb;
 
 html {
     height: 100%;
@@ -69,15 +70,15 @@ textarea {
 
     h1 {
         text-transform: uppercase;
-        text-shadow: 0 0 16px rgba(0, 0, 0, 0.35);
-        letter-spacing: 0.16em;
+        text-shadow: 0 0 16px rgba(0, 0, 0, .35);
+        letter-spacing: .16em;
         font-weight: bold;
         font-size: 70px;
         line-height: 1.2;
 
         @media (max-width: 767px) {
+            letter-spacing: .1em;
             font-size: 34px;
-            letter-spacing: 0.1em;
         }
     }
 
@@ -94,8 +95,8 @@ textarea {
 
 .s-brief {
     background: $color-primary url(../img/brief-bg.png) center no-repeat;
-    color: rgba(255, 255, 255, 0.9);
     background-size: cover;
+    color: rgba(255, 255, 255, .9);
 }
 
 .s-stat {
@@ -131,11 +132,11 @@ textarea {
     color: #ffffff;
     text-align: center;
     text-transform: uppercase;
-    letter-spacing: 0.05em;
+    letter-spacing: .05em;
     font-weight: bold;
     font-size: 18px;
     cursor: pointer;
-    transition: 0.1s ease;
+    transition: .1s ease;
 
     user-select: none;
 
@@ -152,8 +153,8 @@ textarea {
     }
 
     @media (max-width: 767px) {
-        font-size: 16px;
         letter-spacing: 0;
+        font-size: 16px;
     }
 }
 
@@ -161,7 +162,7 @@ textarea {
     display: flex;
     align-items: center;
     color: #ffffff;
-    letter-spacing: 0.05em;
+    letter-spacing: .05em;
     font-weight: 500;
     font-size: 22px;
 
@@ -203,7 +204,7 @@ textarea {
         height: 7px;
         background: url(../img/arrow-bot.svg) center no-repeat;
         content: "";
-        transition: 0.3s ease;
+        transition: .3s ease;
     }
 
     &.is-open::after {
@@ -215,7 +216,7 @@ textarea {
     position: absolute;
     margin-top: 0;
     opacity: 0;
-    transition: 0.3s ease;
+    transition: .3s ease;
     transform: scale(0);
     transform-origin: 50% top;
 
@@ -229,7 +230,7 @@ textarea {
         display: inline-block;
         margin: 0;
         padding: 0;
-        background-color: rgba(255, 255, 255, 0.8);
+        background-color: rgba(255, 255, 255, .8);
         list-style: none;
         font-size: 18px;
     }
@@ -239,7 +240,7 @@ textarea {
         padding: 10px 30px;
         color: #000000;
         line-height: 1.2;
-        transition: 0.1s ease;
+        transition: .1s ease;
 
         &:hover {
             color: $color-primary;
@@ -250,10 +251,15 @@ textarea {
 }
 
 .footer {
+    position: relative;
     flex: 0 0 auto;
     background-color: $color-primary;
     color: #ffffff;
     font-size: 12px;
+
+    &_alt {
+        background-color: $color-alt;
+    }
 }
 
 .art {
@@ -276,7 +282,7 @@ textarea {
     flex-direction: column;
     color: #000000;
     text-transform: uppercase;
-    letter-spacing: 0.25em;
+    letter-spacing: .25em;
     font-size: 44px;
 
     &::after {
@@ -295,8 +301,8 @@ textarea {
     }
 
     @media (max-width: 767px) {
+        letter-spacing: .15em;
         font-size: 30px;
-        letter-spacing: 0.15em;
     }
 }
 
@@ -307,7 +313,7 @@ textarea {
 
     @media (max-width: 767px) {
         font-size: 22px;
-        
+
         br {
             display: none;
         }
@@ -445,7 +451,7 @@ textarea {
     background: $color-primary url(../img/btn-prev-next.svg) 45% center no-repeat;
     background-size: 35%;
     cursor: pointer;
-    transition: 0.1s ease;
+    transition: .1s ease;
 
     user-select: none;
 
@@ -480,7 +486,7 @@ textarea {
         margin: 5px;
         max-width: 365px;
         border-radius: 16px;
-        box-shadow: 0 0 8px rgba(0, 0, 0, 0.25);
+        box-shadow: 0 0 8px rgba(0, 0, 0, .25);
     }
 
     &-img {
@@ -495,13 +501,13 @@ textarea {
         position: relative;
         margin-top: -1px;
         padding: 30px 40px 15px 40px;
-        transition: 0.2s ease;
+        transition: .2s ease;
     }
 
     &-name {
         color: #000000;
         font-size: 22px;
-        transition: 0.2s ease;
+        transition: .2s ease;
     }
 
     &-txt {
@@ -514,7 +520,7 @@ textarea {
         top: 0;
         right: 40px;
         cursor: auto;
-        transition: 0.3s ease-out;
+        transition: .3s ease-out;
 
         &:hover {
             background-color: $color-primary;
@@ -540,8 +546,8 @@ textarea {
 
     &-nav {
         position: relative;
-        min-width: 240px;
         display: inline-block;
+        min-width: 240px;
 
         & .swiper-pagination {
             position: relative;
@@ -549,12 +555,12 @@ textarea {
         }
 
         & .swiper-pagination-bullet {
+            margin: 0 5px;
             width: 18px;
             height: 18px;
-            background-color: #fff;
             border: 4px solid $color-primary;
+            background-color: #ffffff;
             opacity: 1;
-            margin: 0 5px;
 
             &-active {
                 background-color: $color-primary;
@@ -588,7 +594,7 @@ textarea {
         display: inline-block;
         color: #828282;
         font-size: 18px;
-        transition: 0.3s ease;
+        transition: .3s ease;
 
         &::after {
             display: block;
@@ -607,7 +613,7 @@ textarea {
             height: 3px;
             background-color: $color-primary;
             content: "";
-            transition: 0.3s ease;
+            transition: .3s ease;
         }
 
         &:hover {
@@ -625,4 +631,170 @@ textarea {
     border-radius: 16px;
     background: $color-primary url(../img/triple.svg) 40px 50% no-repeat;
     background-size: auto 102%;
+}
+
+.triline {
+    position: absolute;
+    top: 0;
+    height: 100%;
+    transform: translateX(calc(-100% - 15px));
+}
+
+.portal {
+    color: #828282;
+    font-size: 18px;
+
+    &-head {
+        line-height: 1.3;
+    }
+
+    &-body {
+        font-size: 17px;
+        color: #4f4f4f;
+        font-weight: 400;
+    }
+
+    &-logo {
+        max-width: 90px;
+        max-height: 90px;
+    }
+
+    &-name {
+        color: #828282;
+        text-transform: uppercase;
+        letter-spacing: .03em;
+        font-weight: 500;
+        font-size: 16px;
+    }
+
+    &-h1 {
+        color: #000000;
+        text-transform: uppercase;
+        letter-spacing: .1em;
+        font-weight: bold;
+        font-size: 72px;
+
+        p {
+            text-transform: none;
+            letter-spacing: 0;
+            font-size: 18px;
+        }
+
+        @media (max-width: 767px) {
+            font-size: 36px;
+        }
+    }
+
+    &-imgs {
+        position: relative;
+        height: 100%;
+
+        .portal-img {
+            height: 100%;
+            margin-left: 18%;
+        }
+
+        .portal-triple {
+            position: absolute;
+            height: 100%;
+        }
+    }
+
+    &-title {
+        color: #000000;
+        text-transform: uppercase;
+        letter-spacing: .1em;
+        font-weight: bold;
+        font-size: 48px;
+        line-height: 1.2;
+
+        @media (max-width: 767px) {
+            font-size: 22px;
+            letter-spacing: 0.03em;
+            text-align: center;
+        }
+    }
+
+    &-service {
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+        justify-content: center;
+        margin-bottom: 30px;
+        padding: 10px;
+        min-height: 270px;
+        border: 1px solid #dbdbdb;
+        border-radius: 4px;
+        background-color: #ffffff;
+        color: #000000;
+        text-align: center;
+        font-weight: 500;
+        font-size: 17px;
+        transition: 0.1s ease;
+
+        &:hover {
+            border-color: $color-reserve;
+            background-color: $color-reserve;
+            color: #ffffff;
+            text-decoration: none;
+
+            .portal-icon {
+                color: #ffffff;
+            }
+        }
+
+        img {
+            max-width: 100px;
+            max-height: 100px;
+        }
+
+        h4 {
+            text-transform: uppercase;
+        }
+
+        .portal-icon {
+            margin-bottom: 20px;
+            color: $color-reserve;
+            font-size: 100px;
+        }
+    }
+
+    &-gos,
+    &-link {
+        min-height: 115px;
+        background-color: #fff;
+        border: 1px solid #149ADB;
+        border-radius: 4px;
+        padding: 20px;
+        display: flex;
+        align-items: center;
+        font-size: 14px;
+        color: #4f4f4f;
+        font-weight: bold;
+        text-transform: uppercase;
+        letter-spacing: 0.03em;
+        margin-bottom: 30px;
+
+        &:hover {
+            text-decoration: none;
+        }
+
+        p {
+            margin: 0;
+        }
+    }
+
+    &-link {
+        img {
+            flex: 0 0 auto;
+            max-width: 55px;
+            max-height: 55px;
+            margin-right: 30px;
+        }
+    }
+
+    &-gos {
+        justify-content: center;
+    }
+
 }
