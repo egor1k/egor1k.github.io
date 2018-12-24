@@ -34,7 +34,7 @@ textarea { padding: 15px 30px; min-height: 140px; width: 100%; border-radius: 16
 
 @media (max-width: 767px) { .s-head p { font-size: 18px; } }
 
-.s-brief { background: #112ed0 url(../img/brief-bg.png) center no-repeat; color: rgba(255, 255, 255, 0.9); }
+.s-brief { background: #112ed0 url(../img/brief-bg.png) center no-repeat; color: rgba(255, 255, 255, 0.9); background-size: cover; }
 
 .s-stat { font-size: 18px; }
 
