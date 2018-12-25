@@ -220,7 +220,7 @@ textarea {
     transform: scale(0);
     transform-origin: 50% top;
 
-    .is-open+& {
+    .is-open + & {
         margin-top: 15px;
         opacity: 1;
         transform: scale(1);
@@ -649,9 +649,9 @@ textarea {
     }
 
     &-body {
-        font-size: 17px;
         color: #4f4f4f;
         font-weight: 400;
+        font-size: 17px;
     }
 
     &-logo {
@@ -690,8 +690,8 @@ textarea {
         height: 100%;
 
         .portal-img {
-            height: 100%;
             margin-left: 18%;
+            height: 100%;
         }
 
         .portal-triple {
@@ -709,9 +709,9 @@ textarea {
         line-height: 1.2;
 
         @media (max-width: 767px) {
-            font-size: 22px;
-            letter-spacing: 0.03em;
             text-align: center;
+            letter-spacing: .03em;
+            font-size: 22px;
         }
     }
 
@@ -730,7 +730,7 @@ textarea {
         text-align: center;
         font-weight: 500;
         font-size: 17px;
-        transition: 0.1s ease;
+        transition: background-color 0.1s ease;
 
         &:hover {
             border-color: $color-reserve;
@@ -761,19 +761,19 @@ textarea {
 
     &-gos,
     &-link {
-        min-height: 115px;
-        background-color: #fff;
-        border: 1px solid #149ADB;
-        border-radius: 4px;
-        padding: 20px;
         display: flex;
         align-items: center;
-        font-size: 14px;
-        color: #4f4f4f;
-        font-weight: bold;
-        text-transform: uppercase;
-        letter-spacing: 0.03em;
         margin-bottom: 30px;
+        padding: 20px;
+        min-height: 115px;
+        border: 1px solid #149adb;
+        border-radius: 4px;
+        background-color: #ffffff;
+        color: #4f4f4f;
+        text-transform: uppercase;
+        letter-spacing: .03em;
+        font-weight: bold;
+        font-size: 14px;
 
         &:hover {
             text-decoration: none;
@@ -787,9 +787,9 @@ textarea {
     &-link {
         img {
             flex: 0 0 auto;
+            margin-right: 30px;
             max-width: 55px;
             max-height: 55px;
-            margin-right: 30px;
         }
 
         &:hover {
@@ -800,5 +800,4 @@ textarea {
     &-gos {
         justify-content: center;
     }
-
 }
