@@ -604,6 +604,10 @@ body {
     &__bolder {
         font-size: 24px;
         font-weight: bold;
+
+        &_black {
+            color: #000;
+        }
     }
 
     &__bold {

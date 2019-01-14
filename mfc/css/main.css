@@ -194,6 +194,8 @@ body { display: -webkit-box; display: -ms-flexbox; display: flex; overflow-x: hi
 
 .monoblock__bolder { font-size: 24px; font-weight: bold; }
 
+.monoblock__bolder_black { color: #000; }
+
 .monoblock__bold { font-weight: bold; color: #000; line-height: 19px; font-size: 18px; }
 
 .monoblock__bold_white { color: #fff; }

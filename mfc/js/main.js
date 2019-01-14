@@ -51,10 +51,10 @@
 
     function clAosConfig() {
         AOS.init({
-            offset: 200,
+            offset: 150,
             duration: 600,
             easing: 'ease-in-sine',
-            delay: 300,
+            delay: 200,
             once: true,
             disable: 'mobile'
         });
