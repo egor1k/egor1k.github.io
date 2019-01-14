@@ -118,6 +118,8 @@ body { display: -webkit-box; display: -ms-flexbox; display: flex; overflow-x: hi
 
 @media (max-width: 991px) { .main-title { font-size: 24px; line-height: 28px; margin-bottom: 30px; } }
 
+@media (max-width: 1199px) { .main-title br { display: none; } }
+
 .section-title { color: #25292f; text-align: center; text-transform: uppercase; letter-spacing: .05em; font-weight: 800; font-size: 40px; line-height: 1.4; }
 
 @media (max-width: 991px) { .section-title { font-size: 22px; } }
@@ -138,7 +140,11 @@ body { display: -webkit-box; display: -ms-flexbox; display: flex; overflow-x: hi
 
 .marked-list::before { position: absolute; top: 6px; left: -36px; width: 1px; height: 100%; background: #f05023; content: ""; }
 
-@media (max-width: 991px) { .marked-list::before { display: none; } }
+@media (max-width: 1199px) { .marked-list::before { display: none; } }
+
+.marked-list_a::before { height: 700px; }
+
+.marked-list_b::before { height: 800px; }
 
 .marked-list li { position: relative; margin-bottom: 20px; }
 
@@ -146,7 +152,9 @@ body { display: -webkit-box; display: -ms-flexbox; display: flex; overflow-x: hi
 
 .marked-list li::before { position: absolute; top: 6px; left: -42px; width: 13px; height: 13px; border-radius: 50%; background: #f05023; content: ""; }
 
-@media (max-width: 991px) { .marked-list li::before { display: none; } }
+@media (max-width: 991px) { .marked-list li::before { left: 0; } }
+
+@media (max-width: 991px) { .marked-list li { padding-left: 30px; left: 0; } }
 
 .marked-list__title { margin: 0 0 20px; color: #000000; letter-spacing: .02em; font-weight: bold; font-size: 24px; }
 
@@ -219,5 +227,7 @@ body { display: -webkit-box; display: -ms-flexbox; display: flex; overflow-x: hi
 .square-background__img { position: absolute; top: 50%; -webkit-transform: translateY(calc(-50% - 15px)); transform: translateY(calc(-50% - 15px)); left: -25px; }
 
 .numeric { font-weight: bold; font-size: 120px; text-align: right; color: #F05023; line-height: 1; }
+
+@media (max-width: 991px) { .numeric { font-size: 80px; } }
 
 @media (max-width: 991px) { br { display: none; } }

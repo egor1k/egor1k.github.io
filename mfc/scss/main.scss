@@ -373,6 +373,12 @@ body {
         line-height: 28px;
         margin-bottom: 30px;
     }
+
+    @media (max-width: 1199px) {
+        br {
+            display: none;
+        }
+    }
 }
 
 .section-title {
@@ -442,9 +448,17 @@ body {
         background: #f05023;
         content: "";
 
-        @media (max-width: 991px) {
+        @media (max-width: 1199px) {
             display: none;
         }
+    }
+
+    &_a::before {
+        height: 700px;
+    }
+
+    &_b::before {
+        height: 800px;
     }
 
     li {
@@ -466,8 +480,14 @@ body {
             content: "";
 
             @media (max-width: 991px) {
-                display: none;
+                // display: none;
+                left: 0;
             }
+        }
+
+        @media (max-width: 991px) {
+            padding-left: 30px;
+            left: 0;
         }
     }
 
@@ -690,6 +710,10 @@ body {
     text-align: right;
     color: #F05023;
     line-height: 1;
+
+    @media (max-width: 991px) {
+        font-size: 80px;
+    }
 }
 
 @media (max-width: 991px) {
