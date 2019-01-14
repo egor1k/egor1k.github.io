@@ -1,12 +1,12 @@
 "use strict";
 
 $(function () {
+    clPreload();
     clWindows();
     clScrolling();
     clHeader();
     clAnchors();
     clAosConfig();
-    clPreload();
 });
 
 function clWindows() {
@@ -108,4 +108,5 @@ function clPreload() {
         $("html").addClass('cl-loaded');
 
     });
+
 }
