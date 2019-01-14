@@ -462,6 +462,10 @@ body {
         height: 800px;
     }
 
+    &_d::before {
+        height: 315px;
+    }
+
     li {
         position: relative;
         margin-bottom: 20px;

@@ -146,6 +146,8 @@ body { display: -webkit-box; display: -ms-flexbox; display: flex; overflow-x: hi
 
 .marked-list_b::before { height: 800px; }
 
+.marked-list_d::before { height: 315px; }
+
 .marked-list li { position: relative; margin-bottom: 20px; }
 
 .marked-list li:last-child { margin-bottom: 0; }
