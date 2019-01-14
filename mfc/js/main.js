@@ -5,7 +5,7 @@ $(function () {
     clScrolling();
     clHeader();
     clAnchors();
-    // clAosConfig();
+    clAosConfig();
 });
 
 function clWindows() {
