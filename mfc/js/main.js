@@ -6,7 +6,7 @@ $(function () {
     clHeader();
     clAnchors();
     clAosConfig();
-    clPreload()
+    clPreload();
 });
 
 function clWindows() {
