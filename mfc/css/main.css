@@ -96,7 +96,7 @@ body { display: -webkit-box; display: -ms-flexbox; display: flex; overflow-x: hi
 
 .push-window { position: fixed; top: 0; left: 0; z-index: 100; display: -webkit-box; display: -ms-flexbox; display: flex; overflow-x: hidden; overflow-y: auto; -webkit-box-align: center; -ms-flex-align: center; align-items: center; -webkit-box-orient: vertical; -webkit-box-direction: normal; -ms-flex-direction: column; flex-direction: column; padding: 55px 15px; max-width: 1140px; width: 100%; height: 100%; background-color: #000000; color: #ffffff; -webkit-transition: .4s ease-out; transition: .4s ease-out; -webkit-transform: translateX(-100%); transform: translateX(-100%); }
 
-@media (max-width: 991px) { .push-window { width: 100vw; height: 100vh; padding: 35px 15px; } }
+@media (max-width: 991px) { .push-window { width: 100vw; min-height: 100vh; padding: 35px 15px; } }
 
 .push-window__title { font-size: 24px; text-transform: uppercase; letter-spacing: 0.05em; }
 
