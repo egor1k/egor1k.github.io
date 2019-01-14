@@ -6,6 +6,7 @@ $(function () {
     clHeader();
     clAnchors();
     clAosConfig();
+    clPreload()
 });
 
 function clWindows() {
@@ -90,5 +91,21 @@ function clAnchors() {
         }, 800);
 
         $('.js-win-nav').removeClass('is-open');
+    });
+}
+
+function clPreload() {
+    $("html").addClass('cl-preload');
+
+    $(window).on('load', function () {
+        $('html, body').animate({ scrollTop: 0 }, 'normal');
+
+        $("#loader").fadeOut("slow", function () {
+            $("#preloader").delay(300).fadeOut("slow");
+        });
+
+        $("html").removeClass('cl-preload');
+        $("html").addClass('cl-loaded');
+
     });
 }
