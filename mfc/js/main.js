@@ -41,6 +41,7 @@
         $('body').niceScroll({
             zindex: 100,
             horizrailenabled: false,
+            cursoropacitymax: 0
         });
 
         $('.js-win-nav, .js-win-form').niceScroll({
