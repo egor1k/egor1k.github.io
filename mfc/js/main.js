@@ -49,7 +49,7 @@ function clScrolling() {
         horizrailenabled: false,
     });
 
-    $('.js-win-nav, js-win-form').niceScroll({
+    $('.js-win-nav, .js-win-form').niceScroll({
         cursoropacitymax: 0
     });
 }
