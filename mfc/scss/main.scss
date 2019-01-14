@@ -490,10 +490,6 @@ body {
 
         @media (max-width: 991px) {
             font-size: 20px;
-
-            br {
-                display: none;
-            }
         }
     }
 }
@@ -539,6 +535,10 @@ body {
         font-weight: bold;
         color: #000;
         margin-bottom: 10px;
+
+        @media (max-width: 991px) {
+            text-align: center;
+        }
     }
 
     &__lead {
@@ -689,4 +689,10 @@ body {
     text-align: right;
     color: #F05023;
     line-height: 1;
+}
+
+@media (max-width: 991px) {
+    br {
+        display: none;
+    }
 }
