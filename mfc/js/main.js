@@ -110,7 +110,7 @@
     (function ssInit() {
         clPreload();
         clWindows();
-        clScrolling();
+        // clScrolling();
         clHeader();
         clAnchors();
         clAosConfig();
