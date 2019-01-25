@@ -31,6 +31,10 @@ body {
 .page-content {
     flex: 1 1 auto;
     padding-top: 100px;
+
+    @media (max-width: 991px) {
+        padding-top: 65px;
+    }
 }
 
 .header {
@@ -43,6 +47,11 @@ body {
     height: 100px;
     background-color: #ffffff;
     transition: .4s ease;
+
+    @media (max-width: 991px) {
+        height: 65px;
+        border-bottom: 1px solid #dbdbdb;
+    }
 }
 
 .header-logo {
@@ -52,6 +61,10 @@ body {
 
     @media (max-width: 1199px) {
         transform-origin: right;
+    }
+
+    @media (max-width: 991px) {
+        transform: scale(.725);
     }
 }
 
