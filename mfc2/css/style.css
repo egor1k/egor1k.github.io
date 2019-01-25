@@ -150,15 +150,15 @@ body { display: -webkit-box; display: -ms-flexbox; display: flex; -webkit-box-or
 
 .small-text { margin: 0; color: #ffffff; font-weight: 300; font-size: 16px; }
 
-.contact-left { position: relative; padding: 70px 20px 55px 0; color: #ffffff; font-weight: 200; font-size: 22px; line-height: 1.4; }
+.contact-left { position: relative; padding: 70px 20px 55px 0; color: #ffffff; font-weight: 200; font-size: 22px; line-height: 1.4; height: 100%; }
 
 .contact-left::before { position: absolute; top: 0; right: -15px; z-index: -1; width: 960px; height: 100%; background-color: #f05023; content: ""; }
 
 @media (max-width: 991px) { .contact-left::before { right: auto; left: -50%; width: 150vw; } }
 
-.contact-right { position: relative; left: -15px; width: 960px; height: 100%; }
+.contact-right { position: relative; left: -15px; width: 960px; height: 100%; min-height: 400px; }
 
-@media (max-width: 991px) { .contact-right { left: auto; width: 100%; } }
+@media (max-width: 991px) { .contact-right { display: none; } }
 
 .push-window { position: fixed; top: 0; left: 0; z-index: 100; display: -webkit-box; display: -ms-flexbox; display: flex; overflow-x: hidden; overflow-y: auto; -webkit-box-orient: vertical; -webkit-box-direction: normal; -ms-flex-direction: column; flex-direction: column; padding: 35px 25px; min-height: 320px; width: 100%; max-width: 992px; height: 100vh; background-color: #000000; color: #ffffff; -webkit-transition: .4s ease-out; transition: .4s ease-out; -webkit-transform: translateX(-100%); transform: translateX(-100%); }
 
