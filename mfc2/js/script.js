@@ -28,6 +28,7 @@
             }, 800);
 
             window.removeClass('is-open');
+            removeOverlay();
         });
     }
 
@@ -35,9 +36,9 @@
         $("html").addClass('cl-preload');
 
         $(window).on('load', function () {
-            // $('html, body').animate({
-            //     scrollTop: 0
-            // }, 'normal');
+            $('html, body').animate({
+                scrollTop: 0
+            }, 'normal');
 
             $("#loader").fadeOut("slow", function () {
                 $("#preloader").delay(300).fadeOut("slow");
@@ -88,7 +89,7 @@ function toggleWindow(num, that) {
     if (window.hasClass('is-open')) {
         creatOverlay();
     } else {
-        removeOverlay()
+        removeOverlay();
     }
 
 }
