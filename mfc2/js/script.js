@@ -62,7 +62,7 @@
     }
 
     (function ssInit() {
-        clPreload();
+        // clPreload();
         clHeader();
         clAnchors();
         clOverlay();
