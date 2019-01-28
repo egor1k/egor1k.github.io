@@ -68,25 +68,25 @@
                     <div class="row justify-content-center justify-content-lg-between">
                         <div class="col-auto">
                             <div class="adv">
-                                <div class="adv__img"><img src="images/adv-icons/smile.svg" alt=""></div>
+                                <div class="adv__img"><img src="images/info-icons/smile.svg" alt=""></div>
                                 <div class="adv__name">Более 1000<br> довольных клиентов</div>
                             </div>
                         </div>
                         <div class="col-auto">
                             <div class="adv">
-                                <div class="adv__img"><img src="images/adv-icons/rating.svg" class="mb-n2" alt=""></div>
+                                <div class="adv__img"><img src="images/info-icons/rating.svg" class="mb-n2" alt=""></div>
                                 <div class="adv__name">Более 10<br> крупных клиентов</div>
                             </div>
                         </div>
                         <div class="col-auto">
                             <div class="adv">
-                                <div class="adv__img"><img src="images/adv-icons/case.svg" alt=""></div>
+                                <div class="adv__img"><img src="images/info-icons/case.svg" alt=""></div>
                                 <div class="adv__name">4300<br> проданных касс</div>
                             </div>
                         </div>
                         <div class="col-auto">
                             <div class="adv">
-                                <div class="adv__img"><img src="images/adv-icons/office-block.svg" alt=""></div>
+                                <div class="adv__img"><img src="images/info-icons/office-block.svg" alt=""></div>
                                 <div class="adv__name">3 представительства<br> в Приморском крае</div>
                             </div>
                         </div>
@@ -474,13 +474,18 @@
 
         <footer class="footer">
             <div class="container">
-                <div class="row align-items-center justify-content-center">
+                <div class="row align-items-center justify-content-around py-4 py-lg-0">
                     <div class="col-auto py-4">
                         <a href="/">
                             <img src="images/footer-logo.svg" alt="logo">
                         </a>
                     </div>
-                    <div class="col d-none d-lg-block"></div>
+                    <div class="col d-none d-lg-block">
+                        <form class="footer-form mx-auto">
+                            <input type="text" placeholder="Ваше сообщение..." class="footer-form__input" required>
+                            <button class="button footer-form__button" type="submit">Отправить сообщение</button>
+                        </form>
+                    </div>
                     <div class="col-auto py-4"">
                         <a href=" #s5" class="button button--primary-reverse js-anchor">Заказать звонок</a>
                     </div>
@@ -528,7 +533,7 @@
         </div>
     </div>
 
-    <div id="preloader">
+    <div id="preloader d-none">
         <div id="loader">
             <div class="line-scale-pulse-out">
                 <div></div>
@@ -539,6 +544,7 @@
             </div>
         </div>
     </div>
+
 
 
     <script src="js/jquery-3.3.1.min.js"></script>
