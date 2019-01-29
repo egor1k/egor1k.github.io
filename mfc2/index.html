@@ -21,7 +21,7 @@
             <div class="container">
                 <div class="row align-items-center">
                     <div class="col d-xl-none">
-                        <button class="menu-toggler" onclick="toggleWindow(1);">
+                        <button class="menu-toggler" onclick="toggleNav();">
                             <span></span>
                         </button>
                     </div>
@@ -45,7 +45,7 @@
                         <div class="header-mail">e.fedotov@dt-sc.ru</div>
                     </div>
                     <div class="col-auto d-none d-xl-block">
-                        <a href="#s5" class="button js-anchor">Заказать звонок</a>
+                        <button class="button" onclick="toggleSubForm(1);">Заказать звонок</button>
                     </div>
                 </div>
             </div>
@@ -174,7 +174,7 @@
                     <h2 class="section-title">онлайн-касса<br> бесплатно</h2>
                     <img src="images/piggy-bank.svg" class="mb-3" alt="piggy-bank">
                     <h4 class="section-lead mb-5">После налогового вычета</h4>
-                    <button class="button button--primary px-5 my-3">Как вернуть деньги за покупку кассы?</button>
+                    <button class="button button--primary px-5 my-3" onclick="toggleSubForm(2);">Как вернуть деньги за покупку кассы?</button>
                 </div>
             </section>
 
@@ -193,7 +193,7 @@
                                 <h4 class="shop-card__name">Эвотор 5</h4>
                                 <p class="shop-card__details">Эвотор 5 — онлайн-касса для курьерской доставки, торговли на выезде, в небольших магазинах и на рынках.</p>
                                 <div class="text-center">
-                                    <button class="button button--primary px-5" onclick="toggleWindow(2, $(this));">Заказать</button>
+                                    <button class="button button--primary px-5" onclick="toggleShopWindow(1);">Заказать</button>
                                 </div>
                             </div>
                         </div>
@@ -205,7 +205,7 @@
                                 <h4 class="shop-card__name">Эвотор 7.2</h4>
                                 <p class="shop-card__details">Эвотор 7.2 — это компактная онлайн-касса с неограниченными возможностями. Всё в одном маленьком корпусе.</p>
                                 <div class="text-center">
-                                    <button class="button button--primary px-5" onclick="toggleWindow(2, $(this));">Заказать</button>
+                                    <button class="button button--primary px-5" onclick="toggleShopWindow(2);">Заказать</button>
                                 </div>
                             </div>
                         </div>
@@ -217,7 +217,7 @@
                                 <h4 class="shop-card__name">Эвотор 10</h4>
                                 <p class="shop-card__details">Эвотор 10 — онлайн-касса с 10-дюймовым экраном для кафе и ресторанов. Это самый большой экран в линейке.</p>
                                 <div class="text-center">
-                                    <button class="button button--primary px-5" onclick="toggleWindow(2, $(this));">Заказать</button>
+                                    <button class="button button--primary px-5" onclick="toggleShopWindow(3);">Заказать</button>
                                 </div>
                             </div>
                         </div>
@@ -234,7 +234,7 @@
                                 <h4 class="shop-card__name">Атол 90Ф</h4>
                                 <p class="shop-card__details">Благодаря отсутствию лишних функций АТОЛ 90Ф позволяет существенно сэкономить на покупке кассы.</p>
                                 <div class="text-center">
-                                    <button class="button button--primary px-5" onclick="toggleWindow(2, $(this));">Заказать</button>
+                                    <button class="button button--primary px-5" onclick="toggleShopWindow(4);">Заказать</button>
                                 </div>
                             </div>
                         </div>
@@ -246,7 +246,7 @@
                                 <h4 class="shop-card__name">Атол 92Ф</h4>
                                 <p class="shop-card__details">Ньюджер АТОЛ 92Ф имеет два USB-порта для подключения сканера штрих-кода и банковского пин-пада.</p>
                                 <div class="text-center">
-                                    <button class="button button--primary px-5" onclick="toggleWindow(2, $(this));">Заказать</button>
+                                    <button class="button button--primary px-5" onclick="toggleShopWindow(5);">Заказать</button>
                                 </div>
                             </div>
                         </div>
@@ -258,7 +258,7 @@
                                 <h4 class="shop-card__name">Атол 30Ф</h4>
                                 <p class="shop-card__details">АТОЛ 30Ф самый бюджетный вариант, позволяющий сэкономить на покупке и в процессе ее эксплуатации.</p>
                                 <div class="text-center">
-                                    <button class="button button--primary px-5" onclick="toggleWindow(2, $(this));">Заказать</button>
+                                    <button class="button button--primary px-5" onclick="toggleShopWindow(6);">Заказать</button>
                                 </div>
                             </div>
                         </div>
@@ -270,7 +270,7 @@
                                 <h4 class="shop-card__name">Атол 55Ф</h4>
                                 <p class="shop-card__details">Привлекайте внимание покупателя, размещая на чеке маркетинговую информацию, информацию о скидках.</p>
                                 <div class="text-center">
-                                    <button class="button button--primary px-5" onclick="toggleWindow(2, $(this));">Заказать</button>
+                                    <button class="button button--primary px-5" onclick="toggleShopWindow(7);">Заказать</button>
                                 </div>
                             </div>
                         </div>
@@ -282,7 +282,7 @@
                                 <h4 class="shop-card__name">Атол Sigma 10</h4>
                                 <p class="shop-card__details">Благодаря компактным размерам, этот стильный моноблок помогает значительно экономить рабочее пространство.</p>
                                 <div class="text-center">
-                                    <button class="button button--primary px-5" onclick="toggleWindow(2, $(this));">Заказать</button>
+                                    <button class="button button--primary px-5" onclick="toggleShopWindow(8);">Заказать</button>
                                 </div>
                             </div>
                         </div>
@@ -294,14 +294,14 @@
                                 <h4 class="shop-card__name">Атол Optima</h4>
                                 <p class="shop-card__details">Яркий Full HD сенсорный экран диагональю 11.6” в цельном корпусе — это новое поколение дизайна кассовых терминалов.</p>
                                 <div class="text-center">
-                                    <button class="button button--primary px-5" onclick="toggleWindow(2, $(this));">Заказать</button>
+                                    <button class="button button--primary px-5" onclick="toggleShopWindow(9);">Заказать</button>
                                 </div>
                             </div>
                         </div>
                     </div>
                     <div class="text-center">
                         <h2 class="section-title mb-4">Прайс-лист на популярные модели</h2>
-                        <a href="" class="button px-5">Скачать</a>
+                        <button class="button px-5" onclick="toggleSubForm(3);">Скачать</button>
                     </div>
                 </div>
             </section>
@@ -309,11 +309,12 @@
             <section class="payment-section">
                 <div class="container">
                     <h2 class="section-title mb-5">рассчитать стоимость</h2>
-                    <form action="" class="payment-form">
-                        <input type="text" class="input" placeholder="Кол-во онлайн-касс" required>
-                        <input type="text" class="input" placeholder="Есть ли товароучетная программа?" required>
-                        <input type="tel" class="input" placeholder="Ваш телефон +7" required>
-                        <button type="submit" class="button button--primary px-5 mt-2">Расчитать</button>
+                    <form class="payment-form">
+                        <input name="type" type="hidden" value="payment">
+                        <input name="qty" type="text" class="input" placeholder="Кол-во онлайн-касс" required>
+                        <input name="programm" type="text" class="input" placeholder="Есть ли товароучетная программа?" required>
+                        <input name="tel" type="tel" class="input" placeholder="Ваш телефон +7" required>
+                        <button type="submit" class="button button--primary px-5 mt-2">Рассчитать</button>
                     </form>
                 </div>
             </section>
@@ -323,7 +324,7 @@
                     <div class="text-center">
                         <h2 class="section-title mb-3">Мы являемся официальными представителями</h2>
                     </div>
-                    <div class="row align-items-center justify-content-center">
+                    <div class="row align-items-center justify-content-center mb-3">
                         <div class="col-auto">
                             <a href="#" class="partner"><img src="images/partners/file (1).svg" alt=""></a>
                         </div>
@@ -419,10 +420,11 @@
             <section id="s5" class="question-section">
                 <div class="container">
                     <h2 class="section-title mb-5">Остались вопросы?</h2>
-                    <form action="" class="question-form mb-5">
-                        <input type="text" class="input" placeholder="Ваше имя" required>
-                        <input type="text" class="input" placeholder="Ваш телефон +7" required>
-                        <input type="text" class="input" placeholder="Ваш комментарий">
+                    <form class="question-form mb-5">
+                        <input name="type" type="hidden" value="question">
+                        <input name="name" type="text" class="input" placeholder="Ваше имя" required>
+                        <input name="tel" type="text" class="input" placeholder="Ваш телефон +7" required>
+                        <input name="comment" type="text" class="input" placeholder="Ваш комментарий">
                         <button type="submit" class="button button--primary px-5 mt-2">Отправить</button>
                     </form>
                     <p class="small-text">Нажимая на кнопку, вы принимаете Положение и Согласие на обработку персональных данных.</p>
@@ -482,12 +484,13 @@
                     </div>
                     <div class="col d-none d-lg-block">
                         <form class="footer-form mx-auto">
-                            <input type="text" placeholder="Ваше сообщение..." class="footer-form__input" required>
+                            <input name="type" type="hidden" value="message">
+                            <input name="message" type="text" placeholder="Ваше сообщение..." class="footer-form__input" required>
                             <button class="button footer-form__button" type="submit">Отправить сообщение</button>
                         </form>
                     </div>
                     <div class="col-auto py-4"">
-                        <a href=" #s5" class="button button--primary-reverse js-anchor">Заказать звонок</a>
+                        <button class=" button button--primary-reverse" onclick="toggleSubForm(1)">Заказать звонок</button>
                     </div>
                 </div>
             </div>
@@ -497,7 +500,7 @@
 
     <div id="w1" class="push-window">
         <div class="push-window__content">
-            <button class="breaker mb-5" onclick="toggleWindow(1);"></button>
+            <button class="breaker mb-5" onclick="toggleNav();"></button>
             <ul class="menu-navigation mb-4">
                 <li>
                     <a href="#s1" class="menu-navigation__link js-anchor">О компании</a>
@@ -516,20 +519,278 @@
             <div class="header-phone">8-800-350-20-91</div>
             <div class="header-mail mb-5">e.fedotov@dt-sc.ru</div>
             <br>
-            <a href="#s5" class="button button--primary-reverse js-anchor">Заказать звонок</a>
+            <!-- <a href="#s5" class="button button--primary-reverse js-anchor">Заказать звонок</a> -->
+            <button class="button button--primary-reverse" onclick="toggleSubForm(1);">Заказать звонок</button>
 
         </div>
     </div>
 
     <div id="w2" class="push-window push-window--secondary">
         <div class="push-window__content">
-            <button class="breaker mb-5" onclick="toggleWindow(2, $(this));"></button>
-            <div class="push-window__title mb-5"></div>
+            <button class="breaker mb-5" onclick="toggleShopWindow(0);"></button>
+
+            <div class="shop-items">
+                <div id="shop-item-1" class="shop-item">
+                    <div class="push-window__title mb-3">ЭВОТОР 5</div>
+                    <p class="mb-3">Эвотор 5 — онлайн-касса для курьерской доставки, торговли на выезде, в небольших магазинах и на рынках. Это самая легкая и компактная модель: весит 400 г, помещается в карман куртки. Соответствует 54-ФЗ: подключается к любому оператору фискальных данных и передает данные в ФНС.</p>
+                    <table class="shop-table mb-5">
+                        <tr>
+                            <td>Дисплей</td>
+                            <td>5.5 дюйма</td>
+                        </tr>
+                        <tr>
+                            <td>Камера</td>
+                            <td>5 + 5Мп</td>
+                        </tr>
+                        <tr>
+                            <td>Аккумулятор</td>
+                            <td>8-10 часов автономной работы</td>
+                        </tr>
+                    </table>
+                </div>
+                <div id="shop-item-2" class="shop-item">
+                    <div class="push-window__title mb-3">Эвотор 7.2</div>
+                    <p class="mb-3">«Эвотор» — это компактная онлайн-касса с неограниченными возможностями. Всё в одном маленьком корпусе: компьютер, фискальный накопитель, принтер чеков. Эвотор можно научить всему, что захотите — просто установите нужное приложение.</p>
+                    <table class="shop-table mb-5">
+                        <tr>
+                            <td>Дисплей</td>
+                            <td>7 дюймов</td>
+                        </tr>
+                        <tr>
+                            <td>Камера</td>
+                            <td>Нет</td>
+                        </tr>
+                        <tr>
+                            <td>Аккумулятор</td>
+                            <td>только для безопасного отключения</td>
+                        </tr>
+                    </table>
+                </div>
+                <div id="shop-item-3" class="shop-item">
+                    <div class="push-window__title mb-3">Эвотор 10</div>
+                    <p class="mb-3">Эвотор 10 — онлайн-касса с 10-дюймовым экраном для кафе и ресторанов. Это самый большой экран в линейке — пробивать блюда и товары удобно. Касса работает без проводов: можно торговать и в ресторане, и на фестивале в палатке. Соответствует 54-ФЗ: подключается к любому оператору фискальных данных и передает данные в ФНС.</p>
+                    <table class="shop-table mb-5">
+                        <tr>
+                            <td>Дисплей</td>
+                            <td>10.1 дюйма</td>
+                        </tr>
+                        <tr>
+                            <td>Камера</td>
+                            <td>5 Мп</td>
+                        </tr>
+                        <tr>
+                            <td>Аккумулятор</td>
+                            <td>6-8 часов автономной работы</td>
+                        </tr>
+                    </table>
+                </div>
+                <div id="shop-item-4" class="shop-item">
+                    <div class="push-window__title mb-3">Атол 90Ф</div>
+                    <p class="mb-3">У вас нет необходимости в высокой скорости печати чека, в наличии автоматического отреза чека, подключения к автоматическому денежному ящику или максимального набора интерфейсов? Вы не обязаны и не планируете вести количественный учет? Тогда не переплачивайте за то, чем не будете пользоваться. Благодаря отсутствию лишних функций АТОЛ 90Ф позволяет существенно сэкономить на покупке кассы.</p>
+                    <table class="shop-table mb-5">
+                        <tr>
+                            <td>Способ печати</td>
+                            <td>термохимический</td>
+                        </tr>
+                        <tr>
+                            <td>Качество печати, dpi</td>
+                            <td>203</td>
+                        </tr>
+                        <tr>
+                            <td>Автоотрез</td>
+                            <td>нет, гребенка</td>
+                        </tr>
+                        <tr>
+                            <td>Размеры</td>
+                            <td>114х81х235</td>
+                        </tr>
+                        <tr>
+                            <td>Вес</td>
+                            <td>0,9</td>
+                        </tr>
+                    </table>
+                </div>
+                <div id="shop-item-5" class="shop-item">
+                    <div class="push-window__title mb-3">Атол 92Ф</div>
+                    <p class="mb-3">Ньюджер АТОЛ 92Ф имеет два USB-порта для подключения сканера штрих-кода и банковского пин-пада, что обеспечивает начальный уровень автоматизации. Личный кабинет позволяет легко работать с каталогом товаров, а также оперативно получать финансовую аналитику из любой точки планеты, где есть доступ в интернет.</p>
+                    <table class="shop-table mb-5">
+                        <tr>
+                            <td>Способ печати</td>
+                            <td>термопечать</td>
+                        </tr>
+                        <tr>
+                            <td>Качество печати, dpi</td>
+                            <td>203</td>
+                        </tr>
+                        <tr>
+                            <td>Автоотрез</td>
+                            <td>нет</td>
+                        </tr>
+                        <tr>
+                            <td>Размеры</td>
+                            <td>208 х 103 х 66</td>
+                        </tr>
+                        <tr>
+                            <td>Вес</td>
+                            <td>0,5</td>
+                        </tr>
+                    </table>
+                </div>
+                <div id="shop-item-6" class="shop-item">
+                    <div class="push-window__title mb-3">Атол 30Ф</div>
+                    <p class="mb-3">Оптимизация издержек – одна из важнейших бизнес-задач для вас? АТОЛ 30Ф самый бюджетный вариант, позволяющий сэкономить не только на покупке, но и в процессе ее эксплуатации благодаря низкой стоимости запасных частей, используемой бумаги 58 или 44 мм и простой замене ФН (для замены накопителя не придется вскрывать корпус кассы).</p>
+                    <table class="shop-table mb-5">
+                        <tr>
+                            <td>Способ печати</td>
+                            <td>термопечать</td>
+                        </tr>
+                        <tr>
+                            <td>Качество печати, dpi</td>
+                            <td>203</td>
+                        </tr>
+                        <tr>
+                            <td>Автоотрез</td>
+                            <td>нет, гребенка</td>
+                        </tr>
+                        <tr>
+                            <td>Размеры</td>
+                            <td>87 х 160 х 79</td>
+                        </tr>
+                        <tr>
+                            <td>Вес</td>
+                            <td>0,36</td>
+                        </tr>
+                    </table>
+                </div>
+                <div id="shop-item-7" class="shop-item">
+                    <div class="push-window__title mb-3">Атол 55Ф</div>
+                    <p class="mb-3">Эта бюджетная модель, позволят сэкономить не только на покупке, но и в процессе эксплуатации, благодаря низкой стоимости запасных частей и простой замене ФН. Привлекайте внимание покупателя, размещая на чеке маркетинговую информацию, информацию о скидках, специальных акциях и другой необходимой для создания лояльных отношений с Вашими покупателями.</p>
+                    <table class="shop-table mb-5">
+                        <tr>
+                            <td>Способ печати</td>
+                            <td>термопечать</td>
+                        </tr>
+                        <tr>
+                            <td>Качество печати, dpi</td>
+                            <td>203</td>
+                        </tr>
+                        <tr>
+                            <td>Автоотрез</td>
+                            <td>да, ресурс 500 000 отрезов</td>
+                        </tr>
+                        <tr>
+                            <td>Размеры</td>
+                            <td>115х135х200</td>
+                        </tr>
+                        <tr>
+                            <td>Вес</td>
+                            <td>1,2</td>
+                        </tr>
+                    </table>
+                </div>
+                <div id="shop-item-8" class="shop-item">
+                    <div class="push-window__title mb-3">Атол Sigma 10</div>
+                    <p class="mb-3">Благодаря компактным размерам, этот стильный моноблок помогает значительно экономить рабочее пространство. Для дополнительного удобства выход чека при печати осуществляется сбоку. 10-ти дюймовый сенсорный экран поддерживает возможность настройки угла наклона. Работайте так, как вам удобно.</p>
+                    <table class="shop-table mb-5">
+                        <tr>
+                            <td>Операционная система</td>
+                            <td>Android 7,0</td>
+                        </tr>
+                        <tr>
+                            <td>Экран</td>
+                            <td>10", IPS матрица</td>
+                        </tr>
+                        <tr>
+                            <td>Память</td>
+                            <td>ROM 8 Гб, RAM 1Гб</td>
+                        </tr>
+                        <tr>
+                            <td>Аккумулятор</td>
+                            <td>хватает на 30 мин работы планшета</td>
+                        </tr>
+                    </table>
+                </div>
+                <div id="shop-item-9" class="shop-item">
+                    <div class="push-window__title mb-3">Атол Optima</div>
+                    <p class="mb-3">Яркий Full HD сенсорный экран диагональю 11.6” в цельном корпусе — это новое поколение дизайна кассовых терминалов. АТОЛ Optima отлично защищена от внешних воздействий и предназначена для промышленного использования. Вы защищены от случайных перебоев в электросети: терминал может работать до 4-х часов автономно.</p>
+                    <table class="shop-table mb-5">
+                        <tr>
+                            <td>Операционная система</td>
+                            <td>Windows 10/Linux</td>
+                        </tr>
+                        <tr>
+                            <td>Экран</td>
+                            <td>11,6", LCD</td>
+                        </tr>
+                        <tr>
+                            <td>Оперативная память</td>
+                            <td>4 Гб</td>
+                        </tr>
+                        <tr>
+                            <td>Размер</td>
+                            <td>287*180*110</td>
+                        </tr>
+                        <tr>
+                            <td>Вес</td>
+                            <td>1,6</td>
+                        </tr>
+                    </table>
+                </div>
+            </div>
+
             <form>
-                <input type="text" class="input input--alt" placeholder="Ваше имя" required>
-                <input type="tel" class="input input--alt" placeholder="Ваш телефон +7" required>
-                <button type="submit" class="button button--white mt-5">Отправить заявку</button>
+                <input name="type" type="hidden" value="shop">
+                <input name="item" type="hidden">
+                <input name="qty" type="text" class="input input--alt" placeholder="Количество" required>
+                <input name="tel" type="tel" class="input input--alt" placeholder="Ваш телефон +7" required>
+                <button type="submit" class="button button--white my-5">Рассчитать стоимость</button>
             </form>
+
+            <p class="privacy">Нажимая на кнопку, вы принимаете Положение и Согласие на обработку персональных данных.</p>
+
+        </div>
+    </div>
+
+    <div id="w3" class="push-window push-window--secondary">
+        <div class="push-window__content">
+            <button class="breaker mb-5" onclick="toggleSubForm(0)"></button>
+
+            <div class="sub-forms">
+                <form id="sub-form-1" class="sub-form">
+                    <div class="push-window__title mb-5">Заказать звонок</div>
+
+                    <input name="type" type="hidden" value="simple">
+                    <input name="form" type="hidden" value="Заказать звонок">
+                    <input name="name" type="text" class="input input--alt" placeholder="Ваше имя" required>
+                    <input name="tel" type="tel" class="input input--alt" placeholder="Ваш телефон +7" required>
+
+                    <button type="submit" class="button button--white my-5">Заказать звонок</button>
+                </form>
+                <form id="sub-form-2" class="sub-form">
+                    <div class="push-window__title mb-3">Как вернуть деньги за покупку кассы?</div>
+                    <p>Если у вас ИП на ЕНВД или патенте, вы имеете право на налоговый вычет — до 18 000 ₽ за каждую кассу. Это частично компенсирует ваши затраты на онлайн-кассу.</p>
+                    <p class="font-weight-bold mb-5">Для подробной консультации закажите звонок от нашего специалиста</p>
+
+                    <input name="type" type="hidden" value="simple">
+                    <input name="form" type="hidden" value="Как вернуть деньги за покупку кассы?">
+                    <input name="name" type="text" class="input input--alt" placeholder="Ваше имя" required>
+                    <input name="tel" type="tel" class="input input--alt" placeholder="Ваш телефон +7" required>
+
+                    <button type="submit" class="button button--white my-5">Отправить заявку</button>
+                </form>
+                <form id="sub-form-3" class="sub-form">
+                    <div class="push-window__title mb-5">Скачать прайс-лист на популярные модели онлайн-касс</div>
+
+                    <input name="type" type="hidden" value="simple">
+                    <input name="form" type="hidden" value="Скачать прайс-лист на популярные модели онлайн-касс">
+                    <input name="name" type="text" class="input input--alt" placeholder="Ваше имя" required>
+                    <input name="tel" type="tel" class="input input--alt" placeholder="Ваш телефон +7" required>
+
+                    <button type="submit" class="button button--white my-5">Скачать прайс-лист</button>
+                </form>
+            </div>
+
+            <p class="privacy">Нажимая на кнопку, вы принимаете Положение и Согласие на обработку персональных данных.</p>
         </div>
     </div>
 

@@ -14,6 +14,12 @@ body {
     font-size: 18px;
     font-family: "Circe";
     line-height: 1.2;
+    overflow-x: hidden;
+    overflow-y: auto;
+}
+
+.overflow {
+    overflow-y: hidden;
 }
 
 .page {
@@ -80,11 +86,8 @@ body {
 }
 
 .button {
-    display: inline-flex;
-    align-items: center;
-    justify-content: center;
-    padding: 0 18px;
-    min-height: 48px;
+    display: inline-block;
+    padding: 14px 18px;
     border: 1px solid $color-body;
     border-radius: 68px;
     background-color: #ffffff;
@@ -94,6 +97,7 @@ body {
     line-height: 1;
     cursor: pointer;
     transition: .07s linear;
+    font-size: 18px;
 
     user-select: none;
 
@@ -108,7 +112,6 @@ body {
     }
 
     &--primary {
-        min-height: 54px;
         border-color: $color-primary;
         background-color: $color-primary;
         color: #ffffff;
@@ -121,7 +124,6 @@ body {
     }
 
     &--white {
-        min-height: 54px;
         border-color: #ffffff;
         background-color: transparent;
         color: #ffffff;
@@ -547,6 +549,7 @@ body {
         text-transform: uppercase;
         letter-spacing: .05em;
         font-size: 24px;
+        font-weight: bold;
     }
 
     &.is-open {
@@ -594,6 +597,7 @@ body {
     border: none;
     background-color: transparent;
     cursor: pointer;
+    transform: translateX(-6px);
 
     &:focus {
         outline: none;
@@ -630,19 +634,19 @@ body {
 }
 
 .footer-form {
-    height: 48px;
     display: flex;
     max-width: 500px;
+    height: 48px;
 
     &__input {
         flex: 1 1 auto;
-        width: auto;
-        color: #515459;
-        border-radius: 62px;
-        border: 1px solid #515459;
         padding: 0 50px 0 24px;
+        width: auto;
+        border: 1px solid #515459;
+        border-radius: 62px;
         background-color: transparent;
-        color: #fff;
+        color: #515459;
+        color: #ffffff;
 
         &:focus {
             outline: none;
@@ -655,15 +659,29 @@ body {
 
     &__button {
         flex: 0 0 auto;
-        color: #7D7F83;
-        background-color: #515459;
-        padding: 0 24px;
         margin-left: -45px;
-        border: 1px solid #515459;
+        padding-left: 24px;
+        padding-right: 24px;
+        border-color: #515459;
+        background-color: #515459;
+        color: #7d7f83;
 
         &:hover {
             background-color: #515459;
-            color: #fff;
+            color: #ffffff;
         }
     }
+}
+
+.shop-table {
+    font-weight: bold;
+
+    td {
+        width: 50%;
+        padding-right: 10px;
+    }
+}
+
+.privacy {
+    font-size: 16px;
 }
