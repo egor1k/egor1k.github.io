@@ -29,6 +29,7 @@ body {
     overflow: hidden;
     flex: 1 1 auto;
     flex-direction: column;
+    padding-top: 72px;
 }
 
 .header {
@@ -48,7 +49,6 @@ body {
 
 .main {
     flex: 1 1 auto;
-    padding-top: 72px;
 }
 
 .footer {
@@ -149,10 +149,10 @@ body {
     }
 
     &--full {
-        width: 100%;
         display: flex;
-        border-radius: 0;
         flex: 0 0 auto;
+        width: 100%;
+        border-radius: 0;
     }
 }
 
@@ -175,9 +175,7 @@ body {
     border: none;
     background-color: transparent;
 
-    & span,
-    & span::before,
-    & span::after {
+    & span, & span::before, & span::after {
         position: relative;
         display: inline-block;
         width: 16px;
@@ -185,8 +183,7 @@ body {
         background-color: #000000;
     }
 
-    & span::before,
-    & span::after {
+    & span::before, & span::after {
         position: absolute;
         left: 0;
         content: "";
@@ -203,22 +200,21 @@ body {
 
 .button-breaker {
     position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
     padding: 0;
     width: 24px;
     height: 24px;
     border: none;
-    display: flex;
-    align-items: center;
-    justify-content: center;
     background-color: transparent;
 
-    &::before,
-    &::after {
+    &::before, &::after {
         position: absolute;
-        content: "";
         width: 20px;
         height: 2px;
-        background-color: #fff;
+        background-color: #ffffff;
+        content: "";
     }
 
     &::before {
@@ -228,7 +224,6 @@ body {
     &::after {
         transform: rotate(-45deg);
     }
-
 }
 
 .section {
@@ -296,14 +291,14 @@ body {
 }
 
 .slide-panel {
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
     z-index: 10;
-    width: 100%;
-    background-color: #000000;
+    display: flex;
     overflow-x: hidden;
     overflow-y: auto;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 100%;
+    background-color: #000000;
 
     &__link {
         display: flex;
