@@ -9,6 +9,6 @@ var slidePanel = {
     },
     close: function () {
         this.selector.removeClass(this.activeClassName);
-        $('body').addClass('overflow');
+        $('body').removeClass('overflow');
     }
 }

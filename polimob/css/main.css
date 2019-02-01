@@ -90,7 +90,7 @@ body { display: -webkit-box; display: -ms-flexbox; display: flex; -webkit-box-or
 
 .category__name { margin: 0; max-width: 0; color: #ffffff; text-transform: uppercase; letter-spacing: 0.05em; font-weight: bold; font-size: 18px; }
 
-.slide-panel { position: fixed; display: -webkit-box; display: -ms-flexbox; display: flex; -webkit-box-orient: vertical; -webkit-box-direction: normal; -ms-flex-direction: column; flex-direction: column; -webkit-box-pack: justify; -ms-flex-pack: justify; justify-content: space-between; top: 0; left: 0; z-index: 10; width: 100%; height: 100%; background-color: #000000; -webkit-transition: -webkit-transform 0.4s ease; transition: -webkit-transform 0.4s ease; transition: transform 0.4s ease; transition: transform 0.4s ease, -webkit-transform 0.4s ease; -webkit-transform: translateX(-100%); transform: translateX(-100%); }
+.slide-panel { position: fixed; display: -webkit-box; display: -ms-flexbox; display: flex; -webkit-box-orient: vertical; -webkit-box-direction: normal; -ms-flex-direction: column; flex-direction: column; -webkit-box-pack: justify; -ms-flex-pack: justify; justify-content: space-between; top: 0; left: 0; z-index: 10; width: 100%; height: 100%; background-color: #000000; -webkit-transition: -webkit-transform 0.4s ease; transition: -webkit-transform 0.4s ease; transition: transform 0.4s ease; transition: transform 0.4s ease, -webkit-transform 0.4s ease; -webkit-transform: translateX(-100%); transform: translateX(-100%); overflow-x: hidden; overflow-y: auto; }
 
 .slide-panel.is-open { -webkit-transform: translateX(0); transform: translateX(0); }
 

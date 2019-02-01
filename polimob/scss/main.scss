@@ -313,6 +313,8 @@ body {
     background-color: #000000;
     transition: transform 0.4s ease;
     transform: translateX(-100%);
+    overflow-x: hidden;
+    overflow-y: auto;
 
     &.is-open {
         transform: translateX(0);
