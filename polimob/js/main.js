@@ -1,11 +1,14 @@
 "use strict";
 
 var slidePanel = {
+    selector: $('.slide-panel'),
+    activeClassName: 'is-open',
     open: function () {
-        $('.slide-panel').addClass('is-open');
+        this.selector.addClass(this.activeClassName);
+        $('body').addClass('overflow');
     },
     close: function () {
-        $('.slide-panel').removeClass('is-open');
+        this.selector.removeClass(this.activeClassName);
+        $('body').addClass('overflow');
     }
 }
-
