@@ -1,18 +1,10 @@
-$container-max-widths: (
-  sm: 540px,
-  md: 720px,
-  lg: 960px,
-  xl: 1140px
-);
-
-$line-height-base: 1.6;
-$font-family-base: 'Ubuntu', sans-serif;
-$body-color: #4F4F4F;
-
-$spacer: 10px;
-$spacers: ();
-$spacers: map-merge(
-  (
+$grid-columns: 6;
+$grid-gutter-width: 16px;
+$font-family-base: 'Roboto', sans-serif;
+$body-color: #000;
+$spacer: 5px;
+$spacers: 
+(
     0: 0,
     1: ($spacer * 1),
     2: ($spacer * 2),
@@ -24,8 +16,11 @@ $spacers: map-merge(
     8: ($spacer * 8),
     9: ($spacer * 9),
     10: ($spacer * 10),
-  ),
-  $spacers
+    11: ($spacer * 11),
+    12: ($spacer * 12),
+    13: ($spacer * 13),
+    14: ($spacer * 14),
+    15: ($spacer * 15)
 );
 
 @import "bootstrap/functions";
@@ -36,5 +31,4 @@ $spacers: map-merge(
 @import "bootstrap/grid";
 @import "bootstrap/utilities/flex";
 @import "bootstrap/utilities/spacing";
-@import "bootstrap/utilities/display";
-
+@import "bootstrap/utilities/text";

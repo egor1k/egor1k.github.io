@@ -1,14 +1,11 @@
-'use strict';
+"use strict";
 
-function fullPageMenu () {
-    var toggle = $('.js-fullpage-menu-toggle');
-
-    toggle.click(function (e) { 
-        e.preventDefault();
-        $('body').toggleClass('fullpage-menu-is-open');
-    });
+var slidePanel = {
+    open: function () {
+        $('.slide-panel').addClass('is-open');
+    },
+    close: function () {
+        $('.slide-panel').removeClass('is-open');
+    }
 }
 
-$(function () {
-    fullPageMenu ();
-});
