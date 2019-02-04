@@ -2,7 +2,6 @@ $color-primary: #0093cb;
 
 html {
     height: 100%;
-    background-color: #f2f2f2;
 }
 
 body {
@@ -43,7 +42,7 @@ body {
     justify-content: center;
     width: 100%;
     height: 72px;
-    border-bottom: 1px solid #bdbdbd;
+    border-bottom: 1px solid #f0f0f0;
     background-color: #ffffff;
 }
 
@@ -68,12 +67,24 @@ body {
     padding-left: 16px;
 }
 
+.img-fluid {
+    max-width: 100%;
+    height: auto;
+}
+
 .title {
+    margin: 0;
     text-transform: uppercase;
     letter-spacing: 0.05em;
     font-weight: bold;
     font-size: 22px;
     line-height: 1.2;
+
+    &--small {
+        letter-spacing: 0;
+        font-weight: 500;
+        font-size: 16px;
+    }
 
     &--smaller {
         font-size: 18px;
@@ -86,6 +97,107 @@ body {
 
     &--shadow {
         text-shadow: 0 4px 24px rgba(0, 0, 0, 0.25);
+    }
+}
+
+.subtitle {
+    color: #828282;
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 1.2;
+}
+
+.contact {
+    margin-bottom: 30px;
+
+    &__title {
+        position: relative;
+        margin: 0 0 25px;
+        padding-left: 46px;
+        text-transform: uppercase;
+        font-weight: bold;
+        font-size: 16px;
+        line-height: 1.2;
+
+        &::before {
+            position: absolute;
+            top: 50%;
+            left: 0;
+            width: 26px;
+            height: 36px;
+            background: url(../images/mark.svg) center no-repeat;
+            content: "";
+            transform: translateY(-50%);
+        }
+    }
+
+    &__map {
+        overflow: hidden;
+        width: 100%;
+        height: 240px;
+        border: 1px solid $color-primary;
+        border-radius: 4px;
+    }
+}
+
+.input, .textarea {
+    display: block;
+    margin: 0 0 8px;
+    padding: 0;
+    width: 100%;
+    border: none;
+    border-bottom: 2px solid #000000;
+    font-style: italic;
+    font-size: 14px;
+
+    &::placeholder {
+        color: rgba(0, 0, 0, 0.3);
+    }
+
+    &:focus {
+        outline: none;
+    }
+}
+
+.input {
+    height: 36px;
+    line-height: 36px;
+}
+
+.textarea {
+    min-height: 140px;
+    height: auto;
+}
+
+.checkbox {
+    display: block;
+    font-size: 14px;
+
+    &__name {
+        position: relative;
+        padding-left: 40px;
+        cursor: pointer;
+
+        &::before {
+            position: absolute;
+            top: 50%;
+            left: 0;
+            width: 24px;
+            height: 24px;
+            border: 1px solid #000000;
+            border-radius: 2px;
+            background: #ffffff center no-repeat;
+            content: "";
+            transform: translateY(-50%);
+
+            input:checked + & {
+                background-image: url(../images/checkbox.svg);
+            }
+        }
+    }
+
+    input {
+        display: none;
     }
 }
 
@@ -111,7 +223,7 @@ body {
     height: 40px;
     border: 1px solid transparent;
     border-radius: 20px;
-    background: #0093cb;
+    background: $color-primary;
     color: #ffffff;
     text-align: center;
     white-space: nowrap;
@@ -148,7 +260,7 @@ body {
         line-height: 54px;
     }
 
-    &--full {
+    &--stretch {
         display: flex;
         flex: 0 0 auto;
         width: 100%;
@@ -228,9 +340,12 @@ body {
 
 .section {
     position: relative;
-    background-position: center;
-    background-size: cover;
-    background-repeat: no-repeat;
+
+    &--background {
+        background-position: center;
+        background-size: cover;
+        background-repeat: no-repeat;
+    }
 
     &-home {
         background-image: url(../images/backgrounds/home.jpg);
@@ -241,7 +356,7 @@ body {
     }
 }
 
-.category {
+.directory {
     position: relative;
     display: flex;
     flex-direction: column;
@@ -255,7 +370,7 @@ body {
     &::after {
         position: absolute;
         top: 50%;
-        right: 25px;
+        right: 23px;
         width: 8px;
         height: 17px;
         background: url(../images/category-arrow.svg) center no-repeat;
@@ -331,5 +446,59 @@ body {
         justify-content: center;
         width: 85px;
         font-size: 40px;
+    }
+}
+
+.period {
+    display: flex;
+    align-items: center;
+    margin: 0 0 25px;
+
+    &__dash {
+        position: relative;
+        flex: 1 1 auto;
+        margin-left: 20px;
+        height: 1px;
+        background-color: $color-primary;
+
+        &::before {
+            position: absolute;
+            top: 50%;
+            left: 0;
+            width: 11px;
+            height: 11px;
+            border-radius: 50%;
+            background-color: $color-primary;
+            content: "";
+            transform: translateY(-50%);
+        }
+
+        &--reverse {
+            margin-right: 20px;
+            margin-left: 0;
+
+            &::before {
+                right: 0;
+                left: auto;
+            }
+        }
+    }
+
+    &__year {
+        position: relative;
+        flex: 0 0 auto;
+        color: $color-primary;
+        font-weight: 500;
+        font-size: 44px;
+
+        &::after {
+            position: absolute;
+            right: 5px;
+            bottom: -10px;
+            color: rgba(0, 0, 0, 0.5);
+            content: "год";
+            font-weight: 300;
+            font-size: 16px;
+        }
     }
 }

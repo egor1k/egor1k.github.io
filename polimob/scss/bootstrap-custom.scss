@@ -2,6 +2,8 @@ $grid-columns: 6;
 $grid-gutter-width: 16px;
 $font-family-base: 'Roboto', sans-serif;
 $body-color: #000;
+$primary: #0093cb;
+
 $spacer: 5px;
 $spacers: 
 (
@@ -21,6 +23,14 @@ $spacers:
     13: ($spacer * 13),
     14: ($spacer * 14),
     15: ($spacer * 15)
+);
+
+$grid-breakpoints: (
+    xs: 0
+);
+
+$container-max-widths: (
+
 );
 
 @import "bootstrap/functions";
