@@ -3,91 +3,179 @@
 
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Document</title>
-    <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,400i,700,700i&amp;subset=cyrillic" rel="stylesheet">
-    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.1/css/all.css" integrity="sha384-gfdkjb5BdAXd+lj+gudLWI+BXq4IuLW5IT+brZEZsLFm++aCMlF1V92rMkPaX4PP" crossorigin="anonymous">
-    <link rel="stylesheet" href="css/custom-bootstrap.css">
-    <link rel="stylesheet" href="css/swiper.min.css">
+    <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&amp;subset=cyrillic" rel="stylesheet">
+    <link rel="stylesheet" href="css/bootstrap-custom.css">
+    <link rel="stylesheet" href="css/fonts.css">
     <link rel="stylesheet" href="css/main.css">
 </head>
 
 <body>
 
-    <div class="main">
-        <header class="header container">
+    <header class="header">
+        <div class="container-fluid">
             <div class="row align-items-center">
-                <div class="col-auto">
-                    <img src="img/logo-blue.svg" alt="">
-                </div>
                 <div class="col">
-                    <div class="site-lang">
-                        <span class="active">RUS</span> / <span>ENG</span>
-                    </div>
+                    <a href="/">
+                        <img src="images/logo.svg">
+                    </a>
                 </div>
                 <div class="col-auto">
-                    <button class="header-button fas fa-search"></button>
+                    <span class="site-lang site-lang--active">RUS</span>
+                    <span>/</span>
+                    <span class="site-lang">ENG</span>
                 </div>
                 <div class="col-auto">
-                    <button class="header-button fas fa-bars js-fullpage-menu-toggle"></button>
+                    <button class="button-search" type="button"></button>
+                </div>
+                <div class="col-auto">
+                    <button class="button-hamburger" type="button">
+                        <span></span>
+                    </button>
                 </div>
             </div>
-        </header>
-        <div class="content">
-            <section class="container">
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Id aut eaque neque maiores dicta tenetur ad amet qui. Nobis ipsum culpa voluptatum mollitia delectus! Consequatur dolores maiores sequi fugit officiis.</p>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Id aut eaque neque maiores dicta tenetur ad amet qui. Nobis ipsum culpa voluptatum mollitia delectus! Consequatur dolores maiores sequi fugit officiis.</p>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Id aut eaque neque maiores dicta tenetur ad amet qui. Nobis ipsum culpa voluptatum mollitia delectus! Consequatur dolores maiores sequi fugit officiis.</p>
-            </section>
         </div>
-        <footer class="footer container">
-            <h4>Наши контакты</h4>
-            <p>Российская Федерация,<br> г. Москва, 109316<br> Волгоградский проспект, д.47<br> бизнес центр «Куб», офис 201</p>
-            <h4>Телефон</h4>
-            <p>+7 (495) 783-01-67</p>
-            <h4>Email</h4>
-            <p>info@poli.ru</p>
-            <p>© 2009 - 2018</p>
+    </header>
+
+    <div class="page">
+
+        <main class="main">
+
+            <section class="section section--background section-home text-center py-15">
+                <div class="container-fluid">
+                    <h2 class="title title--larger title--shadow text-white mb-15">Завод по производству мягких резервуаров</h2>
+                    <a href="" class="btn btn--reverse btn--larger mb-15">Перейти в каталог</a>
+                </div>
+            </section>
+
+            <section class="section section-directories">
+                <a href="" class="directory">
+                    <div class="container-fluid">
+                        <h3 class="directory__name">Мягкие резервуары</h3>
+                    </div>
+                </a>
+                <a href="" class="directory">
+                    <div class="container-fluid">
+                        <h3 class="directory__name">мобильные склады</h3>
+                    </div>
+                </a>
+                <a href="" class="directory">
+                    <div class="container-fluid">
+                        <h3 class="directory__name">вкладываемый резервуар</h3>
+                    </div>
+                </a>
+                <a href="" class="directory">
+                    <div class="container-fluid">
+                        <h3 class="directory__name">гибридные резервуары</h3>
+                    </div>
+                </a>
+            </section>
+
+            <section class="section section--background section-presentation pt-13 pb-6 text-white">
+                <div class="container-fluid">
+                    <div class="text-center">
+                        <h2 class="title mb-12">НАШЕ ПРОИЗВОДСТВО</h2>
+                        <a href="">
+                            <img src="images/button-youtube.svg" class="mb-6">
+                        </a>
+                    </div>
+
+                    <h3 class="title title--smaller mb-3">Посмотрите видеопрезентацию</h3>
+                    <p class="fz-sm mb-0">На видео представлен технологический цикл производства: от сварки материалов эластичного резервуара токами высокой частоты (ТВЧ) до испытаний и развертывания полевого склада горючего (ПСГ) по месту эксплуатации.</p>
+                </div>
+            </section>
+
+            <section class="section section-questions py-13">
+                <div class="container-fluid">
+                    <h2 class="title text-center mb-3">Остались<br> вопросы?</h2>
+                    <h3 class="subtitle text-center mb-5">Задайте вопрос нашему<br> специалисту</h3>
+                    <form>
+                        <input name="name" class="input" type="text" placeholder="Ваше имя">
+                        <input name="city" class="input" type="text" placeholder="Город">
+                        <input name="email" class="input mb-6" type="text" placeholder="Ваш e-mail">
+                        <textarea name="message" class="textarea mb-5" placeholder="Ваше текстовое сообщение"></textarea>
+                        <label class="checkbox mb-6">
+                            <input name="distribution" type="checkbox" checked>
+                            <span class="checkbox__name">Подписаться на рассылку</span>
+                        </label>
+                        <div class="text-center">
+                            <button class="btn" type="submit">Отправить</button>
+                        </div>
+                    </form>
+                </div>
+            </section>
+
+        </main>
+
+        <footer class="footer font-weight-light text-center fz-sm py-6">
+            <div class="container-fluid">
+                <div class="row">
+                    <div class="col-6">
+
+                        <h3 class="footer__title">Наши контакты</h3>
+                        <p>
+                            Российская Федерация,<br>
+                            г. Москва, 109316<br>
+                            Волгоградский проспект, д.47<br>
+                            бизнес центр «Куб», офис 201
+                        </p>
+
+                        <h3 class="footer__title">Телефон</h3>
+                        <p>+7 (495) 783-01-67</p>
+
+                        <h3 class="footer__title">Email</h3>
+                        <p>info@poli.ru</p>
+
+                        <p class="mb-0">© 2009 - 2018</p>
+
+                    </div>
+                </div>
+            </div>
         </footer>
+
     </div>
 
-    <nav class="fullpage-menu">
-
-        <header class="header container">
-            <div class="row align-items-center">
-                <div class="col-auto">
-                    <img src="img/logo-white.svg" alt="">
+    <div class="slide-panel pt-5">
+        <div class="container-fluid">
+            <button class="button-breaker ml-auto mb-2" type="button"></button>
+            <a href="/" class="slide-panel__link is-active">
+                <div class="slide-panel__img">
+                    <span class="icon-home"></span>
                 </div>
-                <div class="col">
-                    <div class="site-lang">
-                        <span class="active">RUS</span> / <span>ENG</span>
-                    </div>
+                Главная
+            </a>
+            <a href="#" class="slide-panel__link">
+                <div class="slide-panel__img">
+                    <span class="icon-news"></span>
                 </div>
-                <div class="col-auto">
-                    <button class="header-button fas fa-search"></button>
+                Новости
+            </a>
+            <a href="#" class="slide-panel__link">
+                <div class="slide-panel__img">
+                    <span class="icon-products"></span>
                 </div>
-                <div class="col-auto">
-                    <button class="header-button fas fa-times js-fullpage-menu-toggle"></button>
+                Продукция
+            </a>
+            <a href="/company.html" class="slide-panel__link">
+                <div class="slide-panel__img">
+                    <span class="icon-company"></span>
                 </div>
-            </div>
-        </header>
-        <div class="fullpage-menu__content">
-            <ul>
-                <li><a href="" class="active">Главная</a></li>
-                <li><a href="">Новости</a></li>
-                <li><a href="">Продукция</a></li>
-                <li><a href="">О компании</a></li>
-                <li><a href="">Контакты</a></li>
-            </ul>
-            <p class="i-phone"><i class="fas fa-phone"></i> +7 (495) 783-01-67</p>
+                О компании
+            </a>
+            <a href="/contacts.html" class="slide-panel__link">
+                <div class="slide-panel__img">
+                    <span class="icon-contacts"></span>
+                </div>
+                Контакты
+            </a>
         </div>
-        <button class="b-get-consult">Получить консультацию</button>
-
-    </nav>
+        <button class="btn btn--stretch btn--larger" type="button">Получить консультацию</button>
+    </div>
 
     <script src="js/jquery-3.3.1.min.js"></script>
-    <script src="js/swiper.min.js"></script>
+    <script src="js/sliiide.min.js"></script>
     <script src="js/main.js"></script>
 </body>
 
