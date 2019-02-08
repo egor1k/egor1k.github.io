@@ -1,0 +1,171 @@
+html {
+    height: 100%;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    min-height: 100%;
+    color: #4e4e4e;
+    font-family: "circe";
+    font-size: 18px;
+    font-weight: 300;
+}
+
+.page {
+    display: flex;
+    flex: 1 1 auto;
+    flex-direction: column;
+    min-height: 100%;
+}
+
+.header,
+.footer {
+    flex: 0 0 auto;
+}
+
+.page-content {
+    flex: 1 1 auto;
+}
+
+.button {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0 18px;
+    height: 48px;
+    border: 1px solid transparent;
+    border-radius: 62px;
+    background-color: #f05023;
+    color: #fff;
+    text-align: center;
+    font-weight: 300;
+    font-size: 18px;
+    cursor: pointer;
+    transition: 0.07s linear;
+    line-height: 1.1;
+
+    user-select: none;
+
+    &:focus {
+        outline: none;
+    }
+
+    &:hover {
+        color: #fff;
+        text-decoration: none;
+    }
+
+    &_dim {
+        border-color: #25292f;
+        background-color: #fff;
+        color: #25292f;
+
+        &:hover {
+            background-color: #25292f;
+            color: #fff;
+        }
+    }
+
+    &_reverse {
+        background-color: transparent;
+        color: #F05023;
+        border-color: #F05023;
+
+        &:hover {
+            background-color: #F05023;
+            color: #fff;
+        }
+    }
+}
+
+.menu-toggler {
+    display: inline-flex;
+    align-items: center;
+    padding: 0;
+    width: 36px;
+    height: 36px;
+    border: none;
+    background-color: transparent;
+    cursor: pointer;
+
+    &:focus {
+        outline: none;
+    }
+
+    span {
+        position: relative;
+        width: 20px;
+    }
+
+    span,
+    span::before,
+    span::after {
+        display: block;
+        height: 3px;
+        background-color: #25292f;
+    }
+
+    span::before,
+    span::after {
+        position: absolute;
+        width: 26px;
+        content: "";
+    }
+
+    span::before {
+        top: -8px;
+    }
+
+    span::after {
+        bottom: -8px;
+    }
+}
+
+.header {
+    padding: 40px 0 35px;
+    background-color: #fff;
+}
+
+.header-label {
+    color: #000;
+    line-height: 19px;
+}
+
+.header-phone {
+    color: #25292f;
+}
+
+.footer {
+    padding: 65px 0 95px;
+    background-color: #25292F;
+    color: #929497;
+}
+
+.footer-menu {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    line-height: 1.1;
+
+    &__link {
+        color: #929497;
+        margin-bottom: 12px;
+        display: inline-block;
+
+        &:hover {
+            color: #f05023;
+            text-decoration: none;
+        }
+    }
+}
+
+.footer-hr {
+    border-color: #45494E;
+    margin: 20px 0 40px;
+}
+
+.footer-bold {
+    font-weight: bold;
+    font-size: 24px;
+}
