@@ -1,0 +1,89 @@
+.page-footer {
+    padding: 50px 0 30px 0;
+    background-color: #303030;
+    color: #828282;
+    letter-spacing: 0.05em;
+}
+
+.hr-footer {
+    margin: 15px 0 30px 0;
+    border-color: #575757;
+}
+
+.title-footer {
+    margin: 0 0 15px;
+    color: #eeeeee;
+    text-transform: uppercase;
+    letter-spacing: 0.3em;
+    font-weight: bold;
+    font-size: 18px;
+}
+
+.text-small-footer {
+    color: #6e6e6e;
+    letter-spacing: 0.04em;
+    font-size: 14px;
+}
+
+.menu-footer {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+
+    &__link {
+        display: inline-block;
+        margin: 0 0 15px;
+        color: #838383;
+
+        &:hover {
+            color: $color-primary;
+            text-decoration: none;
+        }
+    }
+}
+
+.m-input-footer {
+    border-color: #6a6a6a;
+    background: transparent;
+
+    &::placeholder {
+        color: #838383;
+        letter-spacing: 0.05em;
+        font-size: 16px;
+    }
+}
+
+.social-icons {
+    display: flex;
+    flex-wrap: wrap;
+
+    &__link {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin: 8px;
+        width: 40px;
+        height: 40px;
+        border-radius: 2px;
+        background-color: #6a6a6a;
+
+        &:hover {
+            background-color: $color-primary;
+        }
+    }
+}
+
+.link-upload-app {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 133px;
+    height: 38px;
+    border-radius: 8px;
+    background-color: #000;
+    overflow: hidden;
+
+    &:hover {
+        background-color: $color-primary;
+    }
+}

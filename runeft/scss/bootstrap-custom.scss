@@ -1,0 +1,28 @@
+$primary: #FF6B00;
+$body-color: #000;
+$font-family-base: 'Roboto', sans-serif;
+$border-radius:               2px;
+$border-radius-lg:            2px;
+$border-radius-sm:            2px;
+
+$input-btn-font-size-lg:      1.125rem;
+$input-btn-padding-y-lg:      .8425rem;
+
+$container-max-widths: (
+    sm: 540px,
+    md: 720px,
+    lg: 960px,
+    xl: 1710px
+);
+
+$spacer: 10px;
+$spacers: (
+    0: 0,
+    1: ($spacer * 1),
+    2: ($spacer * 2),
+    3: ($spacer * 3),
+    4: ($spacer * 4),
+    5: ($spacer * 5)
+);
+
+@import "bootstrap/bootstrap";

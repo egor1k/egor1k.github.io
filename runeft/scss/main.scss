@@ -1,0 +1,9 @@
+$color-primary: #FF6B00;
+
+.container {
+    min-width: 1024px;
+}
+
+@import "base";
+@import "header";
+@import "footer";

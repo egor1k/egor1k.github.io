@@ -1,0 +1,29 @@
+html {
+    height: 100%;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    min-height: 100%;
+}
+
+.page-header, .page-footer {
+    flex: 0 0 auto;
+}
+
+.page-content {
+    flex: 1 1 auto;
+}
+
+.s-color-black {
+    color: #000;
+}
+
+.s-text-letter-spacing-sm {
+    letter-spacing: 0.1em !important;
+}
+
+.s-text-letter-spacing-lg {
+    letter-spacing: 0.3em !important;
+}

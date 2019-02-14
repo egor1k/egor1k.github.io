@@ -1,0 +1,78 @@
+.page-header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 1030;
+    padding: 24px 0;
+    width: 100%;
+    background-color: #ffffff;
+}
+
+.site-lang {
+    color: #bdbdbd;
+    text-transform: uppercase;
+    letter-spacing: 0.3em;
+    font-size: 18px;
+
+    &:hover {
+        color: $color-primary;
+        text-decoration: none;
+    }
+
+    &.is-active {
+        color: $color-primary;
+        font-weight: bold;
+    }
+}
+
+.site-lang-dash {
+    display: inline-block;
+    margin: 0 10px 0 6px;
+    color: #bdbdbd;
+    font-weight: bold;
+    font-size: 24px;
+}
+
+.menu-main {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+
+    &__link {
+        display: inline-block;
+        margin: 0 10px;
+        color: #000;
+        text-transform: uppercase;
+        letter-spacing: 0.3em;
+        font-size: 18px;
+
+        &:hover {
+            color: $color-primary;
+            text-decoration: none;
+        }
+
+        &.is-active {
+            color: $color-primary;
+            font-weight: bold;
+        }
+    }
+}
+
+.button-search, .button-login {
+    display: block;
+    width: 35px;
+    height: 35px;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.button-search {
+    background-image: url(../images/icon-search.svg);
+}
+
+.button-login {
+    background-image: url(../images/icon-login.svg);
+}
