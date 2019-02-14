@@ -1,11 +1,21 @@
 html {
     height: 100%;
+    min-width: $site-min-width;
 }
 
 body {
     display: flex;
     flex-direction: column;
     min-height: 100%;
+}
+
+.page {
+    display: flex;
+    overflow-x: hidden;
+    overflow-y: auto;
+    flex: 1 1 auto;
+    flex-direction: column;
+    padding-top: $header-height;
 }
 
 .page-header, .page-footer {
@@ -17,13 +27,13 @@ body {
 }
 
 .s-color-black {
-    color: #000;
+    color: #000000;
 }
 
-.s-text-letter-spacing-sm {
+.s-letter-spacing-sm {
     letter-spacing: 0.1em !important;
 }
 
-.s-text-letter-spacing-lg {
+.s-letter-spacing-lg {
     letter-spacing: 0.3em !important;
 }

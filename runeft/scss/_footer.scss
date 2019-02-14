@@ -42,20 +42,10 @@
     }
 }
 
-.m-input-footer {
-    border-color: #6a6a6a;
-    background: transparent;
-
-    &::placeholder {
-        color: #838383;
-        letter-spacing: 0.05em;
-        font-size: 16px;
-    }
-}
-
 .social-icons {
     display: flex;
     flex-wrap: wrap;
+    margin: 0 -8px;
 
     &__link {
         display: flex;
@@ -75,15 +65,33 @@
 
 .link-upload-app {
     display: flex;
-    justify-content: center;
+    overflow: hidden;
     align-items: center;
+    justify-content: center;
     width: 133px;
     height: 38px;
     border-radius: 8px;
-    background-color: #000;
-    overflow: hidden;
+    background-color: #000000;
 
     &:hover {
         background-color: $color-primary;
+    }
+}
+
+.form-subscribe {
+    &__input {
+        border-color: #6a6a6a;
+        background: transparent;
+
+        &::placeholder {
+            color: #838383;
+            letter-spacing: 0.05em;
+            font-size: 16px;
+        }
+    }
+
+    &__button {
+        color: #000000;
+        text-transform: uppercase;
     }
 }

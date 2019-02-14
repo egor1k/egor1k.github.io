@@ -1,0 +1,115 @@
+.slider-main {
+    &__content {
+        position: absolute;
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-end;
+        align-items: flex-start;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        padding: 60px 140px 140px 140px;
+    }
+
+    &__name {
+        font-size: 54px;
+        color: #fff;
+        letter-spacing: 0.08em;
+        font-weight: 900;
+        text-transform: uppercase;
+
+        @media (max-width: $media-width) {
+            font-size: 48px;
+            letter-spacing: 0.05em;
+        }
+    }
+
+    &__subname {
+        font-size: 24px;
+        color: #f2f2f2;
+        letter-spacing: 0.15em;
+        text-transform: uppercase;
+        font-weight: bold;
+        margin: 0 0 30px;
+        line-height: 1.2;
+    }
+
+    &__button {
+        text-transform: uppercase;
+        font-size: 24px;
+        font-weight: bold;
+        padding: 8px 55px;
+    }
+
+    .swiper-pagination-bullet {
+        width: 40px;
+        height: 6px;
+        background-color: rgba(255, 255, 255, 0.5);
+        border-radius: 0;
+        margin: 0 10px;
+
+        &-active {
+            background-color: $color-primary;
+        }
+    }
+
+    &.swiper-container-horizontal>.swiper-pagination-bullets .swiper-pagination-bullet {
+        margin: 0 10px;
+    }
+
+    &.swiper-container-horizontal>.swiper-pagination-bullets {
+        text-align-last: left;
+        margin-left: 140px;
+        bottom: 60px;
+    }
+}
+
+.fresh {
+    padding: 30px 50px 20px;
+    border: 1px solid #bdbdbd;
+    border-radius: 2px;
+    overflow: hidden;
+    background-color: #fff;
+
+    &__name {
+        letter-spacing: 0.05em;
+        font-size: 24px;
+        text-transform: uppercase;
+        font-weight: bold;
+        margin: 0 0 15px;
+    }
+
+    &__subname {
+        text-transform: uppercase;
+        font-size: 18px;
+        letter-spacing: 0.15em;
+        color: #333;
+        margin: 0 0 20px;
+        line-height: 1.4;
+    }
+
+    &__img {
+        margin: 0 0 20px;
+    }
+
+    &__link {
+        position: relative;
+        font-size: 12px;
+        text-decoration: underline;
+        color: $color-primary;
+        padding-right: 25px;
+
+        &::after {
+            top: 50%;
+            right: 0;
+            transform: translateY(-50%);
+            position: absolute;
+            content: "";
+            width: 20px;
+            height: 7px;
+            background: url(../images/arrow-fresh.svg) center no-repeat;
+            background-size: 20px 7px;
+        }
+    }
+}

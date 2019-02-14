@@ -3,9 +3,12 @@
     top: 0;
     left: 0;
     z-index: 1030;
-    padding: 24px 0;
+    overflow: hidden;
+    padding: 20px 0;
     width: 100%;
+    height: $header-height;
     background-color: #ffffff;
+    min-width: $site-min-width;
 }
 
 .site-lang {
@@ -29,7 +32,6 @@
     display: inline-block;
     margin: 0 10px 0 6px;
     color: #bdbdbd;
-    font-weight: bold;
     font-size: 24px;
 }
 
@@ -37,14 +39,16 @@
     display: flex;
     flex-wrap: wrap;
     justify-content: space-around;
-    margin: 0;
+    margin: 0 -10px;
     padding: 0;
     list-style: none;
 
-    &__link {
-        display: inline-block;
+    &__item {
         margin: 0 10px;
-        color: #000;
+    }
+
+    &__link {
+        color: #000000;
         text-transform: uppercase;
         letter-spacing: 0.3em;
         font-size: 18px;
@@ -67,6 +71,7 @@
     height: 35px;
     background-position: center;
     background-repeat: no-repeat;
+    border-radius: 2px;
 }
 
 .button-search {
