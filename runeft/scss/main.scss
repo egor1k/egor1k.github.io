@@ -1,12 +1,8 @@
 $color-primary: #FF6B00;
 $header-height: 150px;
-$site-min-width: 1366px;
+$site-min-width: 1349px;
 
 $media-width: 1440px;
-
-.btn-lg {
-    letter-spacing: 0.15em;
-}
 
 @import "base";
 @import "header";

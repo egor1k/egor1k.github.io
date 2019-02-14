@@ -18,7 +18,8 @@ body {
     padding-top: $header-height;
 }
 
-.page-header, .page-footer {
+.page-header,
+.page-footer {
     flex: 0 0 auto;
 }
 
@@ -26,14 +27,44 @@ body {
     flex: 1 1 auto;
 }
 
-.s-color-black {
-    color: #000000;
+.section {
+    padding: 35px 0;
 }
 
-.s-letter-spacing-sm {
-    letter-spacing: 0.1em !important;
+.title {
+    letter-spacing: 0.05em;
+    font-size: 32px;
+    text-transform: uppercase;
+    font-weight: bold;
 }
 
-.s-letter-spacing-lg {
-    letter-spacing: 0.3em !important;
+.hr {
+    border-color: #bdbdbd;
+    margin: 5px 0 25px;
+}
+
+.btn-lg {
+    letter-spacing: 0.15em;
+}
+
+.btn-arrow {
+    position: relative;
+    min-width: 260px;
+
+    &::after {
+        position: absolute;
+        right: 20px;
+        top: 50%;
+        transform: translateY(-50%);
+        content: "";
+        background: url(../images/arrow-btn.svg) center no-repeat;
+        background-size: 21px 8px;
+        width: 21px;
+        height: 8px;
+    }
+
+    &:hover::after {
+        background-image: url(../images/arrow-btn-white.svg);
+    }
+
 }
