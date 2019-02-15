@@ -1,36 +1,79 @@
 "use strict";
 
 
-/* Слайдер на главной
+/* Все слайдеры
  * ------------------------------------------------------ */
 var clSliders = function () {
-    var sliderMain = new Swiper('.slider-main', {
 
-        pagination: {
-            el: '.swiper-pagination',
-        }
-    });
-    $('.slider-main__name').shave(256);
-
-
-    var sliderYears = new Swiper('.slider-years', {
-        slidesPerView: 12,
-        navigation: {
-            nextEl: '.swiper-button-next',
-            prevEl: '.swiper-button-prev',
-        }
+    $('.slider-main').slick({
+        arrows: false,
+        dots: true,
+        infinite: false,
+        touchThreshold: 50,
+        autoplay: true,
+        autoplaySpeed: 3000,
+        fade: true,
+        speed: 1000
     });
 
-    var sliderArchive = new Swiper('.slider-archive', {
-        spaceBetween: 60,
-        slidesPerView: 4,
-        navigation: {
-            nextEl: '.swiper-button-next',
-            prevEl: '.swiper-button-prev',
-        }
+    $('.slider-years').slick({
+        variableWidth: true,
+        arrows: true,
+        dots: false,
+        infinite: false,
+        touchThreshold: 50,
+        slidesToScroll: 1,
+        asNavFor: '.slider-archive',
+        focusOnSelect: true,
+        speed: 150,
+        accessibility: false,
+        infinite: true,
+        swipe: false
     });
+
+    $('.slider-archive').slick({
+        slidesToShow: 1,
+        slidesToScroll: 1,
+        arrows: false,
+        fade: true,
+        asNavFor: '.slider-years',
+        swipe: false,
+        accessibility: false,
+        speed: 150
+    });
+
+    $('.slider-matreshka').slick({
+        slidesToShow: 4,
+        slidesToScroll: 1,
+        arrows: true,
+        touchThreshold: 500
+    })
 
 };
+
+
+/* Обрезка текста
+ * ------------------------------------------------------ */
+var clShave = function () {
+
+    function doShave(selector, height) {
+        var el = $(selector),
+            text = el.text();
+
+        $(selector).shave(height);
+        let timer = null;
+        $(window).on('resize', function () {
+            clearTimeout(timer);
+            timer = setTimeout(function () {
+                el = text;
+                $(selector).shave(height);
+            }, 1000);
+        });
+    }
+
+    doShave('.article__name', 63);
+    doShave('.slider-main__name', 256);
+}
 
 
 /* Back to Top
@@ -84,4 +127,5 @@ $(document).ready(function () {
     clBackToTop();
     clSmoothScroll();
     clSliders();
+    clShave();
 });

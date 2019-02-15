@@ -29,11 +29,17 @@
     margin: 0;
     padding: 0;
     list-style: none;
+    color: #838383;
+
+    &__item {
+        display: inline-block;
+        margin: 0 0 15px;
+    }
 
     &__link {
         display: inline-block;
-        margin: 0 0 15px;
         color: #838383;
+        line-height: 1.2;
 
         &:hover {
             color: $color-primary;
@@ -45,20 +51,25 @@
 .social-icons {
     display: flex;
     flex-wrap: wrap;
-    margin: 0 -8px;
+    margin: 0 -5px;
 
     &__link {
         display: flex;
         align-items: center;
         justify-content: center;
-        margin: 8px;
-        width: 40px;
-        height: 40px;
+        margin: 5px;
+        width: 32px;
+        height: 32px;
         border-radius: 2px;
         background-color: #6a6a6a;
 
         &:hover {
             background-color: $color-primary;
+        }
+
+        & img {
+            max-width: 80%;
+            max-height: 80%;
         }
     }
 }
