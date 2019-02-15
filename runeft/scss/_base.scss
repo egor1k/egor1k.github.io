@@ -10,6 +10,10 @@ body {
     min-height: 100%;
 }
 
+.with-limiter {
+    min-width: $site-min-width;
+}
+
 .page {
     display: flex;
     overflow-x: hidden;
@@ -29,6 +33,10 @@ body {
 
 .section {
     padding: 35px 0;
+
+    &--alt {
+        padding: 0 0 70px;
+    }
 }
 
 .title {
@@ -41,10 +49,24 @@ body {
 .hr {
     margin: 5px 0 25px;
     border-color: #bdbdbd;
+
+    &--mini {
+        max-width: 255px;
+        margin: 8px 0 10px;
+    }
+
+    &--primary {
+        border-color: $color-primary;
+    }
 }
 
 .btn-lg {
     letter-spacing: 0.15em;
+}
+
+.form-control::placeholder {
+    color: #bdbdbd;
+    font-size: 16px;
 }
 
 .btn-arrow {
@@ -88,7 +110,7 @@ body {
     li {
         display: flex;
         margin: 0 10px;
-        width: 40px;
+        width: 50px;
         height: 6px;
 
         button {
@@ -114,6 +136,7 @@ body {
 }
 
 .slick-arrow {
+    z-index: 1;
     position: absolute;
     top: 50%;
     margin: 0;

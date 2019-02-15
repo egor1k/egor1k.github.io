@@ -7,33 +7,36 @@
 
     <link href="https://fonts.googleapis.com/css?family=Roboto:100,100i,300,300i,400,400i,500,500i,700,700i,900,900i&amp;subset=cyrillic" rel="stylesheet">
     <link rel="stylesheet" href="css/bootstrap-custom.css">
+    <link rel="stylesheet" href="css/jquery.fancybox.min.css">
     <link rel="stylesheet" href="css/slick.css">
     <link rel="stylesheet" href="css/main.css">
 
     <title>Экспозиция Нефть Газ</title>
 </head>
 
-<body id="top">
+<body id="top" class="width-limiter">
 
     <div class="page">
 
-        <header class="page-header">
+        <header class="page-header width-limiter compensate-for-scrollbar">
             <div class="container">
                 <div class="row align-items-center">
                     <div class="col-3">
-                        <div class="mb-4">
-                            <a href="#" class="site-lang is-active">РУС</a>
-                            <span class="site-lang-dash">|</span>
-                            <a href="#" class="site-lang">ENG</a>
+                        <div class="site-lang">
+                            <a href="#" class="site-lang__item is-active">РУС</a>
+                            <span class="site-lang__dash">|</span>
+                            <a href="#" class="site-lang__item">ENG</a>
                         </div>
-                        <img src="images/logo-site.svg" class="img-fluid" alt="Экспозиция Нефть Газ логотип">
+                        <a href="/runeft/">
+                            <img src="images/logo-site.svg" class="img-fluid" alt="Экспозиция Нефть Газ логотип">
+                        </a>
                     </div>
                     <div class="col-9">
                         <div class="row align-items-center">
                             <div class="col">
                                 <ul class="menu-main">
                                     <li class="menu-main__item">
-                                        <a href="#" class="menu-main__link">Статьи</a>
+                                        <a href="/runeft/articles.html" class="menu-main__link">Статьи</a>
                                     </li>
                                     <li class="menu-main__item">
                                         <a href="#" class="menu-main__link is-active">Авторам</a>
@@ -462,7 +465,6 @@
                                         </div>
                                     </div>
                                 </div>
-
                                 <div class="slider-matreshka__slide">
                                     <div class="slider-matreshka__body">
                                         <img src="images/temp/e3.jpg" class="slider-matreshka__img img-fluid">
@@ -480,7 +482,6 @@
                                         </div>
                                     </div>
                                 </div>
-
                                 <div class="slider-matreshka__slide">
                                     <div class="slider-matreshka__body">
                                         <img src="images/temp/e4.jpg" class="slider-matreshka__img img-fluid">
@@ -498,7 +499,6 @@
                                         </div>
                                     </div>
                                 </div>
-
                                 <div class="slider-matreshka__slide">
                                     <div class="slider-matreshka__body">
                                         <img src="images/temp/e4.jpg" class="slider-matreshka__img img-fluid">
@@ -605,7 +605,182 @@
                             </div>
                         </div>
                         <div class="slider-archive__slide">2018</div>
-                        <div class="slider-archive__slide">2017</div>
+                        <div class="slider-archive__slide">
+                            <div class="slider-matreshka">
+
+                                <div class="slider-matreshka__slide">
+                                    <div class="slider-matreshka__body">
+                                        <img src="images/temp/e1.jpg" class="slider-matreshka__img img-fluid">
+                                        <h4 class="slider-matreshka__name">
+                                            №7 (67)<br>
+                                            ноябрь 2018
+                                        </h4>
+                                        <div class="form-row">
+                                            <div class="col">
+                                                <a href="#" class="btn btn-sm btn-outline-dark btn-block text-uppercase">Читать</a>
+                                            </div>
+                                            <div class="col">
+                                                <a href="#" class="btn btn-sm btn-primary btn-block text-uppercase">Заказать</a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="slider-matreshka__slide">
+                                    <div class="slider-matreshka__body">
+                                        <img src="images/temp/e2.jpg" class="slider-matreshka__img img-fluid">
+                                        <h4 class="slider-matreshka__name">
+                                            №7 (67)<br>
+                                            ноябрь 2018
+                                        </h4>
+                                        <div class="form-row">
+                                            <div class="col">
+                                                <a href="#" class="btn btn-sm btn-outline-dark btn-block text-uppercase">Читать</a>
+                                            </div>
+                                            <div class="col">
+                                                <a href="#" class="btn btn-sm btn-primary btn-block text-uppercase">Заказать</a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="slider-matreshka__slide">
+                                    <div class="slider-matreshka__body">
+                                        <img src="images/temp/e3.jpg" class="slider-matreshka__img img-fluid">
+                                        <h4 class="slider-matreshka__name">
+                                            №7 (67)<br>
+                                            ноябрь 2018
+                                        </h4>
+                                        <div class="form-row">
+                                            <div class="col">
+                                                <a href="#" class="btn btn-sm btn-outline-dark btn-block text-uppercase">Читать</a>
+                                            </div>
+                                            <div class="col">
+                                                <a href="#" class="btn btn-sm btn-primary btn-block text-uppercase">Заказать</a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="slider-matreshka__slide">
+                                    <div class="slider-matreshka__body">
+                                        <img src="images/temp/e4.jpg" class="slider-matreshka__img img-fluid">
+                                        <h4 class="slider-matreshka__name">
+                                            №7 (67)<br>
+                                            ноябрь 2018
+                                        </h4>
+                                        <div class="form-row">
+                                            <div class="col">
+                                                <a href="#" class="btn btn-sm btn-outline-dark btn-block text-uppercase">Читать</a>
+                                            </div>
+                                            <div class="col">
+                                                <a href="#" class="btn btn-sm btn-primary btn-block text-uppercase">Заказать</a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="slider-matreshka__slide">
+                                    <div class="slider-matreshka__body">
+                                        <img src="images/temp/e4.jpg" class="slider-matreshka__img img-fluid">
+                                        <h4 class="slider-matreshka__name">
+                                            №7 (67)<br>
+                                            ноябрь 2018
+                                        </h4>
+                                        <div class="form-row">
+                                            <div class="col">
+                                                <a href="#" class="btn btn-sm btn-outline-dark btn-block text-uppercase">Читать</a>
+                                            </div>
+                                            <div class="col">
+                                                <a href="#" class="btn btn-sm btn-primary btn-block text-uppercase">Заказать</a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="slider-matreshka__slide">
+                                    <div class="slider-matreshka__body">
+                                        <img src="images/temp/e4.jpg" class="slider-matreshka__img img-fluid">
+                                        <h4 class="slider-matreshka__name">
+                                            №7 (67)<br>
+                                            ноябрь 2018
+                                        </h4>
+                                        <div class="form-row">
+                                            <div class="col">
+                                                <a href="#" class="btn btn-sm btn-outline-dark btn-block text-uppercase">Читать</a>
+                                            </div>
+                                            <div class="col">
+                                                <a href="#" class="btn btn-sm btn-primary btn-block text-uppercase">Заказать</a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="slider-matreshka__slide">
+                                    <div class="slider-matreshka__body">
+                                        <img src="images/temp/e4.jpg" class="slider-matreshka__img img-fluid">
+                                        <h4 class="slider-matreshka__name">
+                                            №7 (67)<br>
+                                            ноябрь 2018
+                                        </h4>
+                                        <div class="form-row">
+                                            <div class="col">
+                                                <a href="#" class="btn btn-sm btn-outline-dark btn-block text-uppercase">Читать</a>
+                                            </div>
+                                            <div class="col">
+                                                <a href="#" class="btn btn-sm btn-primary btn-block text-uppercase">Заказать</a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="slider-matreshka__slide">
+                                    <div class="slider-matreshka__body">
+                                        <img src="images/temp/e4.jpg" class="slider-matreshka__img img-fluid">
+                                        <h4 class="slider-matreshka__name">
+                                            №7 (67)<br>
+                                            ноябрь 2018
+                                        </h4>
+                                        <div class="form-row">
+                                            <div class="col">
+                                                <a href="#" class="btn btn-sm btn-outline-dark btn-block text-uppercase">Читать</a>
+                                            </div>
+                                            <div class="col">
+                                                <a href="#" class="btn btn-sm btn-primary btn-block text-uppercase">Заказать</a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="slider-matreshka__slide">
+                                    <div class="slider-matreshka__body">
+                                        <img src="images/temp/e4.jpg" class="slider-matreshka__img img-fluid">
+                                        <h4 class="slider-matreshka__name">
+                                            №7 (67)<br>
+                                            ноябрь 2018
+                                        </h4>
+                                        <div class="form-row">
+                                            <div class="col">
+                                                <a href="#" class="btn btn-sm btn-outline-dark btn-block text-uppercase">Читать</a>
+                                            </div>
+                                            <div class="col">
+                                                <a href="#" class="btn btn-sm btn-primary btn-block text-uppercase">Заказать</a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="slider-matreshka__slide">
+                                    <div class="slider-matreshka__body">
+                                        <img src="images/temp/e4.jpg" class="slider-matreshka__img img-fluid">
+                                        <h4 class="slider-matreshka__name">
+                                            №7 (67)<br>
+                                            ноябрь 2018
+                                        </h4>
+                                        <div class="form-row">
+                                            <div class="col">
+                                                <a href="#" class="btn btn-sm btn-outline-dark btn-block text-uppercase">Читать</a>
+                                            </div>
+                                            <div class="col">
+                                                <a href="#" class="btn btn-sm btn-primary btn-block text-uppercase">Заказать</a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                            </div>
+                        </div>
                         <div class="slider-archive__slide">2016</div>
                         <div class="slider-archive__slide">2015</div>
                         <div class="slider-archive__slide">2014</div>
@@ -623,7 +798,7 @@
                 </div>
             </section>
 
-            <section class="google-play">
+            <div class="google-play">
                 <div class="container">
                     <div class="row align-items-center">
                         <div class="col-3 text-center">
@@ -640,7 +815,7 @@
                         </div>
                     </div>
                 </div>
-            </section>
+            </div>
 
         </div><!-- /.page-content -->
 
@@ -649,12 +824,9 @@
             <img src="images/temp/c1.jpg" class="img-fluid " alt="">
         </div>
 
-        <div class="go-top">
-            <a class="smoothscroll go-top__button" title="Back to Top" href="#top"></a>
-        </div>
-
         <footer class="page-footer">
             <div class="container">
+
                 <img src="images/logo-site-footer.svg" class="img-fluid" alt="Экспозиция Нефть Газ логотип">
                 <hr class="hr-footer">
 
@@ -754,10 +926,16 @@
 
     </div><!-- /.page -->
 
+    <!-- Кнопка наверх -->
+    <div class="go-top">
+        <a class="go-top__button smoothscroll" title="Back to Top" href="#top"></a>
+    </div>
+
     <script src="js/jquery-3.3.1.min.js"></script>
+    <script src="js/jquery.fancybox.min.js"></script>
+    <script src="js/jquery.shave.min.js"></script>
     <script src="js/bootstrap.min.js"></script>
     <script src="js/slick.min.js"></script>
-    <script src="js/jquery.shave.min.js"></script>
     <script src="js/main.js"></script>
 </body>
 

@@ -1,6 +1,19 @@
 "use strict";
 
 
+var clHeader = function () {
+    var body = $('body');
+
+    $(window).on('scroll', function () {
+        if ($(window).scrollTop() > 0) {
+            body.addClass('site-srolled');
+        } else {
+            body.removeClass('site-srolled');
+        }
+    });
+};
+
+
 /* Все слайдеры
  * ------------------------------------------------------ */
 var clSliders = function () {
@@ -8,12 +21,16 @@ var clSliders = function () {
     $('.slider-main').slick({
         arrows: false,
         dots: true,
-        infinite: false,
+        infinite: true,
         touchThreshold: 50,
         autoplay: true,
         autoplaySpeed: 3000,
         fade: true,
-        speed: 1000
+        speed: 500,
+        swipe: false,
+        pauseOnFocus: false,
+        pauseOnHover: false,
+        cssEase: 'linear'
     });
 
     $('.slider-years').slick({
@@ -47,7 +64,12 @@ var clSliders = function () {
         slidesToScroll: 1,
         arrows: true,
         touchThreshold: 500
-    })
+    });
+
+    $('.slider-simple').slick({
+        arrows: true,
+        dots: false
+    });
 
 };
 
@@ -73,7 +95,8 @@ var clShave = function () {
 
     doShave('.article__name', 63);
     doShave('.slider-main__name', 256);
-}
+    doShave('.preview__name', 115);
+};
 
 
 /* Back to Top
@@ -128,4 +151,5 @@ $(document).ready(function () {
     clSmoothScroll();
     clSliders();
     clShave();
+    clHeader();
 });
