@@ -17,11 +17,14 @@ $font-size-sm: 0.75rem;
 
 $input-btn-focus-box-shadow: none;
 
+$input-btn-padding-y:  0.5625rem;
 $input-btn-padding-y-sm: 0.375rem;
 
-$border-radius:    0.125rem;
-$border-radius-lg: 0.125rem;
+$border-radius:    0;
+$border-radius-lg: 0;
 $border-radius-sm: 0.125rem;
+
+$border-color: $body-color;
 
 $dropdown-font-size: 0.75rem;
 
@@ -29,10 +32,10 @@ $headings-color: $dark;
 $headings-font-weight: bold;
 $h1-font-size: 3rem;
 $h2-font-size: 1.5rem;
-// $h3-font-size:                $font-size-base * 1.75 !default;
-// $h4-font-size:                $font-size-base * 1.5 !default;
-// $h5-font-size:                $font-size-base * 1.25 !default;
-// $h6-font-size:                $font-size-base !default;
+$h3-font-size: 1rem;
+$h4-font-size: 1rem;
+$h5-font-size: 1rem;
+$h6-font-size: 1rem;
 
 $spacer: 0.3125rem;
 $spacers: (
@@ -63,5 +66,23 @@ $grid-breakpoints: (
     lg: 992px,
     xl: 1230px
 );
+
+$custom-file-text: (
+    ru: "Загрузить"
+);
+
+$breadcrumb-divider: quote(">");
+
+$breadcrumb-padding-y: 0;
+$breadcrumb-padding-x: 0;
+$breadcrumb-item-padding: 0.375rem;
+
+$breadcrumb-margin-bottom: 1.5rem;
+
+$breadcrumb-bg: transparent;
+$breadcrumb-divider-color: $body-color;
+$breadcrumb-active-color: $body-color;
+
+$breadcrumb-border-radius: 0;
 
 @import "bootstrap/bootstrap";
