@@ -18,10 +18,10 @@
 
         <header class="header fixed-top text-dark">
 
-            <div class="container">
+            <div class="container d-none d-lg-block">
                 <div class="row align-items-center pt-3 pb-2">
                     <div class="col-auto py-2">
-                        <a href="/"><img src="images/logo.svg" alt="logo"></a>
+                        <a href="/"><img class="img-fluid" src="images/logo.svg" alt="logo"></a>
                     </div>
                     <div class="col py-2 order-last order-lg-0">
                         <select class="form-control form-control-sm w-auto text-primary font-weight-semibold">
@@ -48,6 +48,9 @@
                     <button class="navbar-toggler my-1" type="button" data-toggle="collapse" data-target="#nav-main">
                         <span class="navbar-toggler-icon"></span>
                     </button>
+                    <a class="navbar-brand d-lg-none" href="">
+                        <img class="img-fluid" src="images/logo-sm.svg" alt="ТМС групп Логотип" width="90px">
+                    </a>
                     <div class="collapse navbar-collapse" id="nav-main">
                         <ul class="navbar-nav my-2 my-lg-0 text-uppercase justify-content-around w-100">
                             <li class="nav-item active">
@@ -81,8 +84,35 @@
                                 </div>
                             </li>
                         </ul>
+
+                        <div class="d-lg-none bg-white p-2 mb-2 text-center rounded">
+
+                            <div class="row align-items-center">
+                                <div class="col py-2 order-last order-lg-0">
+                                    <select class="form-control form-control-sm w-auto text-primary font-weight-semibold">
+                                        <option>RU</option>
+                                        <option>ENG</option>
+                                    </select>
+                                </div>
+                                <div class="col-auto py-2 d-flex align-items-center">
+                                    <img class="mr-2" src="images/mail.svg" alt="mail">
+                                    <u>mail@boxmail.ru</u>
+                                </div>
+                                <div class="col-auto py-2 d-flex align-items-center">
+                                    <img class="mr-2" src="images/phone.svg" alt="phone">
+                                    <span class="font-weight-semibold">8-800-000-00-00</span>
+                                </div>
+                                <div class="col-auto py-2">
+                                    <button class="btn btn-sm btn-success font-weight-semibold px-6">Заказать звонок</button>
+                                </div>
+                            </div>
+
+                        </div>
+
                     </div>
+
                     <a class="d-none d-lg-block" href=""><img src="images/search.svg" alt="search"></a>
+
                 </div>
             </nav>
 
@@ -91,29 +121,37 @@
         <div class="content">
             <div class="container">
 
-                <div class="section">
+                <section class="py-5">
                     <div class="row">
 
-                        <div class="col-md-4 col-xl-3">
-                            <a class="d-block text-center mb-6" href="#"><img class="img-fluid" src="images/special_offer.jpg" alt="Специальное предложение"></a>
-                            <a class="d-block text-center mb-10" href="/"><img class="img-fluid" src="images/logo-banner.svg" alt="logo"></a>
+                        <div class="col-md-4 col-xl-3 order-last order-md-0">
+                            <div class="row d-none d-md-flex">
+                                <div class="col-6 col-md-12">
+                                    <a class="d-block text-center mb-6" href="#"><img class="img-fluid" src="images/special_offer.jpg" alt="Специальное предложение"></a>
+                                </div>
+                                <div class="col-6 col-md-12">
+                                    <a class="d-block text-center mb-10" href="/"><img class="img-fluid" src="images/logo-banner.svg" alt="logo"></a>
+                                </div>
+                            </div>
 
-                            <h2 class="text-uppercase">Новости</h2>
-                            <hr class="border-primary hr-lg mt-2 mb-5">
+                            <section>
+                                <h2 class="text-uppercase">Новости</h2>
+                                <hr class="border-primary hr-lg mt-2 mb-5">
 
-                            <a class="news" href="">
-                                <p class="news__name">ЧМК изготовил арматуру для строительства намывных территорий в Санкт-Петербурге</p>
-                                <p>Челябинский металлургический комбинат Мечел произвел 1,2 тыс. т арматуры...</p>
-                            </a>
+                                <a class="news" href="">
+                                    <p class="news__name">ЧМК изготовил арматуру для строительства намывных территорий в Санкт-Петербурге</p>
+                                    <p>Челябинский металлургический комбинат Мечел произвел 1,2 тыс. т арматуры...</p>
+                                </a>
 
-                            <a class="news" href="">
-                                <p class="news__name">"Вертолеты России" провели демотур вертолетов Ансат и Ми-171А2 в Таиланде</p>
-                                <p>"Вертолеты России" в рамках демонстрационного тура вертолетов в странах Юго-Восточной Азии представил новейшие гражданские вертолеты Ансат и Ми-171А2...</p>
-                            </a>
+                                <a class="news" href="">
+                                    <p class="news__name">"Вертолеты России" провели демотур вертолетов Ансат и Ми-171А2 в Таиланде</p>
+                                    <p>"Вертолеты России" в рамках демонстрационного тура вертолетов в странах Юго-Восточной Азии представил новейшие гражданские вертолеты Ансат и Ми-171А2...</p>
+                                </a>
+                            </section>
 
                         </div>
 
-                        <div class="case col-md-8 col-xl-9">
+                        <div class="case col-md-8 col-xl-9 mb-8 mb-md-0">
                             <div class="row">
 
                                 <div class="col-sm-6 col-xl-4">
@@ -316,9 +354,9 @@
                         </div>
 
                     </div>
-                </div>
+                </section>
 
-                <section class="section-lg">
+                <section class="py-4 py-lg-10">
                     <h2 class="text-center text-uppercase mb-4">Наши партнеры</h2>
                     <div class="slider-partners">
                         <div class="slider-partners__slide">
@@ -355,7 +393,7 @@
                     </div>
                 </section>
 
-                <section class="section-lg">
+                <section class="py-4 py-lg-10">
                     <h2 class="h1 text-uppercase font-weight-semibold mb-5">Наши контакты</h2>
                     <div class="row text-dark lh-lg">
                         <div class="col-lg-6">
@@ -420,7 +458,7 @@
             <div class="container">
                 <div class="row">
                     <div class="col-lg-3 mb-6">
-                        <a href="/"><img src="images/logo-alt.svg" alt="logo"></a>
+                        <a href="/"><img class="img-fluid" src="images/logo-alt.svg" alt="logo"></a>
                     </div>
                     <div class="col-6 col-lg-3 mb-6">
                         <p class="font-weight-bold text-uppercase mb-4">Продукция</p>

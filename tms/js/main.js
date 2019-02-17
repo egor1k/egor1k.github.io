@@ -17,35 +17,30 @@ $(document).ready(function () {
         swipe: false,
         slidesToShow: 5,
         autoplay: true,
-        autoplaySpeed: 0,
-        speed: 12000,
-        cssEase: 'linear',
+        autoplaySpeed: 3000,
+        cssEase: 'ease-in-out',
         responsive: [{
                 breakpoint: 1229,
                 settings: {
-                    slidesToShow: 4,
-                    speed: 10000
+                    slidesToShow: 4
                 }
             },
             {
                 breakpoint: 991,
                 settings: {
-                    slidesToShow: 3,
-                    speed: 7500
+                    slidesToShow: 3
                 }
             },
             {
                 breakpoint: 767,
                 settings: {
-                    slidesToShow: 2,
-                    speed: 5000
+                    slidesToShow: 2
                 }
             },
             {
                 breakpoint: 575,
                 settings: {
-                    slidesToShow: 1,
-                    speed: 2500
+                    slidesToShow: 1
                 }
             }
         ]

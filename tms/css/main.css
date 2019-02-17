@@ -16,10 +16,6 @@ body { display: -webkit-box; display: -ms-flexbox; display: flex; -webkit-box-or
 
 .footer { background-color: #31343d; font-size: 0.75rem; }
 
-.section { padding: 25px 0; }
-
-.section-lg { padding: 50px 0; }
-
 .case__item { display: -webkit-box; display: -ms-flexbox; display: flex; -webkit-box-orient: vertical; -webkit-box-direction: normal; -ms-flex-direction: column; flex-direction: column; height: 100%; color: #f1f3ff; font-size: 0.9375rem; }
 
 .case__header { position: relative; -webkit-box-flex: 1; -ms-flex: 1 1 auto; flex: 1 1 auto; min-height: 3.25rem; }
@@ -44,7 +40,7 @@ body { display: -webkit-box; display: -ms-flexbox; display: flex; -webkit-box-or
 
 .case__dropdown-link:hover { background-color: #1a2a69; color: inherit; text-decoration: none; }
 
-.news { display: block; margin-bottom: 2rem; color: inherit; font-size: 0.875rem; line-height: 1.2; }
+.news { display: block; color: inherit; font-size: 0.875rem; line-height: 1.4; margin-bottom: 2rem; }
 
 .news:hover { color: #1f327d; text-decoration: none; }
 

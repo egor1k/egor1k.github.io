@@ -42,14 +42,6 @@ body {
     font-size: 0.75rem;
 }
 
-.section {
-    padding: 25px 0;
-}
-
-.section-lg {
-    padding: 50px 0;
-}
-
 .case {
     &__item {
         display: flex;
@@ -142,10 +134,10 @@ body {
 
 .news {
     display: block;
-    margin-bottom: 2rem;
     color: inherit;
     font-size: 0.875rem;
-    line-height: 1.2;
+    line-height: 1.4;
+    margin-bottom: 2rem;
 
     &:hover {
         color: $color-primary;
