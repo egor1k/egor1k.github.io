@@ -41,6 +41,10 @@
     .house-card {
         box-shadow: 12px 12px 24px rgba(0, 0, 0, 0.15);
     }
+
+    .header-top {
+        padding: 0.5rem 0;
+    }
 }
 
 @include media-breakpoint-down(xs) {
@@ -66,10 +70,6 @@
     .main-slider__item {
         background-position: top;
         background-size: auto 55%;
-    }
-
-    .header-top {
-        padding: 0.5rem 0;
     }
 
     .header-navbar__link {
