@@ -63,6 +63,30 @@
         font-size: 1.5rem;
     }
 
+    .main-slider__item {
+        background-position: top;
+        background-size: auto 55%;
+    }
+
+    .header-top {
+        padding: 0.5rem 0;
+    }
+
+    .header-navbar__link {
+        padding: 0.5rem;
+    }
+
+    .main-slider__nav {
+        left: 50%;
+        right: auto;
+        transform: translateX(-50%);
+    }
+
+    .slider-card {
+        left: 50%;
+        transform: translateX(-50%);
+    }
+
 }
 
 
