@@ -18,11 +18,18 @@
 
             <div class="header-top">
                 <div class="container">
-                    <div class="row align-items-center">
+                    <div class="row align-items-center flex-nowrap">
 
-                        <div class="col-auto">
+                        <div class="col d-xl-none">
+                            <a href="#" data-toggle="modal" data-target="#modalFullPageMenu">
+                                <img src="images/bar-menu_icon-icons.com_70305.svg" width="50px">
+                            </a>
+                        </div>
+
+                        <div class="col-auto d-none d-xl-block">
                             <a href="#">
-                                <img src="images/logo_white.svg">
+                                <img class="img-fluid d-none d-sm-block" src="images/logo_white.svg">
+                                <!-- <img class="img-fluid d-sm-none" src="images/logo-small.svg"> -->
                             </a>
                         </div>
 
@@ -43,7 +50,7 @@
                             </ul>
                         </div>
 
-                        <div class="col-auto d-none d-xl-block">
+                        <div class="col-auto">
                             <button class="btn-transparent-white" data-toggle="modal" data-target="#modalRequestCall">Заказать звонок</button>
                         </div>
 
@@ -423,6 +430,7 @@
     </div>
 
     <div class="modals">
+
         <div class="modal fade" id="modalRequestCall" tabindex="-1">
             <div class="modal-dialog modal-dialog-centered">
                 <div class="modal-content p-2">
@@ -447,6 +455,31 @@
                         </div>
                         <button type="submit" class="btn btn-lg btn-primary mb-2 px-5">Отправить</button>
                     </form>
+                    <!-- <div class="modal-footer">
+                        <button type="button" class="btn btn-outline-secondary" data-dismiss="modal">Отмена</button>
+                        
+                    </div> -->
+                </div>
+            </div>
+        </div>
+
+        <div class="modal fade" id="modalFullPageMenu" tabindex="-1">
+            <div class="modal-dialog modal-dialog-centered m-0 align-items-stretch h-100">
+                <div class="modal-content p-2">
+                    <div class="modal-header border-0">
+                        <img class="img-fluid" src="images/logo_black.svg">
+                        <button type="button" class="close" data-dismiss="modal">
+                            <span aria-hidden="true">&times;</span>
+                        </button>
+                    </div>
+                    <div class="modal-body">
+                        <div class="list-group">
+                            <a class="list-group-item list-group-item-action" href="#">О компании</a>
+                            <a class="list-group-item list-group-item-action" href="#">Как мы строим</a>
+                            <a class="list-group-item list-group-item-action" href="#">Проекты домов</a>
+                            <a class="list-group-item list-group-item-action" href="#">Контакты</a>
+                        </div>
+                    </div>
                     <!-- <div class="modal-footer">
                         <button type="button" class="btn btn-outline-secondary" data-dismiss="modal">Отмена</button>
                         
