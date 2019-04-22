@@ -27,23 +27,21 @@ body {
 }
 
 .header {
-    position: absolute;
-    top: 0;
-    right: 0;
-    left: 0;
-    z-index: 1;
-    background: linear-gradient(180deg, #141415 0%, rgba(20, 20, 21, 0) 100%);
+
+    .slider-page & {
+        position: absolute;
+        top: 0;
+        right: 0;
+        left: 0;
+        z-index: 1;
+        background: linear-gradient(180deg, #141415 0%, rgba(20, 20, 21, 0) 100%);
+    }
 }
 
 .footer {
     padding: 3.75rem 0 1.625rem;
     background: $body-color;
     color: #ffffff;
-
-    &__title {
-        font-weight: bold;
-        font-size: 1.25rem;
-    }
 
     &__textarea {
         min-height: 10.3rem;
@@ -74,10 +72,14 @@ body {
     @extend .nav;
 
     a {
-        color: #ffffff;
+        color: $body-color;
 
-        &:hover {
+        &:hover, &.active {
             color: $primary;
+        }
+
+        .slider-page & {
+            color: #fff;
         }
     }
 }
@@ -266,7 +268,7 @@ body {
     }
 
     &__properties {
-        font-size: 12px;
+        font-size: 0.75rem;
     }
 
     &__price {
@@ -301,6 +303,7 @@ body {
     letter-spacing: 0.24em;
     font-weight: 800;
     font-size: 2.25rem;
+    line-height: 1.2;
 }
 
 .lineup {
@@ -361,7 +364,7 @@ body {
 
     &__properties {
         flex: 1 1 auto;
-        font-size: 12px;
+        font-size: 0.75rem;
     }
 
     &__price {
@@ -427,7 +430,7 @@ body {
 
     &__item {
         border: 1px solid transparent;
-        transition: 0.15s ease-in-out;
+        transition: 0.1s ease-in-out;
 
         &:not(:first-child) {
             margin-left: 1.5rem;
@@ -447,5 +450,23 @@ body {
 
     &::before {
         content: ">";
+    }
+}
+
+.modal-menu {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+
+    &__link {
+        display: inline-block;
+        color: $body-color;
+        padding: 1rem 0;
+        font-size: 1.5rem;
+
+        &:hover {
+            color: $primary;
+            text-decoration: none;
+        }
     }
 }

@@ -12,7 +12,7 @@
 </head>
 
 <body>
-    <div class="page">
+    <div class="page slider-page">
 
         <div class="header">
 
@@ -22,7 +22,7 @@
 
                         <div class="col d-xl-none">
                             <a href="#" data-toggle="modal" data-target="#modalFullPageMenu">
-                                <img src="images/bar-menu_icon.svg" width="50px">
+                                <img src="images/bar-menu_icon-white.svg" width="50px">
                             </a>
                         </div>
 
@@ -257,7 +257,7 @@
                 </div>
             </section>
 
-            <section class="py-5">
+            <section class="py-3 py-sm-5">
 
                 <div class="container">
                     <h2 class="title text-center mb-5">С Любовью к MATRYOSHKA</h2>
@@ -311,12 +311,12 @@
                 <div class="container">
                     <h2 class="title text-center mb-5">MATRYOSHKA это</h2>
 
-                    <div class="row align-items-center mb-5 mb-lg-0">
-                        <div class="col-lg-6 clearfix mb-3 mb-lg-0">
+                    <div class="row align-items-center">
+                        <div class="col-lg-6 clearfix">
                             <img class="float-right d-none d-lg-block" src="images/e1.jpg">
-                            <img class="img-fluid d-lg-none" src="images/e1.jpg">
+                            <img class="img-fluid d-lg-none mb-4" src="images/e1.jpg">
                         </div>
-                        <div class="col-lg-6">
+                        <div class="col-lg-6 pb-3">
                             <div class="row mb-3 mb-lg-5">
                                 <div class="col-6 col-sm-4 mb-4">
                                     <div class="numbers">200</div>
@@ -344,11 +344,11 @@
                     </div>
 
                     <div class="row align-items-center mt-lg-n5">
-                        <div class="col-lg-5 mb-5 mb-lg-0">
+                        <div class="col-lg-5 mb-5 mb-lg-0 pt-lg-3 order-2 order-lg-0">
                             <div class="mb-5">Ясность нашей позиции очевидна: сплоченность команды профессионалов позволяет оценить значение первоочередных требований. Не следует, однако, забывать, что высокое качество позиционных исследований прекрасно подходит для реализации системы массового участия.</div>
                             <button class="btn-transparent-black" data-toggle="modal" data-target="#modalRequestCall">Связаться с нами</button>
                         </div>
-                        <div class="col-lg-7">
+                        <div class="col-lg-7 pt-3 pt-lg-0 order-1 order-lg-0 ">
                             <img class="d-none d-lg-block" src="images/e2.jpg">
                             <img class="img-fluid d-lg-none mb-4" src="images/e2.jpg">
                         </div>
@@ -361,7 +361,7 @@
 
         <div class="footer">
             <div class="container">
-                <div class="footer__title text-center mb-5">Если у Вас есть вопрос, задайте его нам</div>
+                <div class="h5 text-center mb-5">Если у Вас есть вопрос, задайте его нам</div>
 
                 <form class="mb-5">
                     <div class="row justify-content-between">
@@ -455,38 +455,31 @@
                         </div>
                         <button type="submit" class="btn btn-lg btn-primary mb-2 px-5">Отправить</button>
                     </form>
-                    <!-- <div class="modal-footer">
-                        <button type="button" class="btn btn-outline-secondary" data-dismiss="modal">Отмена</button>
-                        
-                    </div> -->
                 </div>
             </div>
         </div>
 
         <div class="modal fade" id="modalFullPageMenu" tabindex="-1">
-            <div class="modal-dialog modal-dialog-centered m-0 align-items-stretch h-100">
+            <div class="modal-dialog modal-dialog-centered m-0 align-items-stretch min-vh-100">
                 <div class="modal-content p-2">
-                    <div class="modal-header border-0">
+                    <div class="modal-header border-0 align-items-center">
                         <img class="img-fluid" src="images/logo_black.svg">
                         <button type="button" class="close" data-dismiss="modal">
-                            <span aria-hidden="true">&times;</span>
+                            <span aria-hidden="true" class="h2">&times;</span>
                         </button>
                     </div>
                     <div class="modal-body">
-                        <div class="list-group py-5">
-                            <a class="list-group-item list-group-item-action border-0 mb-4 h3" href="#">О компании</a>
-                            <a class="list-group-item list-group-item-action border-0 mb-4 h3" href="#">Как мы строим</a>
-                            <a class="list-group-item list-group-item-action border-0 mb-4 h3" href="#">Проекты домов</a>
-                            <a class="list-group-item list-group-item-action border-0 mb-4 h3" href="#">Контакты</a>
-                        </div>
+                        <ul class="modal-menu py-5">
+                            <li class="modal-menu__item"><a href="#" class="modal-menu__link">О компании</a></li>
+                            <li class="modal-menu__item"><a href="#" class="modal-menu__link">Как мы строим</a></li>
+                            <li class="modal-menu__item"><a href="#" class="modal-menu__link">Проекты домов</a></li>
+                            <li class="modal-menu__item"><a href="#" class="modal-menu__link">Контакты</a></li>
+                        </ul>
                     </div>
-                    <!-- <div class="modal-footer">
-                        <button type="button" class="btn btn-outline-secondary" data-dismiss="modal">Отмена</button>
-                        
-                    </div> -->
                 </div>
             </div>
         </div>
+
     </div>
 
     <script src="https://code.jquery.com/jquery-3.4.0.min.js"></script>
