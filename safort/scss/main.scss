@@ -1,0 +1,22 @@
+$color-primary: #F7142E;
+$color-body:    #535F66;
+$color-dark:    #131421;
+$color-warning: #FFCC3E;
+$color-info:    #16CDE7;
+
+$max-xs: 575.98px;
+$max-sm: 767.98px;
+$max-md: 991.98px;
+$max-lg: 1199.98px;
+
+$min-sm: 576px;
+$min-md: 768px;
+$min-lg: 992px;
+$min-xl: 1200px;
+
+
+
+
+@import "base";
+@import "utilities";
+@import "custom";
