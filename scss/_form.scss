@@ -1,0 +1,62 @@
+.custom-input {
+    display: block;
+    width: 100%;
+    height: 54px;
+    padding: 0 20px 0 32px;
+    transition: border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out, padding 0.15s ease-in-out;
+    color: #25292F;
+    border: 1px solid #F05023;
+    border-radius: 62px;
+    background-color: #FFFFFF;
+    background-clip: padding-box;
+    font-size: 18px;
+    font-weight: 400;
+    line-height: 54px;
+    margin: 0 0 30px;
+
+    &:focus {
+        outline: none;
+    }
+}
+
+.custom-textarea {
+    @extend .custom-input;
+
+    overflow: hidden;
+    min-height: 160px;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    resize: none;
+    font-family: inherit;
+    font-weight: 300;
+    line-height: 1.2;
+}
+
+.custom-input-label {
+    position: relative;
+    display: block;
+    margin: 0;
+
+    div {
+        position: absolute;
+        top: 50%;
+        left: 32px;
+        cursor: text;
+        transition: 0.15s ease;
+        transform: translateY(-50%);
+        font-size: 22px;
+        font-weight: 300;
+        line-height: 1;
+    }
+
+    &.active {
+        .custom-input {
+            padding-top: 15px;
+        }
+
+        div {
+            top: 25%;
+            font-size: 14px;
+        }
+    }
+}

@@ -1,0 +1,33 @@
+html {
+    height: 100%;
+}
+
+body {
+    min-width: 320px;
+    height: 100%;
+    color: #4F4F4F;
+    font-family: "Circe", sans-serif;
+    font-size: 16px;
+    overflow-x: hidden;
+    overflow-y: auto;
+}
+
+a {
+    color: #F05023;
+
+    &:hover {
+        color: #F05023;
+    }
+}
+
+.text-color-base {
+    color: #4F4F4F;
+}
+
+.text-color-heading {
+    color: #25292F;
+}
+
+.text-color-primary {
+    color: #F05023;
+}
